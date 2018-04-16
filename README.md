@@ -1,2 +1,20 @@
-# Web-application
-Đồ án môn Lập trình web do Vũ Anh Tai, Nguyễn Đại Tài và Nguyễn Thành Tâm thực hiện
+﻿Cấu trúc Thư Mục:
+|---Service:
+    |---Data
+        |---Images
+        |---SQL
+    |---MainService
+    |---StorageHandling
+|---Public:
+    |---Handling
+    |---Assest
+    |---index.html
+|---Views:
+    |---User
+        |---Handling
+        |---Assest
+        |---index.html
+    |---Admin
+        |---Handling
+        |---Assest
+        |---index.html
