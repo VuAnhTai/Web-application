@@ -55,7 +55,12 @@ body a:focus {
     outline: none;
     text-decoration: none;
 }
-
+/*-- logo --*/
+.logo{
+    float: left;
+    margin-top: -20px;
+    width: 60px;
+}
 /*-- banner --*/
 
 .banner-bg {
