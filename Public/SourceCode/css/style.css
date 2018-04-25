@@ -1641,12 +1641,12 @@ a.thumbnail.active {
 }
 
 .carousel-control.right {
-    right: 47%;
+    right: 0%;
     top: 44%;
 }
 
 .carousel-control.left {
-    left: 47%;
+    left: 0%;
     top: 44%;
 }
 
@@ -3381,3 +3381,4 @@ button#btn-signup {
 .luotxem{
     margin-left: 22px;
 }
+
