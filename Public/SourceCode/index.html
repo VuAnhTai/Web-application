@@ -31,18 +31,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <link href="css/font-awesome.css" rel="stylesheet">
         <!-- //Custom Theme files -->
         <!-- online-fonts -->
-        <!-- logo -->
-        <link href="//fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
-        <!-- titles -->
-        <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
-        <!-- body -->
-        <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-        <!-- //online-fonts -->
+        <!-- logo -->    
         
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="slider/owl-carousel/owl.carousel.css">
+        
+        <!-- Default Theme -->
+        <link rel="stylesheet" href="slider/owl-carousel/owl.theme.css">
+        
+        <!--  jQuery 1.7+  -->
+        <script src="slider/assets/js/jquery-1.9.1.min.js"></script>
+        
+        <!-- Include js plugin -->
+        <script src="slider/owl-carousel/owl.carousel.js"></script>
+       
+        
     </head>
+    <script>
+        $(document).ready(function() {
+        $("#owl-example").owlCarousel();
+        
+      })
+      $(document).ready(function() {
+        $("#owl-example2").owlCarousel();
+        
+      })
+      
+    </script>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
         <div id="home">
             <!-- header -->
@@ -165,45 +182,1270 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
             <!-- Shop -->
             <!-- Item slider-->
-            
+<!-- Sản phẩm nổi bật             -->
             <div class="container-fluid">
                 <h4 class="rad-txt">
-                </br><span class="abtext">Sản phẩm nổi bật</span>
+                </br><span class="abtext">Sản phẩm mới nhất</span>
                 </h4>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="carousel carousel-showmanymoveone slide" id="itemslider">
-                            <div class="carousel-inner">
-                                
-                                <div class="item active">
-                                    <div class="col-xs-12 col-sm-6 col-md-2">
-                                        <a href="#"><img src="images/lib1.jpg" class="img-responsive center-block"></a>
-                                        <h4 class="text-center">MAYORAL SUKNJA</h4>
-                                        <h5 class="text-center">400.000 VND</h5>
+
+                <div id="owl-example" class="owl-carousel">
+                    <div> 
+                            <div class="col-md-3 product-men" style="width:250px;">
+                                    <div class="product-chr-info chr">
+                                        <div class="thumbnail">
+                                            <a href="single_product.html">
+                                                <img src="images/sp1.jpg" alt="" width="200px">
+                                            </a>
+                                        </div>
+                                        <div class="caption">
+                                            <h4>the gingerbread man</h4>
+                                            <p>Vera South Gate</p>
+                                            <p>Ngày nhập kho: 25/04/2018</p>
+                                            <div class="matrlf-mid">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="price-list">
+                                                    <li>$ 100.00</li>
+                                                    <li>
+                                                        $200.00
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="chr_item" value="SP1">
+                                                <input type="hidden" name="amount" value="100.00">
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                </button>
+                                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
-                                
-                                <div class="item">
-                                    <div class="col-xs-12 col-sm-6 col-md-2">
-                                        <a href="#"><img src="images/lib2.jpg" class="img-responsive center-block"></a>
-                                        <h4 class="text-center">MAYORAL KOŠULJA</h4>
-                                        <h5 class="text-center">400.000 VND</h5>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                
-                            </div>
-                            <!-- left,right control -->
-                            <div id="slider-control">
-                                <a class="left carousel-control" href="#itemslider" data-slide="prev"><img src="images/arrow_left.png" alt="Left" class="img-responsive"></a>
-                                <a class="right carousel-control" href="#itemslider" data-slide="next"><img src="images/arrow_right.png" alt="Right" class="img-responsive"></a>
-                            </div>
-                        </div>
+                    
                     </div>
-                </div>
+                    <div> 
+                            <div class="col-md-3 product-men" style="width:250px;">
+                                    <div class="product-chr-info chr">
+                                        <div class="thumbnail">
+                                            <a href="single_product.html">
+                                                <img src="images/sp2.jpg" alt="" width="200px">
+                                            </a>
+                                        </div>
+                                        <div class="caption">
+                                            <h4>Jemina Puddle Duck</h4>
+                                            <p>Beatrix Potter</p>
+                                            <p>Ngày nhập kho: 25/04/2018</p>
+                                            <div class="matrlf-mid">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="price-list">
+                                                    <li>$ 100.00</li>
+                                                    <li>
+                                                        $200.00
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="chr_item" value="SP2">
+                                                <input type="hidden" name="amount" value="100.00">
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                </button>
+                                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div>
+                            <div class="col-md-3 product-men" style="width:250px;">
+                                    <div class="product-chr-info chr">
+                                        <div class="thumbnail">
+                                            <a href="single_product.html">
+                                                <img src="images/sp3.jpg" alt="" width="200px">
+                                            </a>
+                                        </div>
+                                        <div class="caption">
+                                            <h4>being happy</h4>
+                                            <p>Andrew Matthews</p>
+                                            <p>Ngày nhập kho: 20/04/2018</p>
+                                            <div class="matrlf-mid">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="price-list">
+                                                    <li>$ 100.00</li>
+                                                    <li>
+                                                        $200.00
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="chr_item" value="SP3">
+                                                <input type="hidden" name="amount" value="100.00">
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                </button>
+                                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div>
+                            <div class="col-md-3 product-men" style="width:250px;">
+                                    <div class="product-chr-info chr">
+                                        <div class="thumbnail">
+                                            <a href="single_product.html">
+                                                <img src="images/sp4.jpg" alt="" width="200px">
+                                            </a>
+                                        </div>
+                                        <div class="caption">
+                                            <h4>Happiness now</h4>
+                                            <p>Andrew Matthews</p>
+                                            <p>Ngày nhập kho: 20/04/2018</p>
+                                            <div class="matrlf-mid">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="price-list">
+                                                    <li>$ 100.00</li>
+                                                    <li>
+                                                        $200.00
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="chr_item" value="SP4">
+                                                <input type="hidden" name="amount" value="100.00">
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                </button>
+                                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div>
+                            <div class="col-md-3 product-men" style="width:250px;">
+                                    <div class="product-chr-info chr">
+                                        <div class="thumbnail">
+                                            <a href="single_product.html">
+                                                <img src="images/sp5.jpg" alt="" width="200px">
+                                            </a>
+                                        </div>
+                                        <div class="caption">
+                                            <h4>55 cách tranh luận</h4>
+                                            <p>XACT</p>
+                                            <p>Ngày nhập kho: 20/04/2018</p>
+                                            <div class="matrlf-mid">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="price-list">
+                                                    <li>$ 100.00</li>
+                                                    <li>
+                                                        $200.00
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="chr_item" value="SP5">
+                                                <input type="hidden" name="amount" value="100.00">
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                </button>
+                                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>    
+                    </div>
+                    <div>
+                            <div class="col-md-3 product-men" style="width:250px;">
+                                    <div class="product-chr-info chr">
+                                        <div class="thumbnail">
+                                            <a href="single_product.html">
+                                                <img src="images/sp6.jpg" alt="" width="200px">
+                                            </a>
+                                        </div>
+                                        <div class="caption">
+                                            <h4>Ô,dù lọng</h4>
+                                            <p>Hữu Thọ</p>
+                                            <p>Ngày nhập kho: 20/04/2018</p>
+                                            <div class="matrlf-mid">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="price-list">
+                                                    <li>$ 100.00</li>
+                                                    <li>
+                                                        $200.00
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="chr_item" value="SP6">
+                                                <input type="hidden" name="amount" value="100.00">
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                </button>
+                                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div>
+                            <div class="col-md-3 product-men" style="width:250px;">
+                                    <div class="product-chr-info chr">
+                                        <div class="thumbnail">
+                                            <a href="single_product.html">
+                                                <img src="images/sp7.jpg" alt="" width="200px">
+                                            </a>
+                                        </div>
+                                        <div class="caption">
+                                            <h4>nể và né</h4>
+                                            <p>Hữu Thọ</p>
+                                            <p>Ngày nhập kho: 15/04/2018</p>
+                                            <div class="matrlf-mid">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="price-list">
+                                                    <li>$ 100.00</li>
+                                                    <li>
+                                                        $200.00
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="chr_item" value="SP7">
+                                                <input type="hidden" name="amount" value="100.00">
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                </button>
+                                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div>
+                            <div class="col-md-3 product-men" style="width:250px;">
+                                    <div class="product-chr-info chr">
+                                        <div class="thumbnail">
+                                            <a href="single_product.html">
+                                                <img src="images/sp8.jpg" alt="" width="200px">
+                                            </a>
+                                        </div>
+                                        <div class="caption">
+                                            <h4>thiên thần sa ngã</h4>
+                                            <p>Cassandra Clare</p>
+                                            <p>Ngày nhập kho: 15/04/2018</p>
+                                            <div class="matrlf-mid">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="price-list">
+                                                    <li>$ 100.00</li>
+                                                    <li>
+                                                        $200.00
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="chr_item" value="SP8">
+                                                <input type="hidden" name="amount" value="100.00">
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                </button>
+                                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div>
+                            <div class="col-md-3 product-men" style="width:250px;">
+                                    <div class="product-chr-info chr">
+                                        <div class="thumbnail">
+                                            <a href="single_product.html">
+                                                <img src="images/sp9.jpg" alt="" width="200px">
+                                            </a>
+                                        </div>
+                                        <div class="caption">
+                                            <h4>how life works</h4>
+                                            <p>Andrew Matthews</p>
+                                            <p>Ngày nhập kho: 15/04/2018</p>
+                                            <div class="matrlf-mid">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="price-list">
+                                                    <li>$ 100.00</li>
+                                                    <li>
+                                                        $200.00
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="chr_item" value="SP9">
+                                                <input type="hidden" name="amount" value="100.00">
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                </button>
+                                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div>
+                            <div class="col-md-3 product-men" style="width:250px;">
+                                    <div class="product-chr-info chr">
+                                        <div class="thumbnail">
+                                            <a href="single_product.html">
+                                                <img src="images/sp10.jpg" alt="" width="200px">
+                                            </a>
+                                        </div>
+                                        <div class="caption">
+                                            <h4>thành phố tro tàn</h4>
+                                            <p>Cassandra Clare</p>
+                                            <p>Ngày nhập kho: 10/04/2018</p>
+                                            <div class="matrlf-mid">
+                                                <ul class="rating">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="price-list">
+                                                    <li>$ 100.00</li>
+                                                    <li>
+                                                        $200.00
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="chr_item" value="SP10">
+                                                <input type="hidden" name="amount" value="100.00">
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                </button>
+                                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+            
+                  </div>
             </div>
+           
+            <div class="container-fluid">
+                    <h4 class="rad-txt">
+                    </br><span class="abtext" style="background-color: #f7c052" >Sản phẩm bán chạy</span>
+                    </h4>
+    
+                    <div id="owl-example2" class="owl-carousel">
+                        <div> 
+                                <div class="col-md-3 product-men" style="width:250px;">
+                                        <div class="product-chr-info chr">
+                                            <div class="thumbnail">
+                                                <a href="single_product.html">
+                                                    <img src="images/sp21.jpg" alt="" width="200px">
+                                                </a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Diary of a Wimpy kid</h4>
+                                                <p>Jeff Kinney</p>
+                                                <p>Số lượng bán: 55 quyển</p>
+                                                <div class="matrlf-mid">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="price-list">
+                                                        <li>$ 100.00</li>
+                                                        <li>
+                                                            $200.00
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="chr_item" value="SP21">
+                                                    <input type="hidden" name="amount" value="100.00">
+                                                    <button type="submit" class="chr-cart pchr-cart">Mua
+                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                        </div>
+                        <div> 
+                                <div class="col-md-3 product-men" style="width:250px;">
+                                        <div class="product-chr-info chr">
+                                            <div class="thumbnail">
+                                                <a href="single_product.html">
+                                                    <img src="images/sp11.jpg" alt="" width="200px">
+                                                </a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Mê động long lĩnh</h4>
+                                                <p>Ma thổi đèn</p>
+                                                <p>Số lượng bán: 53 quyển</p>
+                                                <div class="matrlf-mid">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="price-list">
+                                                        <li>$ 100.00</li>
+                                                        <li>
+                                                            $200.00
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="chr_item" value="SP11">
+                                                    <input type="hidden" name="amount" value="100.00">
+                                                    <button type="submit" class="chr-cart pchr-cart">Mua
+                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div>
+                                <div class="col-md-3 product-men" style="width:250px;">
+                                        <div class="product-chr-info chr">
+                                            <div class="thumbnail">
+                                                <a href="single_product.html">
+                                                    <img src="images/sp12.jpg" alt="" width="200px">
+                                                </a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Thiền sư</h4>
+                                                <p>Thích Nhất Hạnh</p>
+                                                <p>Số lượng bán: 53 quyển</p>
+                                                <div class="matrlf-mid">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="price-list">
+                                                        <li>$ 100.00</li>
+                                                        <li>
+                                                            $200.00
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="chr_item" value="SP12">
+                                                    <input type="hidden" name="amount" value="100.00">
+                                                    <button type="submit" class="chr-cart pchr-cart">Mua
+                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div>
+                                <div class="col-md-3 product-men" style="width:250px;">
+                                        <div class="product-chr-info chr">
+                                            <div class="thumbnail">
+                                                <a href="single_product.html">
+                                                    <img src="images/sp13.jpg" alt="" width="200px">
+                                                </a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Lịch sử Việt Nam</h4>
+                                                <p>Bộ giáo dục</p>
+                                                <p>Số lượng bán: 50 quyển</p>
+                                                <div class="matrlf-mid">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="price-list">
+                                                        <li>$ 100.00</li>
+                                                        <li>
+                                                            $200.00
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="chr_item" value="SP13">
+                                                    <input type="hidden" name="amount" value="100.00">
+                                                    <button type="submit" class="chr-cart pchr-cart">Mua
+                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div>
+                                <div class="col-md-3 product-men" style="width:250px;">
+                                        <div class="product-chr-info chr">
+                                            <div class="thumbnail">
+                                                <a href="single_product.html">
+                                                    <img src="images/sp14.jpg" alt="" width="200px">
+                                                </a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Super Hero Max</h4>
+                                                <p>Lawrence David</p>
+                                                <p>Số lượng bán: 49 quyển</p>
+                                                <div class="matrlf-mid">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="price-list">
+                                                        <li>$ 100.00</li>
+                                                        <li>
+                                                            $200.00
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="chr_item" value="SP14">
+                                                    <input type="hidden" name="amount" value="100.00">
+                                                    <button type="submit" class="chr-cart pchr-cart">Mua
+                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>    
+                        </div>
+                        <div>
+                                <div class="col-md-3 product-men" style="width:250px;">
+                                        <div class="product-chr-info chr">
+                                            <div class="thumbnail">
+                                                <a href="single_product.html">
+                                                    <img src="images/sp15.jpg" alt="" width="200px">
+                                                </a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Con chó nhỏ mang giỏ</h4>
+                                                <p>Nguyễn Nhật Ánh</p>
+                                                <p>Số lượng bán: 47 quyển</p>
+                                                <div class="matrlf-mid">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="price-list">
+                                                        <li>$ 100.00</li>
+                                                        <li>
+                                                            $200.00
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="chr_item" value="SP15">
+                                                    <input type="hidden" name="amount" value="100.00">
+                                                    <button type="submit" class="chr-cart pchr-cart">Mua
+                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div>
+                                <div class="col-md-3 product-men" style="width:250px;">
+                                        <div class="product-chr-info chr">
+                                            <div class="thumbnail">
+                                                <a href="single_product.html">
+                                                    <img src="images/sp7.jpg" alt="" width="200px">
+                                                </a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>nể và né</h4>
+                                                <p>Hữu Thọ</p>
+                                                <p>Số lượng bán: 45 quyển</p>
+                                                <div class="matrlf-mid">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="price-list">
+                                                        <li>$ 100.00</li>
+                                                        <li>
+                                                            $200.00
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="chr_item" value="SP7">
+                                                    <input type="hidden" name="amount" value="100.00">
+                                                    <button type="submit" class="chr-cart pchr-cart">Mua
+                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div>
+                                <div class="col-md-3 product-men" style="width:250px;">
+                                        <div class="product-chr-info chr">
+                                            <div class="thumbnail">
+                                                <a href="single_product.html">
+                                                    <img src="images/sp8.jpg" alt="" width="200px">
+                                                </a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>thiên thần sa ngã</h4>
+                                                <p>Cassandra Clare</p>
+                                                <p>Số lượng bán: 40 quyển</p>
+                                                <div class="matrlf-mid">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="price-list">
+                                                        <li>$ 100.00</li>
+                                                        <li>
+                                                            $200.00
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="chr_item" value="SP8">
+                                                    <input type="hidden" name="amount" value="100.00">
+                                                    <button type="submit" class="chr-cart pchr-cart">Mua
+                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div>
+                                <div class="col-md-3 product-men" style="width:250px;">
+                                        <div class="product-chr-info chr">
+                                            <div class="thumbnail">
+                                                <a href="single_product.html">
+                                                    <img src="images/sp16.jpg" alt="" width="200px">
+                                                </a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Ghế</h4>
+                                                <p>Hữu Thọ</p>
+                                                <p>Số lượng bán: 37 quyển</p>
+                                                <div class="matrlf-mid">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="price-list">
+                                                        <li>$ 100.00</li>
+                                                        <li>
+                                                            $200.00
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="chr_item" value="SP16">
+                                                    <input type="hidden" name="amount" value="100.00">
+                                                    <button type="submit" class="chr-cart pchr-cart">Mua
+                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div>
+                                <div class="col-md-3 product-men" style="width:250px;">
+                                        <div class="product-chr-info chr">
+                                            <div class="thumbnail">
+                                                <a href="single_product.html">
+                                                    <img src="images/sp10.jpg" alt="" width="200px">
+                                                </a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>thành phố tro tàn</h4>
+                                                <p>Cassandra Clare</p>
+                                                <p>Số lượng bán: 35 quyển</p>
+                                                <div class="matrlf-mid">
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star yellow-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-star gray-star" aria-hidden="true"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="price-list">
+                                                        <li>$ 100.00</li>
+                                                        <li>
+                                                            $200.00
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="chr_item" value="SP10">
+                                                    <input type="hidden" name="amount" value="100.00">
+                                                    <button type="submit" class="chr-cart pchr-cart">Mua
+                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                
+                      </div>
+                </div>
+               
+
             <!-- Item slider end-->
             <div class="innerf-pages section">
                 <div class="container-cart">
@@ -212,30 +1454,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <!--preference -->
                         <div class="left-side">
                             <h3 class="shopf-sear-headits-sear-head">
-                            Categories</h3>
+                            Thể loại</h3>
                             <ul>
                                 <li>
                                     <input type="checkbox" class="checked">
-                                    <span class="span">Biographies</span>
+                                    <span class="span">Khoa học</span>
                                 </li>
                                 <li>
                                     <input type="checkbox" class="checked">
-                                    <span class="span">Fiction</span>
+                                    <span class="span">Viễn tưởng</span>
                                 </li>
                                 <li>
                                     <input type="checkbox" class="checked">
-                                    <span class="span">Management</span>
+                                    <span class="span">Giải trí</span>
                                 </li>
                                 <li>
                                     <input type="checkbox" class="checked">
-                                    <span class="span">Business</span>
+                                    <span class="span">Kinh doanh</span>
                                 </li>
                             </ul>
                         </div>
                         <!-- // preference -->
                         <div class="search-hotel">
                             <h3 class="shopf-sear-headits-sear-head">
-                            <span>author</span> in focus</h3>
+                            <span>Tìm</span> theo tên tác giả</h3>
                             <form action="#" method="post">
                                 <input type="search" placeholder="search here" name="search" required="">
                                 <input type="submit" value="Search">
@@ -244,7 +1486,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <!-- price range -->
                         <div class="range">
                             <h3 class="shopf-sear-headits-sear-head">
-                            <span>Price</span> range</h3>
+                            <span>Mức</span> giá</h3>
                             <ul class="dropdown-menu6">
                                 <li>
                                     <div id="slider-range"></div>
@@ -256,26 +1498,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <!--preference -->
                         <div class="left-side">
                             <h3 class="shopf-sear-headits-sear-head">
-                            <span>latest</span> arrivals</h3>
+                            <span>Sách</span> mới về</h3>
                             <ul>
                                 <li>
                                     <input type="checkbox" class="checked">
-                                    <span class="span">last 30 days</span>
+                                    <span class="span">30 ngày gần đây</span>
                                 </li>
                                 <li>
                                     <input type="checkbox" class="checked">
-                                    <span class="span">last 90 days</span>
+                                    <span class="span">60 ngày gần đây</span>
                                 </li>
                                 <li>
                                     <input type="checkbox" class="checked">
-                                    <span class="span">last 150 days</span>
+                                    <span class="span">120 ngày gần đây</span>
                                 </li>
                             </ul>
                         </div>
                         <!-- // preference -->
                         <!-- discounts -->
                         <div class="left-side">
-                            <h3 class="shopf-sear-headits-sear-head">Language</h3>
+                            <h3 class="shopf-sear-headits-sear-head">Ngôn ngữ</h3>
                             <ul>
                                 <li>
                                     <input type="checkbox" class="checked">
@@ -308,36 +1550,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                         <!-- //discounts -->
-                        <!-- Binding -->
-                        <div class="left-side">
-                            <h3 class="shopf-sear-headits-sear-head">Format</h3>
-                            <ul>
-                                <li>
-                                    <input type="checkbox" class="checked">
-                                    <span class="span">Hardcover</span>
-                                </li>
-                                <li>
-                                    <input type="checkbox" class="checked">
-                                    <span class="span">Board Book</span>
-                                </li>
-                                <li>
-                                    <input type="checkbox" class="checked">
-                                    <span class="span">Bundle</span>
-                                </li>
-                                <li>
-                                    <input type="checkbox" class="checked">
-                                    <span class="span">Paperback</span>
-                                </li>
-                                <li>
-                                    <input type="checkbox" class="checked">
-                                    <span class="span">Audio Book</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //Binding -->
+    
                         <!-- discounts -->
                         <div class="left-side">
-                            <h3 class="shopf-sear-headits-sear-head">Discount</h3>
+                            <h3 class="shopf-sear-headits-sear-head">Khuyến mãi</h3>
                             <ul>
                                 <li>
                                     <input type="checkbox" class="checked">
@@ -353,14 +1569,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </li>
                                 <li>
                                     <input type="checkbox" class="checked">
-                                    <span class="span">60% or more</span>
+                                    <span class="span">60% trở lên</span>
                                 </li>
                             </ul>
                         </div>
                         <!-- //discounts -->
                         <!-- reviews -->
                         <div class="customer-rev left-side">
-                            <h3 class="shopf-sear-headits-sear-head">Customer Review</h3>
+                            <h3 class="shopf-sear-headits-sear-head">Phản hồi từ khách hàng</h3>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -474,7 +1690,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book1">
                                                 <input type="hidden" name="amount" value="100.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -533,7 +1749,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book2">
                                                 <input type="hidden" name="amount" value="200.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -592,7 +1808,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book3">
                                                 <input type="hidden" name="amount" value="80.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -651,7 +1867,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book4">
                                                 <input type="hidden" name="amount" value="120.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -712,7 +1928,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book5">
                                                 <input type="hidden" name="amount" value="125.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -771,7 +1987,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book6">
                                                 <input type="hidden" name="amount" value="70.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -830,7 +2046,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book7">
                                                 <input type="hidden" name="amount" value="220.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -889,7 +2105,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book8">
                                                 <input type="hidden" name="amount" value="210.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -950,7 +2166,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book9">
                                                 <input type="hidden" name="amount" value="180.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -1009,7 +2225,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book10">
                                                 <input type="hidden" name="amount" value="330.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -1068,7 +2284,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book11">
                                                 <input type="hidden" name="amount" value="280.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -1127,7 +2343,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <input type="hidden" name="add" value="1">
                                                 <input type="hidden" name="chr_item" value="Book12">
                                                 <input type="hidden" name="amount" value="140.00">
-                                                <button type="submit" class="chr-cart pchr-cart">Add to cart
+                                                <button type="submit" class="chr-cart pchr-cart">Mua
                                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                 </button>
                                                 <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -1292,7 +2508,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- //home -->
         <!-- js -->
         <!-- Common js -->
-        <script src="js/jquery-2.2.3.min.js"></script>
+        <!-- <script src="js/jquery-2.2.3.min.js"></script> -->
         <!--// Common js -->
         <!-- cart-js -->
         <script src="js/minicart.js"></script>
@@ -1309,60 +2525,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- //cart-js -->
         <!-- price range (top products) -->
         <script src="js/jquery-ui.js"></script>
-        <script>
-        //<![CDATA[
-        $(window).load(function () {
-        $("#slider-range").slider({
-        range: true,
-        min: 0,
-        max: 9000,
-        values: [50, 6000],
-        slide: function (event, ui) {
-        $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-        }
-        });
-        $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
-        }); //]]>
-        </script>
-        <!-- //price range (top products) -->
-        <!-- dropdown nav -->
-        <script>
-        $(document).ready(function () {
-        $(".dropdown").hover(
-        function () {
-        $('.dropdown-menu', this).stop(true, true).slideDown("fast");
-        $(this).toggleClass('open');
-        },
-        function () {
-        $('.dropdown-menu', this).stop(true, true).slideUp("fast");
-        $(this).toggleClass('open');
-        }
-        );
-        });
-        </script>
-        <script type="text/javascript">
-        $(document).ready(function(){
         
-        $('#itemslider').carousel({ interval: 3000 });
-        
-        $('.carousel-showmanymoveone .item').each(function(){
-        var itemToClone = $(this);
-        
-        for (var i=1;i<6;i++) {
-        itemToClone = itemToClone.next();
-        
-        if (!itemToClone.length) {
-        itemToClone = $(this).siblings(':first');
-        }
-        
-        itemToClone.children(':first-child').clone()
-        .addClass("cloneditem-"+(i))
-        .appendTo($(this));
-        }
-        });
-        });
-        
-        </script>
         <!-- //dropdown nav -->
         <!--search jQuery-->
         <script src="js/main.js"></script>
@@ -1402,9 +2565,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         });
         });
         </script>
-        <!-- //here ends scrolling icon -->
-        <!-- smoothscroll -->
         <script src="js/SmoothScroll.min.js"></script>
         <!-- //smoothscroll -->
+       
     </body>
 </html>
