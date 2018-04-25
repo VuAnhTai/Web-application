@@ -1,4 +1,7 @@
 
+#home{
+    background-color: #eff0f4;
+}
 a:hover, a:active, a:focus {
     outline: 0;
     text-decoration: none;

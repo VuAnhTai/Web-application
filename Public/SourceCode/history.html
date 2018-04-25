@@ -26,6 +26,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href="css/default.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/account.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/history.css" type="text/css" rel="stylesheet" media="all">
 
     <!-- font-awesome icons -->
     <link href="css/font-awesome.css" rel="stylesheet">
@@ -183,12 +184,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <!--//breadcrumbs ends here-->
       <!-- ******************************* Form account ******************************************** -->
       
-      <div class="container-cart">
+      <div class="container-order">
         <!-- //product left -->
         <div class="col-md-3">
           <ul class="list-group">         
-            <li>           
-              <legend class="alert alert-success"><center><p>Tài khoản</p><h2><b>Vũ Anh Tài</b></h2></center></legend>
+            <li>
+              
+              <legend class="alert alert-success"><center><p>Tài khoản</p><h2><b>Vũ Anh Tài</b></h2></center></legend><br>
             </li>
             <li class="list-group-item">
               <a href="user-dashboard-saved-searches.html">
@@ -197,7 +199,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               </a>
             </li> 
             <li class="list-group-item">
-              <a href="history.html">
+              <a href="user-dashboard-saved-searches.html">
                 <i class="glyphicon glyphicon-th-list"></i>
                 Thông tin hóa đơn
               </a>
@@ -217,160 +219,122 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           </ul>
         </div>
         <!-- product right -->
-        <div class="display-inf col-md-9">
-            
-
-        <div class="container-fluid">
-
-          <form id="myform-js" class="well form-horizontal" action="action_page.html" method="post"  name="contact_form" onsubmit="return checkForm()">
-            <fieldset>
-
-              <!-- Form Name -->
-
-              <!-- Text input-->
-              <div class="panel panel-success">
-                <div class="panel-heading">Person Info</div>
-                <div class="panel-body">
-                  <div class="form-group col-md-12"> 
-                    <label class="col-md-3 control-label ">First Name</label>  
-                    <div class="col-md-8 inputGroupContainer">
-                      <div class="col-md-12 announ-check-form none"></div>
-
-                      <div class="col-md-12 input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="firstName" name="first_name" placeholder="First Name" class="form-control"  type="text" pattern="[A-Za-z._ ]{1,20}" required>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group col-md-12"> 
-                    <label class="col-md-3 control-label" >Last Name</label> 
-                    <div class="col-md-8 inputGroupContainer">
-                      <div class="col-md-12 announ-check-form none"></div>
-
-                      <div class="col-md-12 input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="lastName" name="last_name" placeholder="Last Name" class="form-control"  type="text" pattern="[A-Za-z._ ]{1,20}" required>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="DateOfBirth" class="form-group col-md-12" required pattern="[0-9]{1,20}"> 
-                    <label class="col-md-3 control-label" >Date Of Birth</label> 
-                    <div class="col-md-8 inputGroupContainer">
-                      <div class="col-md-12 announ-check-form none"></div>
-
-                      <div class="col-md-12 input-group" id='datetimepicker1'>
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                        <input id="dateOfBirth"name="dateofbirth" placeholder="dd/mm/yyyy" class="form-control"  type="date" required="">
-                        
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group col-md-12" > 
-                    <label class="col-md-3 control-label">Gender</label>  
-                    <div class="col-md-8 inputGroupContainer" style="margin-top: 5px">
-                      <div id="gender" class="in-group">
-                        <div class="col-md-6 " style="padding: 2px">
-                          <label for="male">Male</label>
-                          <input type="radio" name="gender" id="male" value="male" checked="">
+        <div class="display-his col-md-8">
+            <div class="orders">
+                <div class="order">
+                    <div class="order-info row">
+                        <div class="col-md-6">
+                            <h3>
+                                Đơn hàng
+                                <a href="history_detail.html"><span class="Ma-Don-hang">#xxxxxxxxxxxxxxx</span></a>
+                            </h3>
+                            <p class="date">
+                                Dat ngay 22 thang 4 nam 2018
+                            </p>
                         </div>
-                        <div class="col-md-6 padding-0" style="padding: 2px">
-                          <label for="female">Female</label>
-                          <input type="radio" name="gender" id="female" value="female">
+                        <div class="col-md-6" style="text-align: right; color: #34c663">
+                            <h3><a href="history_detail.html">Quản lý</a></h3>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                  <!-- Text input-->
-
-                  <div class="form-group col-md-12"> 
-                    <label class="col-md-3 control-label">E-Mail</label>  
-                    <div class="col-md-8 inputGroupContainer">
-                      <div class="col-md-12 announ-check-form none"></div>
-
-                      <div class="col-md-12 input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                        <input id="email" name="email" placeholder="John@example.com" class="form-control"  type="text" pattern="([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$)" required>
-                      </div>
+                    <div class="order-item row">
+                        <div class="item-pic col-md-2">
+                            <a href="history_detail.html">
+                                <img src="" width=60px height=60px alt="60*60">
+                            </a>
+                        </div>
+                        <div class="item-name col-md-3">
+                            Ten san pham
+                        </div>
+                        <div class="item-quanlity col-md-1">Qty: 1</div>
+                        <div class="item-status col-md-2">Da giao hang</div>
+                        <div class="item-info col-md-3" >Da duoc giao ngay 23 thang 4 nam 2018</div>
                     </div>
-                  </div>
-                  <div class="form-group col-md-12"> 
-                    <label class="col-md-3 control-label">Contact No.</label>  
-                    <div class="col-md-8 inputGroupContainer">
-                      <div class="col-md-12 announ-check-form none"></div>
-
-                      <div class="col-md-12 input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                        <input id="contactNo" name="contact_no" placeholder="(639)" class="form-control" type="text">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group col-md-12"> 
-                    <label class="col-md-3 control-label">City</label>  
-                    <div class="col-md-8 inputGroupContainer">
-                      <div class="col-md-12 announ-check-form none"></div>
-
-                      <div class="col-md-12 input-group">
-                        <span class="input-group-addon"><i class="fa fa-institution"></i></span>
-                        <input id="city" name="city" placeholder="City" class="form-control" type="text" pattern="[A-Za-z0-9]{1,20}">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group col-md-12"> 
-                    <label class="col-md-3 control-label">Country</label>
-                    <div class="col-md-8 selectContainer">
-                      <div class="input-group autocomplete">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-globe
-                        "></i></span>
-                        <input id="inputCountry-js" name="country" placeholder="Country" class="form-control" type="text">
-                      </div>
-                    </div>
-                  </div>
-                    
-                    <!-- Text input-->
-                  <div class="form-group col-md-12"> 
-                    <label class="col-md-3 control-label">Address 1</label>  
-                    <div class="col-md-8 inputGroupContainer">
-                      <div class="announ-check-form none"></div>
-
-                      <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                        <input id="address1" name="Address_1" placeholder="Address" class="form-control"  type="text" pattern="[A-Za-z0-9 ./_]{1,56}">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group col-md-12"> 
-                    <label class="col-md-3 control-label">Address 2</label>  
-                    <div class="col-md-8 inputGroupContainer">
-                      <div class="announ-check-form none"></div>
-
-                      <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                        <input id="address2" name="Address_2" placeholder="Address" class="form-control"  type="text" pattern="[A-Za-z0-9 ./_ ]{1,56}">
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-
-
-                <!-- Select Basic -->
-
-                <!-- Success message -->
-                <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
-
-                <!-- Button -->
-                <div class="form-group">
-                  <label class="col-md-4 control-label"></label>
-                  <div class="col-md-4"><br>
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button  type="submit" class="btn btn-success" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCập nhật<span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
-                  </div>
+                <div class="order">
+                    <div class="order-info row">
+                        <div class="col-md-6">
+                            <h3>
+                                Đơn hàng
+                                <a href="history_detail.html"><span class="Ma-Don-hang">#xxxxxxxxxxxxxxx</span></a>
+                            </h3>
+                            <p class="date">
+                                Dat ngay 22 thang 4 nam 2018
+                            </p>
+                        </div>
+                        <div class="col-md-6" style="text-align: right; color: #34c663">
+                            <h3><a href="history_detail.html">Quản lý</a></h3>
+                        </div>
+                    </div>
+                    <div class="order-item row">
+                        <div class="item-pic col-md-2">
+                            <a href="history_detail.html">
+                                <img src="" width=60px height=60px alt="60*60">
+                            </a>
+                        </div>
+                        <div class="item-name col-md-3">
+                            Ten san pham
+                        </div>
+                        <div class="item-quanlity col-md-1">Qty: 1</div>
+                        <div class="item-status col-md-2">Da giao hang</div>
+                        <div class="item-info col-md-3" >Da duoc giao ngay 23 thang 4 nam 2018</div>
+                    </div>
+                    <div class="order-item row">
+                        <div class="item-pic col-md-2">
+                            <a href="history_detail.html">
+                                <img src="" width=60px height=60px alt="60*60">
+                            </a>
+                        </div>
+                        <div class="item-name col-md-3">
+                            Ten san pham
+                        </div>
+                        <div class="item-quanlity col-md-1">Qty: 1</div>
+                        <div class="item-status col-md-2">Da giao hang</div>
+                        <div class="item-info col-md-3" >Da duoc giao ngay 23 thang 4 nam 2018</div>
+                    </div>
                 </div>
-
-              </fieldset>
-            </form>
-          </div>
-        
+                <div class="order">
+                    <div class="order-info row">
+                        <div class="col-md-6">
+                            <h3>
+                                Đơn hàng
+                                <a href="history_detail.html"><span class="Ma-Don-hang">#xxxxxxxxxxxxxxx</span></a>
+                            </h3>
+                            <p class="date">
+                                Dat ngay 22 thang 4 nam 2018
+                            </p>
+                        </div>
+                        <div class="col-md-6" style="text-align: right; color: #34c663">
+                            <h3><a href="history_detail.html">Quản lý</a></h3>
+                        </div>
+                    </div>
+                    <div class="order-item row">
+                        <div class="item-pic col-md-2">
+                            <a href="history_detail.html">
+                                <img src="" width=60px height=60px alt="60*60">
+                            </a>
+                        </div>
+                        <div class="item-name col-md-3">
+                            Ten san pham
+                        </div>
+                        <div class="item-quanlity col-md-1">Qty: 1</div>
+                        <div class="item-status col-md-2">Da giao hang</div>
+                        <div class="item-info col-md-3" >Da duoc giao ngay 23 thang 4 nam 2018</div>
+                    </div>
+                    <div class="order-item row">
+                        <div class="item-pic col-md-2">
+                            <a href="history_detail.html">
+                                <img src="" width=60px height=60px alt="60*60">
+                            </a>
+                        </div>
+                        <div class="item-name col-md-3">
+                            Ten san pham
+                        </div>
+                        <div class="item-quanlity col-md-1">Qty: 1</div>
+                        <div class="item-status col-md-2">Da giao hang</div>
+                        <div class="item-info col-md-3" >Da duoc giao ngay 23 thang 4 nam 2018</div>
+                    </div>
+                </div>
+            </div>    
         </div>
         <div class="clearfix"></div>
       </div>
