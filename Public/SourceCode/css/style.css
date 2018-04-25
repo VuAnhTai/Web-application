@@ -68,14 +68,19 @@ body a:focus {
 
 /*-- header --*/
 
-h1 a.navbar-brand {
-    font-size: 1.2em;
-    letter-spacing: 0.5px;
+h1 a span.navbar-brand {
+    margin-top: -45px;
+    font-size: 1.5em;
     color: #fff !important;
     padding: 14px 0 0;
     position: relative;
     text-transform: capitalize;
-    font-family: 'Fredericka the Great', cursive;
+    letter-spacing: 0.5px;
+    border-width: 1px 0;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 3px #000;
+    font-weight: 800;
 }
 
 .footer-logo h3 a {
@@ -3373,3 +3378,6 @@ button#btn-signup {
     position: relative;
 }
 
+.luotxem{
+    margin-left: 22px;
+}
