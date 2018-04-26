@@ -1,4 +1,7 @@
 
+li {
+    padding: 10px 20px;
+}
 #home{
     background-color: #eff0f4;
 }
@@ -42,4 +45,14 @@ a {
 }
 .alert{
 	margin-bottom: 0px;
+}
+
+.change-info-btn {
+    background: #787fe1;
+    border: 0 none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 30px;
 }

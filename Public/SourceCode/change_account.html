@@ -176,6 +176,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               <li class="btn btn2">
                 <a href="footer.html">Thông tin tài khoản</a>
               </li>
+              <li class="btn btn3">
+                <a href="change_account.html">Thay đổi thông tin</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -217,51 +220,162 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           </ul>
         </div>
         <!-- product right -->
-        <div class="display-inf col-md-9 ">
+        <div class="display-inf col-md-9">
+            
 
-          <div class="container-fluid">
+        <div class="container-fluid">
 
-            <div id="info-js" class="well form-horizontal row col-md-12">
-              <div class="panel-info">
-                <h3 style="padding-left: 15px; padding: 20px 30px 30px 30px"><i class="fa fa-circle-o"></i> Thông tin tài khoản</h3>
-                <div class="panel-info-body clr">
-                  <ul class="col-md-9"> 
-                    <li>
-                      <label style="margin-right: 70px;font-weight: bold;">Họ tên:</label>
-                      <span>vũ anh tài</span>
-                    </li>
-                    <li>
-                      <label style="margin-right: 58px;font-weight: bold;">Giới tính:</label>
-                      <span>Nam</span>
-                    </li>
+          <form id="myform-js" class="well form-horizontal" action="action_page.html" method="post"  name="contact_form" onsubmit="return checkForm()">
+            <fieldset>
 
-                    <li>
-                      <label style="margin-right: 48px;font-weight: bold;">Ngày sinh:</label>
-                      <span>26/04/2018</span>
-                    </li>
-                    <li>
-                      <label style="margin-right: 25px;font-weight: bold;">Số điện thoại: </label>
-                      <span>01655925039</span>
-                    </li>
-                    <li>
-                      <label style="margin-right: 77px;font-weight: bold;">Email:</label>
-                      <span>vuanhtai1997@gmail.com</span>
-                    </li>
-                    <li>
-                      <label style="margin-right: 67px;font-weight: bold;">Địa chỉ:</label>
-                      <span>359/2Y Lê văn sỹ (nhà bên tay phải màu xanh), Hồ Chí Minh, Quận 3, Phường 12</span>
-                    </li>
-                  </ul>
-                  <div class="change-info col-md-3">
-                    <button onclick='location.href="change_account.html";' class="change-info-btn">Thay đổi</button>
+              <!-- Form Name -->
+
+              <!-- Text input-->
+              <div class="panel panel-success">
+                <div class="panel-heading">Person Info</div>
+                <div class="panel-body">
+                  <div class="form-group col-md-12"> 
+                    <label class="col-md-3 control-label ">First Name</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="col-md-12 announ-check-form none"></div>
+
+                      <div class="col-md-12 input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="firstName" name="first_name" placeholder="First Name" class="form-control"  type="text" pattern="[A-Za-z._ ]{1,20}" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12"> 
+                    <label class="col-md-3 control-label" >Last Name</label> 
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="col-md-12 announ-check-form none"></div>
+
+                      <div class="col-md-12 input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="lastName" name="last_name" placeholder="Last Name" class="form-control"  type="text" pattern="[A-Za-z._ ]{1,20}" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="DateOfBirth" class="form-group col-md-12" required pattern="[0-9]{1,20}"> 
+                    <label class="col-md-3 control-label" >Date Of Birth</label> 
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="col-md-12 announ-check-form none"></div>
+
+                      <div class="col-md-12 input-group" id='datetimepicker1'>
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        <input id="dateOfBirth"name="dateofbirth" placeholder="dd/mm/yyyy" class="form-control"  type="date" required="">
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-md-12" > 
+                    <label class="col-md-3 control-label">Gender</label>  
+                    <div class="col-md-8 inputGroupContainer" style="margin-top: 5px">
+                      <div id="gender" class="in-group">
+                        <div class="col-md-6 " style="padding: 2px">
+                          <label for="male">Male</label>
+                          <input type="radio" name="gender" id="male" value="male" checked="">
+                        </div>
+                        <div class="col-md-6 padding-0" style="padding: 2px">
+                          <label for="female">Female</label>
+                          <input type="radio" name="gender" id="female" value="female">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Text input-->
+
+                  <div class="form-group col-md-12"> 
+                    <label class="col-md-3 control-label">E-Mail</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="col-md-12 announ-check-form none"></div>
+
+                      <div class="col-md-12 input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input id="email" name="email" placeholder="John@example.com" class="form-control"  type="text" pattern="([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$)" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12"> 
+                    <label class="col-md-3 control-label">Contact No.</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="col-md-12 announ-check-form none"></div>
+
+                      <div class="col-md-12 input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input id="contactNo" name="contact_no" placeholder="(639)" class="form-control" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12"> 
+                    <label class="col-md-3 control-label">City</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="col-md-12 announ-check-form none"></div>
+
+                      <div class="col-md-12 input-group">
+                        <span class="input-group-addon"><i class="fa fa-institution"></i></span>
+                        <input id="city" name="city" placeholder="City" class="form-control" type="text" pattern="[A-Za-z0-9]{1,20}">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12"> 
+                    <label class="col-md-3 control-label">Country</label>
+                    <div class="col-md-8 selectContainer">
+                      <div class="input-group autocomplete">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-globe
+                        "></i></span>
+                        <input id="inputCountry-js" name="country" placeholder="Country" class="form-control" type="text">
+                      </div>
+                    </div>
+                  </div>
+                    
+                    <!-- Text input-->
+                  <div class="form-group col-md-12"> 
+                    <label class="col-md-3 control-label">Address 1</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="announ-check-form none"></div>
+
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input id="address1" name="Address_1" placeholder="Address" class="form-control"  type="text" pattern="[A-Za-z0-9 ./_]{1,56}">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12"> 
+                    <label class="col-md-3 control-label">Address 2</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="announ-check-form none"></div>
+
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input id="address2" name="Address_2" placeholder="Address" class="form-control"  type="text" pattern="[A-Za-z0-9 ./_ ]{1,56}">
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>    
-          </div>
-        </div>
-          <div class="clearfix"></div>
 
+
+                <!-- Select Basic -->
+
+                <!-- Success message -->
+                <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+
+                <!-- Button -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label"></label>
+                  <div class="col-md-4"><br>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button  type="submit" class="btn btn-success" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCập nhật<span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+                  </div>
+                </div>
+
+              </fieldset>
+            </form>
+          </div>
+        
+        </div>
+        <div class="clearfix"></div>
       </div>
       
       <!-- //footer-layouts -->
