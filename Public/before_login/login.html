@@ -29,14 +29,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- font-awesome icons -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- //Custom Theme files -->
-    <!-- online-fonts -->
-    <!-- logo -->
-    <link href="//fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
-    <!-- titles -->
-    <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
-    <!-- body -->
-    <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-    <!-- //online-fonts -->
+    <!-- reCapcha V2-->
+
+    <script type="text/javascript">
+    var verifyCallback = function(response) {
+        alert("Bạn đã đăng ký thành công");
+      };
+
+      var onloadCallback = function() {
+        // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+        // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+
+        grecaptcha.render('recapcha', {
+          'sitekey' : '6LdgDVYUAAAAAExWfTTdL9aAcqPXaXLp0f-KlFLR',
+          // 'callback' : verifyCallback,
+          'theme' : 'dark'
+          // 'style' : 'text-align:center'
+        });
+      };
+    </script>
 </head>
 
 
@@ -145,23 +156,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </nav>
         <!-- //navbar ends here -->
 
-        <div class="banner-bg-agileits">
-            <!-- banner-text -->
-            <div class="banner-text">
-                <div class="container">
-                    <p class="b-txt">US</p>
-                    <h2 class="title">
-                    Bookstore
-                    </h2>
-                    <ul class="banner-txt">
-                        <li>Hiểu biết</li>
-                        <li>Thư giãn</li>
-                        <li>Tĩnh lặng</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- //banner-text -->
-        </div>
+        <br><br><br><br>
         <!--//breadcrumbs ends here-->
         <!-- signin and signup form -->
         <div class="login-form section text-center">
@@ -204,8 +199,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
                                 <div style="margin-top:10px" class="form-group">
                                     <!-- Button -->
+
                                     <div class="col-sm-12 controls">
-                                        <a id="btn-login" href="../After_login/information_account.html" class="btn btn-success">Đăng nhập </a>
+                                        <a id="btn-login" href="../after_login/information_account.html" class="btn btn-success">Đăng nhập </a>
                                         <a id="btn-fblogin" href="information_account.html" class="btn btn-primary">Đăng nhập bằng Facebook</a>
                                     </div>
                                 </div>
@@ -264,11 +260,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
                                 <div class="form-group">
                                     <!-- Button -->
+                                    <div style="float:right; padding-bottom: 20px">
+                                         <div id="recapcha" ></div>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                    
                                     <div class="signup-btn">
-                                        <button id="btn-signup" type="button" class="btn btn-info">
+                                        <button id="btn-signup" type="Submit" class="btn btn-info" action="login.html">
                                             <i class="icon-hand-right"></i> &nbsp; Đăng kí</button>
                                     </div>
                                 </div>
+                                <!--  <div id="example3"></div>
+                                 <br>
+                                <input type="submit" value="Submit"> -->
+                                <!-- <form action="login.html" method="POST">
+                                  <div id="example3"></div>
+                                  <br>
+                                  <input type="submit" value="Submit">
+                                </form> -->
                                 <div style="border-top: 1px solid #999; padding-top:20px" class="form-group">
 
                                     <div class="f-btn">
@@ -276,6 +286,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <i class="icon-facebook"></i>   Đăng kí bằng Facebook</button>
                                     </div>
                                 </div>
+
                             </form>
                         </div>
                     </div>
@@ -512,6 +523,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer></script>
 </body>
 
 </html>
