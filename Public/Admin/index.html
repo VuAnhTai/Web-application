@@ -209,6 +209,130 @@
                     </div>
                     
                 </div>
+                <div class="span9">
+                    <ul class="breadcrumb">
+                        <li style="font-size: x-large">
+                            <i class="fa fa-plus fa-x"></i>
+                            <b> Thêm sản phẩm</b>
+                        </li>
+                    </ul>
+
+                    <div class="well">
+                        <form class="form-horizontal">
+                            <h4>Thông tin sản phẩm</h4>
+                            <div class="control-group">
+                                <label class="control-label">Tên
+                                </label>
+                                <div class="controls">
+                                    <input type="text" id="inputFname" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Giá
+                                </label>
+                                <div class="controls">
+                                    <input type="number" id="inputFprice" value=0 min="0">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Nhà xuất bản
+                                </label>
+                                <div class="controls">
+                                    <select class="span2" name="brand">
+                                        <option value="">-</option>
+                                        <option value="KD">Kim Đồng</option>
+                                        <option value="NXBT">NXB Trẻ</option>
+                                        <option value="LD">NXB Lao động</option>
+                                        <option value="TH">NXB Tổng hợp TPHCM</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Thể loại
+                                </label>
+                                <div class="controls">
+                                    <select class="span2" name="type">
+                                        <option value="">-</option>
+                                        <option value="">Truyện tranh</option>
+                                        <option value="">Tiểu thuyết</option>
+                                        <option value="">Sách tham khảo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="control-group">
+                                <label class="control-label">Mô tả</label>
+                                <div class="controls">
+                                    <textarea id="description" cols="26" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Hình ảnh
+                                </label>
+                                <div class="controls">
+                                    <input type="file" id="inputFimage">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <button type="button" class="btn btn-large btn-danger"><i class="fa fa-plus"></i> Thêm</button>
+                                
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <ul class="breadcrumb">
+                    <li style="font-size: x-large">
+                        <i class="fa fa-pencil fa-x"></i>
+                        <b> Cập nhật sản phẩm</b>
+                    </li>
+                </ul>
+                <h2 style="text-align: center">Cập nhật giá cả</h2>
+                
+                <div class="table-responsive" style="margin-top:30px">
+                    <table class="table table-condensed table-bordered table-secondary table-hover table-striped">
+                        <thead style="background-color: rgba(19, 14, 14, 0.822);color: beige">
+                            <tr class="text-primary">
+                                <th>Sản phẩm</th>
+                                <th>Loại</th>
+                                <th>Giá cũ</th>
+                                <th>Giá mới</th>
+                                <th>Cập nhật</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Th_bang">
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Truyện Conan</th>
+                                <th>20.000 đ</th>
+                                <th><input type="number" value=0 /></th>
+                                <th><button type="button" class="btn btn-danger"><span class="fa fa-pencil"></span></button></th>
+                            </tr>
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Truyện Conan</th>
+                                <th>20.000 đ</th>
+                                <th><input type="number" value=0 /></th>
+                                <th><button type="button" class="btn btn-danger"><span class="fa fa-pencil"></span></button></th>
+                            </tr>
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Truyện Conan</th>
+                                <th>20.000 đ</th>
+                                <th><input type="number" value=0 /></th>
+                                <th><button type="button" class="btn btn-danger"><span class="fa fa-pencil"></span></button></th>
+                            </tr>
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Truyện Conan</th>
+                                <th>20.000 đ</th>
+                                <th><input type="number" value=0 /></th>
+                                <th><button type="button" class="btn btn-danger"><span class="fa fa-pencil"></span></button></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <!-- /.row -->
 
                 <div class="row">

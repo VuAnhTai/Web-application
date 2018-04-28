@@ -2203,6 +2203,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </li>
                             </ul>
                         </div>
+                        
                         <!-- //price range -->
                         <!--preference -->
                         <div class="left-side">
@@ -3274,6 +3275,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- price range (top products) -->
         <script src="js/jquery-ui.js"></script>
         
+        <script>
+            //<![CDATA[ 
+            $(window).load(function () {
+                $("#slider-range").slider({
+                    range: true,
+                    min: 0,
+                    max: 300,
+                    values: [1, 60],
+                    slide: function (event, ui) {
+                        $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                    }
+                });
+                $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+    
+            }); //]]>
+        </script>
         <!-- //dropdown nav -->
         <!--search jQuery-->
         <script src="js/main.js"></script>
