@@ -1,0 +1,114 @@
+.container-order{
+	margin-bottom: 40px
+}
+div.display-his{
+	margin: 0 40px;
+	border-left: solid 1px #34c663;
+	border-right: solid 1px #34c663;
+	border-bottom: solid 1px #34c663;
+
+	background-color: white
+}
+span.Ma-Don-hang{
+	color: #34c663;
+}
+div.order
+div.order-info {
+	padding: 30px;
+	border-top: solid 1px #34c663;
+
+}
+
+div.order-info a:hover{
+	color: #34c663;;
+}
+div.order-item{
+	padding: 10px 0 ;
+}
+
+.order-info.row {
+    border-bottom: 1px solid #dadada;
+}
+.items {
+    border-bottom: 1px solid #dadada;
+}
+/*//historydetail*/
+.package .package-header {
+    margin: 9px 11px 0;
+    height: 20px;
+    line-height: 20px;
+}
+.package .package-header-text {
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+}
+.seller-info {
+    padding: 4px 12px 9px;
+    border-bottom: 1px solid #dadada;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.text.link {
+    cursor: pointer;
+    color: #1a9cb7;
+}
+
+span.text.desc {
+    padding: 20px;
+}
+
+.item{
+    padding-bottom: 30px
+}
+
+/*wapper*/
+.delivery-summary {
+    width: 488px;
+    margin-top: 12px;
+}
+delivery-summary .delivery-wrapper {
+    padding: 10px 12px;
+    height: 125px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.delivery-summary h3.title {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 9px;
+}
+.delivery-summary span {
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+}
+.delivery-summary span.username {
+    font-weight: 500;
+}
+.delivery-summary span.address {
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+}
+
+.total-summary {
+    width: 488px;
+    box-sizing: border-box;
+    float: right;
+    margin-top: 12px;
+    padding: 10px 30px;
+    background-color: white;
+    min-height: 262px;
+}
+hr {
+    border: 0;
+        border-top-width: 0px;
+        border-top-style: none;
+        border-top-color: currentcolor;
+    border-top: 1px solid #dadada;
+    margin: 14px 0;
+}

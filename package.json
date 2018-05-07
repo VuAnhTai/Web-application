@@ -1,0 +1,26 @@
+{
+  "name": "Web-application",
+  "version": "1.0.0",
+  "description": "Cấu trúc Thư Mục:\r |---Service:\r     |---Data\r         |---Images\r         |---SQL\r     |---MainService\r     |---StorageHandling\r |---Public:\r     |---Handling\r     |---Assest\r     |---index.html\r |---Views:\r     |---User\r         |---Handling\r         |---Assest\r         |---index.html\r     |---Admin\r         |---Handling\r         |---Assest\r         |---index.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VuAnhTai/Web-application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VuAnhTai/Web-application/issues"
+  },
+  "homepage": "https://github.com/VuAnhTai/Web-application#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-handlebars-sections": "^1.0.1"
+  }
+}
