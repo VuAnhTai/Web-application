@@ -1,0 +1,138 @@
+<br><br><br><br>
+<div class="login-form section text-center">
+    <div class="container">
+        <h4 class="rad-txt">
+            <a href="login.html"><span class="abtxt1">Đăng nhập</span></a>
+            
+            <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                <span class="abtext">Đăng kí</span>
+            </a>
+        </h4>
+        <!-- form login -->
+        <div id="loginbox" style="margin-top:30px;" class="mainbox  loginbox">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Đăng nhập</div>
+                    <div class="fpassword">
+                        <a href="#">Bạn quên mật khẩu?</a>
+                    </div>
+                </div>
+                <div style="padding-top:30px" class="panel-body">
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                    <form id="loginform" class="form-horizontal" action="#" method="post">
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span>
+                            <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Tên đăng nhập hoặc email" required="">
+                        </div>
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-lock"></i>
+                            </span>
+                            <input id="login-password" type="password" class="form-control" name="password" placeholder="Mật khẩu" required="">
+                        </div>
+                        <div class="input-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="login-remember" type="checkbox" name="remember" value="1"> Lưu thông tin
+                                </label>
+                            </div>
+                        </div>
+                        <div style="margin-top:10px" class="form-group">
+                            <!-- Button -->
+
+                            <div class="col-sm-12 controls">
+                                <a id="btn-login" href="../after_login/information_account.html" class="btn btn-success">Đăng nhập </a>
+                                <a id="btn-fblogin" href="information_account.html" class="btn btn-primary">Đăng nhập bằng Facebook</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 control">
+                                <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                    Bạn chưa có tài khoản!
+                                    <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                        Đăng kí tại đây
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- form signup -->
+        <div id="signupbox" style="display:none; margin-top:50px" class="mainbox loginbox">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Đăng kí</div>
+                    <div style="float:right; font-size: 85%; position: relative; top:-10px">
+                        <a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Đăng nhập</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form id="signupform" class="form-horizontal" action="#" method="post">
+                        <div id="signupalert" style="display:none" class="alert alert-danger">
+                            <p>Error:</p>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 col-xs-3 control-label">Email</label>
+                            <div class="col-md-9 col-sm-9 col-xs-9">
+                                <input type="text" class="form-control" name="email" placeholder="Địa chỉ Email" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 col-xs-3 control-label">Tên của bạn</label>
+                            <div class="col-md-9 col-sm-9 col-xs-9">
+                                <input type="text" class="form-control" name="firstname" placeholder="Tên của bạn" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 col-xs-3 control-label">Họ của bạn</label>
+                            <div class="col-md-9 col-sm-9 col-xs-9">
+                                <input type="text" class="form-control" name="lastname" placeholder="Họ của bạn" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-sm-3 col-xs-3 control-label">Mật khẩu</label>
+                            <div class="col-md-9 col-sm-9 col-xs-9">
+                                <input type="password" class="form-control" name="passwd" placeholder="Mật khẩu" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <!-- Button -->
+                            <div style="float:right; padding-bottom: 20px">
+                                 <div id="recapcha" ></div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            
+                            <div class="signup-btn">
+                                <button id="btn-signup" type="Submit" class="btn btn-info" action="login.html">
+                                    <i class="icon-hand-right"></i> &nbsp; Đăng kí</button>
+                            </div>
+                        </div>
+                        <!--  <div id="example3"></div>
+                         <br>
+                        <input type="submit" value="Submit"> -->
+                        <!-- <form action="login.html" method="POST">
+                          <div id="example3"></div>
+                          <br>
+                          <input type="submit" value="Submit">
+                        </form> -->
+                        <div style="border-top: 1px solid #999; padding-top:20px" class="form-group">
+
+                            <div class="f-btn">
+                                <button id="btn-fbsignup" type="button" class="btn btn-primary">
+                                    <i class="icon-facebook"></i>   Đăng kí bằng Facebook</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

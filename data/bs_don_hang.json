@@ -1,0 +1,23 @@
+[
+{"type":"header","version":"4.7.4","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"ban_hang"},
+{"type":"table","name":"bs_don_hang","database":"ban_hang","data":
+[
+{"id":"1","ma_don_hang":"S240220161","tong_tien":"92000","ngay_dat":"2016-02-24 00:00:00","id_nguoi_dung":null,"ho_ten_nguoi_nhan":"Nguy\u1ec5n Xu\u00e2n H\u00f9ng","email_nguoi_nhan":"hungnguyenxuan118@gmail.com","so_dien_thoai_nguoi_nhan":"0909090909","trang_thai":"1","dia_chi_nguoi_nhan":null},
+{"id":"2","ma_don_hang":"S240220162","tong_tien":"85000","ngay_dat":"2016-02-24 14:20:10","id_nguoi_dung":null,"ho_ten_nguoi_nhan":"Nguy\u1ec5n Thy M\u1ef9 Linh","email_nguoi_nhan":"linhnguyenthymy136@gmail.com","so_dien_thoai_nguoi_nhan":"0980808080","trang_thai":"1","dia_chi_nguoi_nhan":null},
+{"id":"3","ma_don_hang":"S240220163","tong_tien":"720000","ngay_dat":"2016-02-24 13:57:59","id_nguoi_dung":null,"ho_ten_nguoi_nhan":"L\u00ea V\u0103n Vi\u1ec7t","email_nguoi_nhan":"lvviet@gmail.com","so_dien_thoai_nguoi_nhan":"0908236548","trang_thai":"1","dia_chi_nguoi_nhan":null},
+{"id":"4","ma_don_hang":"S250220164","tong_tien":"658000","ngay_dat":"2016-02-25 02:04:35","id_nguoi_dung":null,"ho_ten_nguoi_nhan":"Hu\u1ef3nh B\u1ea3o","email_nguoi_nhan":"huynhbao@gmail.com","so_dien_thoai_nguoi_nhan":"0908848484","trang_thai":"1","dia_chi_nguoi_nhan":null},
+{"id":"5","ma_don_hang":"S250220165","tong_tien":"838000","ngay_dat":"2016-02-25 14:10:40","id_nguoi_dung":null,"ho_ten_nguoi_nhan":"V\u00f5 Th\u1ecb M\u1ef9 Dung","email_nguoi_nhan":"vothimydung@gmail.com","so_dien_thoai_nguoi_nhan":"0908084865","trang_thai":"1","dia_chi_nguoi_nhan":null},
+{"id":"13","ma_don_hang":null,"tong_tien":"95000","ngay_dat":"2016-03-08 07:24:48","id_nguoi_dung":"2","ho_ten_nguoi_nhan":"H\u00f9ng Nguy\u1ec5n","email_nguoi_nhan":"botautomail@gmail.com","so_dien_thoai_nguoi_nhan":"0909090909","trang_thai":"0","dia_chi_nguoi_nhan":"357 LHP P2 Q10"},
+{"id":"14","ma_don_hang":null,"tong_tien":"410000","ngay_dat":"2016-03-09 10:43:23","id_nguoi_dung":"3","ho_ten_nguoi_nhan":"H\u00f9ng Nguy\u1ec5n Xu\u00e2n","email_nguoi_nhan":"nxhung118@gmail.com","so_dien_thoai_nguoi_nhan":"09090909","trang_thai":"2","dia_chi_nguoi_nhan":"357 LHP P2 Q10"},
+{"id":"19","ma_don_hang":null,"tong_tien":"1329000","ngay_dat":"2016-03-15 09:35:43","id_nguoi_dung":"1","ho_ten_nguoi_nhan":"H\u00f9ng Nguy\u1ec5n","email_nguoi_nhan":"hungnguyenxuan118@gmail.com","so_dien_thoai_nguoi_nhan":"0909090909","trang_thai":"2","dia_chi_nguoi_nhan":"asd asdas asd asdas das"},
+{"id":"20","ma_don_hang":null,"tong_tien":"1329000","ngay_dat":"2016-03-15 09:38:52","id_nguoi_dung":"1","ho_ten_nguoi_nhan":"H\u00f9ng Nguy\u1ec5n","email_nguoi_nhan":"hungnguyenxuan118@gmail.com","so_dien_thoai_nguoi_nhan":"0909090909","trang_thai":"2","dia_chi_nguoi_nhan":"asd asdas asd asdas das"},
+{"id":"21","ma_don_hang":null,"tong_tien":"529000","ngay_dat":"2016-03-15 09:41:19","id_nguoi_dung":"1","ho_ten_nguoi_nhan":"H\u00f9ng Nguy\u1ec5n","email_nguoi_nhan":"hungnguyenxuan118@gmail.com","so_dien_thoai_nguoi_nhan":"0909090909","trang_thai":"2","dia_chi_nguoi_nhan":"asd asdas asd asdas das"},
+{"id":"22","ma_don_hang":null,"tong_tien":"462000","ngay_dat":"2016-03-15 09:42:32","id_nguoi_dung":"1","ho_ten_nguoi_nhan":"H\u00f9ng Nguy\u1ec5n","email_nguoi_nhan":"hungnguyenxuan118@gmail.com","so_dien_thoai_nguoi_nhan":"0909090909","trang_thai":"2","dia_chi_nguoi_nhan":"asd asdas asd asdas das"},
+{"id":"23","ma_don_hang":null,"tong_tien":"560000","ngay_dat":"2016-03-15 09:44:53","id_nguoi_dung":"1","ho_ten_nguoi_nhan":"H\u00f9ng Nguy\u1ec5n","email_nguoi_nhan":"hungnguyenxuan118@gmail.com","so_dien_thoai_nguoi_nhan":"0909090909","trang_thai":"2","dia_chi_nguoi_nhan":"asd asdas asd asdas das"},
+{"id":"24","ma_don_hang":null,"tong_tien":"560000","ngay_dat":"2016-03-15 10:00:16","id_nguoi_dung":"1","ho_ten_nguoi_nhan":"H\u00f9ng Nguy\u1ec5n","email_nguoi_nhan":"hungnguyenxuan118@gmail.com","so_dien_thoai_nguoi_nhan":"0909090909","trang_thai":"2","dia_chi_nguoi_nhan":"asd asdas asd asdas das"},
+{"id":"25","ma_don_hang":null,"tong_tien":"1229000","ngay_dat":"2016-03-15 10:17:05","id_nguoi_dung":"1","ho_ten_nguoi_nhan":"H\u00f9ng Nguy\u1ec5n","email_nguoi_nhan":"hungnguyenxuan118@gmail.com","so_dien_thoai_nguoi_nhan":"0909090909","trang_thai":"2","dia_chi_nguoi_nhan":"asd asdas asd asdas das"},
+{"id":"26","ma_don_hang":null,"tong_tien":"208000","ngay_dat":"2016-03-15 10:35:50","id_nguoi_dung":"3","ho_ten_nguoi_nhan":"H\u00f9ng Nguy\u1ec5n Xu\u00e2n","email_nguoi_nhan":"nxhung118@gmail.com","so_dien_thoai_nguoi_nhan":"09090909","trang_thai":"2","dia_chi_nguoi_nhan":"357 LHP P2 Q10"}
+]
+}
+]

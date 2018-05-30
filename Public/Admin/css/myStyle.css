@@ -1,0 +1,54 @@
+.contain-items{
+	text-align: center;
+	color: #777;
+}
+.contain-items .item{
+	width: 20%;
+}
+
+.checkout-left-basket h4 {
+	padding: 1em;
+	background: #eee;
+	font-size: 1em;
+	color: #000;
+	letter-spacing: 1px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 0 2em;
+}
+
+.checkout-left {
+	margin: 2em 0 0;
+}
+.checkout-left-basket ul{
+	padding: 0;
+}
+.checkout-left-basket ul li {
+	list-style-type: none;
+	margin-bottom: 1em;
+	font-size: 14px;
+	color: #999;
+}
+
+.checkout-left-basket {
+	float: left;
+	padding-left: 0;
+}
+.checkout-left-basket ul li span {
+    float: right;
+}
+.checkout-left-basket .sum {
+    font-size: 1em;
+    color: #212121;
+    font-weight: 600;
+    padding: 1em 0;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    margin: 2em 0 0;
+}
+.checkout-left-basket input{
+	width: 50px;
+    text-align: center;
+}
+    
