@@ -3441,5 +3441,45 @@ button#btn-signup {
   }
 
   .thumbnail a > img{
-      height: 200px;
+      height: 138px;
   }
+  .col-md-4.product-men {
+    width: 175px;
+    }
+
+/* best-sell */
+.bestseller-list .bestseller-item {
+    padding-bottom: 15px;
+    margin-bottom: 3px;
+    position: relative;
+}
+.bestseller-list .bestseller-item .image {
+    display: block;
+    float: left;
+    position: relative;
+    margin: 0;
+}
+.bestseller-list .bestseller-item .image img {
+    width: 70px;
+}
+
+.bestseller-list .bestseller-item .name {
+    margin-left: 90px;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+.bestseller-list .bestseller-item .price {
+    font-size: 13px;
+    color: #242424;
+    font-weight: 500;
+    padding: 10px 0 0 90px;
+    text-align: left;
+}
+.bestseller-list .bestseller-item .list-price {
+    font-size: 11px;
+    color: #a2a2a2;
+    text-decoration: line-through;
+    text-align: left;
+    padding-left: 90px;
+    font-weight: 300;
+}

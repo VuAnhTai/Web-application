@@ -1,392 +1,616 @@
 <!DOCTYPE html>
 <html lang="zxx">
-    <head>
-        <title>US Bookstore</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <script>
+
+<head>
+    <title>US Bookstore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>
         addEventListener("load", function () {
-        setTimeout(hideURLbar, 0);
+            setTimeout(hideURLbar, 0);
         }, false);
         function hideURLbar() {
-        window.scrollTo(0, 1);
+            window.scrollTo(0, 1);
         }
-        </script>
-        <!-- Custom Theme files -->
-        <link href="/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-        <!-- shop css -->
-        <link href="/css/shop.css" type="text/css" rel="stylesheet" media="all">
-        <!-- checkout css -->
-        <link href="/css/checkout.css" type="text/css" rel="stylesheet" media="all">
-        <!-- Range-slider-css -->
-        <link rel="stylesheet" type="text/css" href="/css/jquery-ui1.css">
-        <!-- common-css -->
-        <link href="/css/style.css" type="text/css" rel="stylesheet" media="all">
-        <!-- font-awesome icons -->
-        <link href="/css/font-awesome.css" rel="stylesheet">
-        <!-- //Custom Theme files -->
-        <!-- online-fonts -->
-        <!-- logo -->    
-        
-        
-        <link rel="stylesheet" href="/slider/owl-carousel/owl.carousel.css">
-        
-        <!-- Default Theme -->
-        <link rel="stylesheet" href="/slider/owl-carousel/owl.theme.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-        <!--  jQuery 1.7+  -->
-        <script src="/slider/assets/js/jquery-1.9.1.min.js"></script>
-        
-        <!-- Include js plugin -->
-        <script src="/slider/owl-carousel/owl.carousel.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        
-    </head>
-    <script>
-        $(document).ready(function() {
-        $("#owl-example").owlCarousel();
-        
-      })
-      $(document).ready(function() {
-        $("#owl-example2").owlCarousel();
-        
-      })
-      $(document).ready(function() {
-        $("#owl-example3").owlCarousel();
-        
-      })
-      
     </script>
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-        <div id="home">
-            <!-- header -->
-            <!-- navbar -->
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="main-nav">
-                    <div class="container">
-                        <div class="navbar-header page-scroll">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+    <!-- Custom Theme files -->
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <!-- shop css -->
+    <link href="/css/shop.css" type="text/css" rel="stylesheet" media="all">
+    <!-- checkout css -->
+    <link href="/css/checkout.css" type="text/css" rel="stylesheet" media="all">
+    <!-- Range-slider-css -->
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui1.css">
+    <!-- common-css -->
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <!-- logo -->
+
+
+    <link rel="stylesheet" href="/slider/owl-carousel/owl.carousel.css">
+
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="/slider/owl-carousel/owl.theme.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!--  jQuery 1.7+  -->
+    <script src="/slider/assets/js/jquery-1.9.1.min.js"></script>
+
+    <!-- Include js plugin -->
+    <script src="/slider/owl-carousel/owl.carousel.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> {{{_sections.css}}}
+</head>
+<script>
+    $(document).ready(function () {
+        $("#owl-example").owlCarousel();
+
+    })
+    $(document).ready(function () {
+        $("#owl-example2").owlCarousel();
+
+    })
+    $(document).ready(function () {
+        $("#owl-example3").owlCarousel();
+
+    })
+
+</script>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="home">
+        <!-- header -->
+        <!-- navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="main-nav">
+                <div class="container">
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                             <span class="sr-only">US Bookstore</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
-                            </button>
-                            <h1>
-                            <a style="margin-top: -18px;"  href="index">
-                                <img src="/images/logo.png" class="logo"  />
-                                <span class="navbar-brand" >USBS</span>
-                                
+                        </button>
+                        <h1>
+                            <a style="margin-top: -18px;" href="index">
+                                <img src="/images/logo.png" class="logo" />
+                                <span class="navbar-brand">USBS</span>
+
                             </a>
-                            </h1>
-                        </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse navbar-ex1-collapse nav-right">
-                            <ul class="nav navbar-nav navbar-left cl-effect-15">
-                                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                                <li class="hidden">
-                                    <a class="page-scroll" href="#page-top"></a>
-                                </li>
-                                <li id="home">
-                                    <a href="/home">Home</a>
-                                </li>
-                                <li id="about">
-                                    <a href="/about">about us</a>
-                                </li >
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">shop
-                                        <b class="caret"></b>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="/checkout">checkout</a>
-                                        </li>
-                                        <li>
-                                            <a href="/payment">Payment</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                
-                                <li id="contact">
-                                    <a href="/contact">Contact us</a>
-                                </li>
-                                <li id="admin">
-                                    <a href="../Admin/index">ADMIN</a>
-                                </li>
-                                <li>
-                                    <a href="/login" title="SignIn & SignUp">
-                                        <span class="fa fa-user nav-icon" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- search-bar -->
-                            <div class="search-bar-agileits">
-                                <div class="cd-main-header">
-                                    <ul class="cd-header-buttons">
-                                        <li>
-                                            <a class="cd-search-trigger" href="#cd-search">
-                                                <span></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- cd-header-buttons -->
-                                </div>
-                                <div id="cd-search" class="cd-search">
-                                    <form action="#" method="post">
-                                        <input name="Search" type="search" placeholder="Nhập và bấm Enter">
-                                    </form>
-                                </div>
-                            </div>
-                            <!-- //search-bar ends here -->
-                            <!-- shopping cart -->
-                            <div class="cart-mainf">
-                                <div class="chrcart chrcart2 cart cart box_1">
-                                    <form action="#" method="post" class="last">
-                                        <input type="hidden" name="cmd" value="_cart">
-                                        <input type="hidden" name="display" value="1">
-                                        <button class="top_chr_cart" type="submit" name="submit" value="">
-                                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                            <!-- //shopping cart ends here -->
-                        </div>
-                        <!-- /.navbar-collapse -->
-                        <div class="clearfix"></div>
+                        </h1>
                     </div>
-                    <!-- /.container -->
-                </div>
-            </nav>
-            <!-- //navbar ends here -->
-  			
-  			<!-- ********************************************************************************* -->
-  			{{{body}}}
-  			<!-- ********************************************************************************* -->
-            <!-- footer -->
-            <div class="footer-bottom section">
-                <div class="container">
-                    <!-- newsletter -->
-                    <div class="subscribe-main section-w3layouts text-center">
-                        <h4 class="rad-txt">
-                        <span class="abtxt1">Nhập Email</span>
-                        <span class="abtext">Cập nhật liên tục</span>
-                        </h4>
-                        <h5>ĐỂ LẠI EMAIL CỦA BẠN ĐỂ CẬP NHẬT NHỮNG ƯU ĐÃI HOT NHẤT TỪ USBS </h5>
-                        <div class="subscribe-form">
-                            <form action="#" method="post" class="subscribe_form">
-                                <div class="email-news">
-                                    <input type="email" placeholder="Email" required="">
-                                </div>
-                                <div class="sub-news">
-                                    <input type="submit" value="Nhận ưu đãi !!!">
-                                </div>
-                            </form>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <p>We respect your privacy.No spam ever!</p>
-                    </div>
-                    <!-- //newsletter ends here -->
-                    <!-- footer grids-->
-                    <div class="footer-cpy">
-                        <!-- footer-grid1 -->
-                        <div class="col-md-3 col-sm-6 footer-logo" style="margin-top: -26px; margin-left:-7px;">
-                            <h3>
-                            <a href="index">
-                                <span style="font-family: Arial" >US Bookstore</span>
-                            </a>
-                            </h3>
-                            <h4>about us</h4>
-                            <img src="/images/dadk.png" style="width: 300px; margin-top: 33px; margin-left: -5px" />
-                        </div>
-                        <!-- //footer-grid1 -->
-                        <!-- footer-grid2 -->
-                        <div class="col-md-3 col-sm-6 footer-nav text-center">
-                            <h4>NAVIGATION</h4>
-                            <ul>
-                                <li>
-                                    <a href="/home">Home</a>
-                                </li>
-                                <li>
-                                    <a href="/app.js">About us</a>
-                                </li>
-                                <li>
-                                    <a href="/shop">shop</a>
-                                </li>
-                                <li>
-                                    <a href="/contact">contact us</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //footer-grid2 -->
-                        <!-- footer-grid3 -->
-                        <div class="col-md-3 col-sm-6 blog-footer">
-                            <h4>TIN TỨC LIÊN QUAN</h4>
-                            <div class="blog1">
-                                <div class="col-md-3 col-sm-3 col-xs-2 bl1">
-                                    <a href="#">
-                                        <img src="/images/b1.jpg" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="col-md-9 col-sm-9 col-xs-10 bl2">
-                                    <a href="#">Nhà sách US mở thêm 10 chi nhánh</a>
-                                    <p>17 tháng 3, 2018</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="blog1">
-                                <div class="col-md-3 col-sm-3 col-xs-2 bl1">
-                                    <a href="#">
-                                        <img src="/images/b2.jpg" alt="" class="img-responsive" />
-                                    </a>
-                                </div>
-                                <div class="col-md-9 col-sm-9 col-xs-10 bl2">
-                                    <a href="#">Bộ giáo dục ra quyết định khen thưởng USBS</a>
-                                    <p>5 tháng 3, 2018</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                        <!-- //footer-grid3 -->
-                        <!-- footer-grid4 -->
-                        <div class="col-md-3 col-sm-6 contact-foot text-right">
-                            <h4>LIÊN HỆ</h4>
-                            <ul>
-                                <li>
-                                    <span class="fa fa-home"></span>
-                                    227 Nguyễn Văn Cừ, P4, Q5, TPHCM
-                                    <br> Việt Nam
-                                </li>
-                                <li>
-                                    <span class="fa fa-phone"></span>
-                                    +84 908980435
-                                </li>
-                                <li>
-                                    <span class="fa fa-envelope"></span>
-                                    <a href="mailto:1512470@student.hcmus.edu.vn">USBS@hcmus.edu.vn</a>
-                                    <a href="mailto:1512470@student.hcmus.edu.vn">US@books.vn</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //footer-grid4 -->
-                        <div class="clearfix"></div>
-                    </div>
-                    <!-- //footer-grids -->
-                    <!-- footer social -->
-                    <div class="footer-social text-center">
-                        <h4>stay connected with us</h4>
-                        <ul>
-                            <li>
-                                <a href="https://www.facebook.com/profile.php?id=100006522224736">
-                                    <span class="fa fa-facebook icon_facebook"></span>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse nav-right">
+                        <ul class="nav navbar-nav navbar-left cl-effect-15">
+                            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                            <li class="hidden">
+                                <a class="page-scroll" href="#page-top"></a>
+                            </li>
+                            <li id="home">
+                                <a href="/home">Home</a>
+                            </li>
+                            <li id="about">
+                                <a href="/about">about us</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">shop
+                                    <b class="caret"></b>
                                 </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="/checkout">checkout</a>
+                                    </li>
+                                    <li>
+                                        <a href="/payment">Payment</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li id="contact">
+                                <a href="/contact">Contact us</a>
+                            </li>
+                            <li id="admin">
+                                <a href="../Admin/index">ADMIN</a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/jypetwice">
-                                    <span class="fa fa-twitter icon_twitter"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.facebook.com/VuAnhTai1997">
-                                    <span class="fa fa-dribbble icon_dribbble"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://plus.google.com/u/0/100930126277695403127">
-                                    <span class="fa fa-google-plus icon_g_plus"></span>
+                                <a href="/login" title="SignIn & SignUp">
+                                    <span class="fa fa-user nav-icon" aria-hidden="true"></span>
                                 </a>
                             </li>
                         </ul>
+                        <!-- search-bar -->
+                        <div class="search-bar-agileits">
+                            <div class="cd-main-header">
+                                <ul class="cd-header-buttons">
+                                    <li>
+                                        <a class="cd-search-trigger" href="#cd-search">
+                                            <span></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- cd-header-buttons -->
+                            </div>
+                            <div id="cd-search" class="cd-search">
+                                <form action="#" method="post">
+                                    <input name="Search" type="search" placeholder="Nhập và bấm Enter">
+                                </form>
+                            </div>
+                        </div>
+                        <!-- //search-bar ends here -->
+                        <!-- shopping cart -->
+                        <div class="cart-mainf">
+                            <div class="chrcart chrcart2 cart cart box_1">
+                                <form action="#" method="post" class="last">
+                                    <input type="hidden" name="cmd" value="_cart">
+                                    <input type="hidden" name="display" value="1">
+                                    <button class="top_chr_cart" type="submit" name="submit" value="">
+                                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- //shopping cart ends here -->
                     </div>
-                    <!-- //footer social -->
+                    <!-- /.navbar-collapse -->
+                    <div class="clearfix"></div>
                 </div>
-                <!-- //footer container -->
+                <!-- /.container -->
             </div>
-            <!-- //footer -->
-            <div class="cpy-right">
-                <p>© 2018 USBS. All rights reserved | Design by
-                    <a href="http://w3layouts.com"> Chronicle Team</a>
-                </p>
+        </nav>
+        <!-- //navbar ends here -->
+        {{{_sections.background}}}
+        <!-- ********************************************************************************* -->
+        <div class="innerf-pages section">
+            <div class="container-cart row">
+                <!-- product left -->
+
+                <div class="col-md-3">
+                    <!--preference -->
+                    <div class="side-bar">
+                        <div class="left-side">
+                            <h3 class="shopf-sear-headits-sear-head">
+                                Thể loại</h3>
+                            <ul>
+                                {{#each layoutVM.categories}}
+                                <li>
+                                    <a href="/product/byCat/{{id}}" class="list-group-item">
+                                        <span class="span">{{ten_loai_sach}}</span>
+                                    </a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+
+                        <div class="left-side">
+                            <h3 class="shopf-sear-headits-sear-head">
+                                Nhà xuất bản</h3>
+                            <ul>
+                                {{#each layoutVM.suppliers}}
+                                <li>
+                                    <a href="/product/bySup/{{id}}" class="list-group-item">
+                                        <span class="span">{{ten_nha_xuat_ban}}</span>
+                                    </a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <!-- // preference -->
+                        <div class="search-hotel">
+                            <h3 class="shopf-sear-headits-sear-head">
+                                <span>Tìm</span> theo tên tác giả</h3>
+                            <form action="#" method="post">
+                                <input type="search" placeholder="Nhập..." name="search" required="">
+                                <input type="submit" value="Tìm">
+                            </form>
+                        </div>
+                        <!--preference -->
+                    </div>
+                    <div class="side-bar">
+                        <div id="collapse-bestseller" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-bestseller">
+                            <div class="bestseller-list">
+                                {{!--
+                                <a href="/bestsellers/lam-dep-suc-khoe/c1520" class="see-all">
+                                    Xem tất cả Top 100 trong tuần
+                                </a> --}}
+                                <br>
+                                <h4>Sản phẩm bán chạy nhất</h4>
+                                <br>
+                                <div class="bestseller-item">
+                                    <p class="image">
+                                        <a href="https://tiki.vn/bong-tay-trang-jomi-120-mieng-tui-p491314.html" title="Bông Tẩy Trang Jomi 120 Miếng/Túi">
+                                            <img src="https://vcdn.tikicdn.com/cache/70x98/media/catalog/product/b/o/bong tay trang 120.u2409.d20160421.t102508.jpg">
+                                        </a>
+                                        <span class="rank rank3">1</span>
+                                    </p>
+                                    <p class="name">
+                                        <a href="https://tiki.vn/bong-tay-trang-jomi-120-mieng-tui-p491314.html" title="Bông Tẩy Trang Jomi 120 Miếng/Túi">
+                                            Bông Tẩy Trang Jomi 120... </a>
+                                    </p>
+
+                                    <p class="price">29.000&nbsp;₫</p>
+                                    <p class="list-price">35.000&nbsp;₫</p>
+                                </div>
+                                <div class="bestseller-item">
+                                    <p class="image">
+                                        <a href="https://tiki.vn/bo-doi-maybelline-mascara-magnum-big-shot-va-ke-mat-maybelline-hyper-sharp-lazer-p1567679.html"
+                                            title="Bộ Đôi Maybelline Mascara Magnum Big Shot Và Kẻ Mắt Maybelline Hyper Sharp Lazer">
+                                            <img src="https://vcdn.tikicdn.com/cache/70x98/ts/product/97/6e/0d/6ef8e0dacae9b9e30e8d2a18a0c5c2ef.jpg">
+                                        </a>
+                                        <span class="rank rank3">2</span>
+                                    </p>
+                                    <p class="name">
+                                        <a href="https://tiki.vn/bo-doi-maybelline-mascara-magnum-big-shot-va-ke-mat-maybelline-hyper-sharp-lazer-p1567679.html"
+                                            title="Bộ Đôi Maybelline Mascara Magnum Big Shot Và Kẻ Mắt Maybelline Hyper Sharp Lazer">
+                                            Bộ Đôi Maybelline Mascara... </a>
+                                    </p>
+
+                                    <p class="price">179.000&nbsp;₫</p>
+                                    <p class="list-price">360.000&nbsp;₫</p>
+                                </div>
+                                <div class="bestseller-item">
+                                    <p class="image">
+                                        <a href="https://tiki.vn/bo-cham-soc-da-va-ngan-ngua-lao-hoa-l-oreal-revitalift-p1040930.html" title="Bộ Chăm Sóc Da Và Ngăn Ngừa Lão Hóa L'oreal Revitalift">
+                                            <img src="https://vcdn.tikicdn.com/cache/70x98/media/catalog/product/1/_/1.u2409.d20171020.t084648.56321.jpg">
+                                        </a>
+                                        <span class="rank rank3">3</span>
+                                    </p>
+                                    <p class="name">
+                                        <a href="https://tiki.vn/bo-cham-soc-da-va-ngan-ngua-lao-hoa-l-oreal-revitalift-p1040930.html" title="Bộ Chăm Sóc Da Và Ngăn Ngừa Lão Hóa L'oreal Revitalift">
+                                            Bộ Chăm Sóc Da Và Ngăn Ngừa... </a>
+                                    </p>
+
+                                    <p class="price">1.072.000&nbsp;₫</p>
+                                    <p class="list-price">1.072.000&nbsp;₫</p>
+                                </div>
+                                <div class="bestseller-item">
+                                    <p class="image">
+                                        <a href="https://tiki.vn/sua-rua-mat-am-min-va-san-chac-da-senka-perfect-whip-collagen-in-14839-120g-p2123245.html" title="Sữa Rửa Mặt Ẩm Mịn Và Săn Chắc Da Senka Perfect Whip Collagen In 14839 (120g)">
+                                            <img src="https://vcdn.tikicdn.com/cache/70x98/ts/product/f1/fc/ce/67f855e645b8a050bbb4a2ad6ebf0808.jpg">
+                                        </a>
+                                        <span class="rank rank3">4</span>
+                                    </p>
+                                    <p class="name">
+                                        <a href="https://tiki.vn/sua-rua-mat-am-min-va-san-chac-da-senka-perfect-whip-collagen-in-14839-120g-p2123245.html" title="Sữa Rửa Mặt Ẩm Mịn Và Săn Chắc Da Senka Perfect Whip Collagen In 14839 (120g)">
+                                            Sữa Rửa Mặt Ẩm Mịn Và Săn... </a>
+                                    </p>
+
+                                    <p class="price">89.000&nbsp;₫</p>
+                                    <p class="list-price">115.000&nbsp;₫</p>
+                                </div>
+                                <div class="bestseller-item">
+                                    <p class="image">
+                                        <a href="https://tiki.vn/sua-rua-mat-tao-bot-chiet-xuat-to-tam-trang-senka-perfect-whip-120g-14839-p568830.html" title="Sữa Rửa Mặt Tạo Bọt Chiết Xuất Tơ Tằm Trắng Senka Perfect Whip 120g - 14839">
+                                            <img src="https://vcdn.tikicdn.com/cache/70x98/ts/product/01/e5/d1/1493405f010f44c3bea899a9626fa807.jpg">
+                                        </a>
+                                        <span class="rank rank3">5</span>
+                                    </p>
+                                    <p class="name">
+                                        <a href="https://tiki.vn/sua-rua-mat-tao-bot-chiet-xuat-to-tam-trang-senka-perfect-whip-120g-14839-p568830.html" title="Sữa Rửa Mặt Tạo Bọt Chiết Xuất Tơ Tằm Trắng Senka Perfect Whip 120g - 14839">
+                                            Sữa Rửa Mặt Tạo Bọt Chiết... </a>
+                                    </p>
+
+                                    <p class="price">75.000&nbsp;₫</p>
+                                    <p class="list-price">95.000&nbsp;₫</p>
+                                </div>
+                                <div class="bestseller-item">
+                                    <p class="image">
+                                        <a href="https://tiki.vn/combo-thuoc-nhuom-toc-l-oreal-exc-creme-172ml-p1511575.html" title="Combo Thuốc Nhuộm Tóc L'oreal Exc Crème (172ml)">
+                                            <img src="https://vcdn.tikicdn.com/cache/70x98/ts/product/2a/1e/69/d367d5d8f06df045e78205a77159934b.jpg">
+                                        </a>
+                                        <span class="rank rank3">6</span>
+                                    </p>
+                                    <p class="name">
+                                        <a href="https://tiki.vn/combo-thuoc-nhuom-toc-l-oreal-exc-creme-172ml-p1511575.html" title="Combo Thuốc Nhuộm Tóc L'oreal Exc Crème (172ml)">
+                                            Combo Thuốc Nhuộm Tóc L'oreal... </a>
+                                    </p>
+
+                                    <p class="price">179.000&nbsp;₫</p>
+                                    <p class="list-price">336.000&nbsp;₫</p>
+                                </div>
+                                <div class="bestseller-item">
+                                    <p class="image">
+                                        <a href="https://tiki.vn/mascara-dau-dua-duong-mi-milaganics-p440260.html" title="Mascara Dầu Dừa Dưỡng Mi Milaganics">
+                                            <img src="https://vcdn.tikicdn.com/cache/70x98/media/catalog/product/c/o/combo_mascara_d_u_d_a_milaganics_5ml.jpg">
+                                        </a>
+                                        <span class="rank rank3">7</span>
+                                    </p>
+                                    <p class="name">
+                                        <a href="https://tiki.vn/mascara-dau-dua-duong-mi-milaganics-p440260.html" title="Mascara Dầu Dừa Dưỡng Mi Milaganics">
+                                            Mascara Dầu Dừa Dưỡng Mi... </a>
+                                    </p>
+
+                                    <p class="price">25.000&nbsp;₫</p>
+                                    <p class="list-price">60.000&nbsp;₫</p>
+                                </div>
+                                <div class="bestseller-item">
+                                    <p class="image">
+                                        <a href="https://tiki.vn/son-kem-li-maybelline-super-stay-matte-ink-5ml-p2028327.html" title="Son Kem Lì Maybelline Super Stay Matte Ink 5ml">
+                                            <img src="https://vcdn.tikicdn.com/cache/70x98/ts/product/25/0b/17/5eb4479f061987cbd26b329e24bce0d4.jpg">
+                                        </a>
+                                        <span class="rank rank3">8</span>
+                                    </p>
+                                    <p class="name">
+                                        <a href="https://tiki.vn/son-kem-li-maybelline-super-stay-matte-ink-5ml-p2028327.html" title="Son Kem Lì Maybelline Super Stay Matte Ink 5ml">
+                                            Son Kem Lì Maybelline Super... </a>
+                                    </p>
+
+                                    <p class="price">179.000&nbsp;₫</p>
+                                    <p class="list-price">205.000&nbsp;₫</p>
+                                </div>
+                                <div class="bestseller-item">
+                                    <p class="image">
+                                        <a href="https://tiki.vn/son-tra-xanh-thien-nhien-duong-moi-giam-tham-milaganics-4-5g-p524810.html" title="Son Trà Xanh Thiên Nhiên Dưỡng Môi, Giảm Thâm Milaganics (4.5g)">
+                                            <img src="https://vcdn.tikicdn.com/cache/70x98/media/catalog/product/s/o/son-duong-moi-tra-xanh-milaganics-4-5g-2677-6266705-54e7ef921b46aa8b973edb0f78625ad2-zoom.u3059.d20170410.t154708.809596.jpg">
+                                        </a>
+                                        <span class="rank rank3">9</span>
+                                    </p>
+                                    <p class="name">
+                                        <a href="https://tiki.vn/son-tra-xanh-thien-nhien-duong-moi-giam-tham-milaganics-4-5g-p524810.html" title="Son Trà Xanh Thiên Nhiên Dưỡng Môi, Giảm Thâm Milaganics (4.5g)">
+                                            Son Trà Xanh Thiên Nhiên... </a>
+                                    </p>
+
+                                    <p class="price">39.000&nbsp;₫</p>
+                                    <p class="list-price">90.000&nbsp;₫</p>
+                                </div>
+                                <div class="bestseller-item">
+                                    <p class="image">
+                                        <a href="https://tiki.vn/combo-3-bot-hu-milaganics-duong-da-yen-mach-khoai-tay-100g-yen-mach-dau-do-100g-dau-xanh-100g-p870418.html"
+                                            title="Combo 3 Bột Hũ Milaganics Dưỡng Da: Yến Mạch Khoai Tây (100g) + Yến Mạch Đậu Đỏ (100g) + Đậu Xanh (100g)">
+                                            <img src="https://vcdn.tikicdn.com/cache/70x98/media/catalog/product/c/o/combo-3-bot-hu-milaganics_1.u2409.d20170830.t191417.88803.jpg">
+                                        </a>
+                                        <span class="rank rank3">10</span>
+                                    </p>
+                                    <p class="name">
+                                        <a href="https://tiki.vn/combo-3-bot-hu-milaganics-duong-da-yen-mach-khoai-tay-100g-yen-mach-dau-do-100g-dau-xanh-100g-p870418.html"
+                                            title="Combo 3 Bột Hũ Milaganics Dưỡng Da: Yến Mạch Khoai Tây (100g) + Yến Mạch Đậu Đỏ (100g) + Đậu Xanh (100g)">
+                                            Combo 3 Bột Hũ Milaganics... </a>
+                                    </p>
+
+                                    <p class="price">69.000&nbsp;₫</p>
+                                    <p class="list-price">380.000&nbsp;₫</p>
+                                </div>
+                                <a href="/bestsellers/lam-dep-suc-khoe/c1520" class="see-all">
+                                    Xem tất cả Top 100 trong tuần
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid col-md-9 left-ads-display">
+                    {{{body}}}
+                </div>
             </div>
         </div>
-        <!-- //home -->
-        <!-- js -->
-        <!-- Common js -->
-        <!-- <script src="js/jquery-2.2.3.min.js"></script> -->
-        <!--// Common js -->
-        <!-- cart-js -->
-        <script src="js/minicart.js"></script>
-        <script>
+        <!-- ********************************************************************************* -->
+        <!-- footer -->
+        <div class="clearfix"></div>
+        
+        <div class="footer-bottom section">
+            <div class="container">
+                <!-- newsletter -->
+                <div class="subscribe-main section-w3layouts text-center">
+                    <h4 class="rad-txt">
+                        <span class="abtxt1">Nhập Email</span>
+                        <span class="abtext">Cập nhật liên tục</span>
+                    </h4>
+                    <h5>ĐỂ LẠI EMAIL CỦA BẠN ĐỂ CẬP NHẬT NHỮNG ƯU ĐÃI HOT NHẤT TỪ USBS </h5>
+                    <div class="subscribe-form">
+                        <form action="#" method="post" class="subscribe_form">
+                            <div class="email-news">
+                                <input type="email" placeholder="Email" required="">
+                            </div>
+                            <div class="sub-news">
+                                <input type="submit" value="Nhận ưu đãi !!!">
+                            </div>
+                        </form>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <p>We respect your privacy.No spam ever!</p>
+                </div>
+                <!-- //newsletter ends here -->
+                <!-- footer grids-->
+                <div class="footer-cpy">
+                    <!-- footer-grid1 -->
+                    <div class="col-md-3 col-sm-6 footer-logo" style="margin-top: -26px; margin-left:-7px;">
+                        <h3>
+                            <a href="index">
+                                <span style="font-family: Arial">US Bookstore</span>
+                            </a>
+                        </h3>
+                        <h4>about us</h4>
+                        <img src="/images/dadk.png" style="width: 300px; margin-top: 33px; margin-left: -5px" />
+                    </div>
+                    <!-- //footer-grid1 -->
+                    <!-- footer-grid2 -->
+                    <div class="col-md-3 col-sm-6 footer-nav text-center">
+                        <h4>NAVIGATION</h4>
+                        <ul>
+                            <li>
+                                <a href="/home">Home</a>
+                            </li>
+                            <li>
+                                <a href="/app.js">About us</a>
+                            </li>
+                            <li>
+                                <a href="/shop">shop</a>
+                            </li>
+                            <li>
+                                <a href="/contact">contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //footer-grid2 -->
+                    <!-- footer-grid3 -->
+                    <div class="col-md-3 col-sm-6 blog-footer">
+                        <h4>TIN TỨC LIÊN QUAN</h4>
+                        <div class="blog1">
+                            <div class="col-md-3 col-sm-3 col-xs-2 bl1">
+                                <a href="#">
+                                    <img src="/images/b1.jpg" alt="" class="img-responsive" />
+                                </a>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-10 bl2">
+                                <a href="#">Nhà sách US mở thêm 10 chi nhánh</a>
+                                <p>17 tháng 3, 2018</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="blog1">
+                            <div class="col-md-3 col-sm-3 col-xs-2 bl1">
+                                <a href="#">
+                                    <img src="/images/b2.jpg" alt="" class="img-responsive" />
+                                </a>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-10 bl2">
+                                <a href="#">Bộ giáo dục ra quyết định khen thưởng USBS</a>
+                                <p>5 tháng 3, 2018</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- //footer-grid3 -->
+                    <!-- footer-grid4 -->
+                    <div class="col-md-3 col-sm-6 contact-foot text-right">
+                        <h4>LIÊN HỆ</h4>
+                        <ul>
+                            <li>
+                                <span class="fa fa-home"></span>
+                                227 Nguyễn Văn Cừ, P4, Q5, TPHCM
+                                <br> Việt Nam
+                            </li>
+                            <li>
+                                <span class="fa fa-phone"></span>
+                                +84 908980435
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope"></span>
+                                <a href="mailto:1512470@student.hcmus.edu.vn">USBS@hcmus.edu.vn</a>
+                                <a href="mailto:1512470@student.hcmus.edu.vn">US@books.vn</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //footer-grid4 -->
+                    <div class="clearfix"></div>
+                </div>
+                <!-- //footer-grids -->
+                <!-- footer social -->
+                <div class="footer-social text-center">
+                    <h4>stay connected with us</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100006522224736">
+                                <span class="fa fa-facebook icon_facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/jypetwice">
+                                <span class="fa fa-twitter icon_twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/VuAnhTai1997">
+                                <span class="fa fa-dribbble icon_dribbble"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/u/0/100930126277695403127">
+                                <span class="fa fa-google-plus icon_g_plus"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //footer social -->
+            </div>
+            <!-- //footer container -->
+        </div>
+        <!-- //footer -->
+        <div class="cpy-right">
+            <p>© 2018 USBS. All rights reserved | Design by
+                <a href="http://w3layouts.com"> Chronicle Team</a>
+            </p>
+        </div>
+    </div>
+    <!-- //home -->
+    <!-- js -->
+    <!-- Common js -->
+    <!-- <script src="js/jquery-2.2.3.min.js"></script> -->
+    <!--// Common js -->
+    <!-- cart-js -->
+    <script src="js/minicart.js"></script>
+    <script>
         chr.render();
         chr.cart.on('new_checkout', function (evt) {
-        var items, len, i;
-        if (this.subtotal() > 0) {
-        items = this.items();
-        for (i = 0, len = items.length; i < len; i++) {}
-        }
+            var items, len, i;
+            if (this.subtotal() > 0) {
+                items = this.items();
+                for (i = 0, len = items.length; i < len; i++) { }
+            }
         });
-        </script>
-        <!-- //cart-js -->
-        <!-- price range (top products) -->
-        <script src="js/jquery-ui.js"></script>
-        <script>
-            //<![CDATA[ 
-            $(window).load(function () {
-                $("#slider-range").slider({
-                    range: true,
-                    min: 0,
-                    max: 300,
-                    values: [1, 60],
-                    slide: function (event, ui) {
-                        $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-                    }
-                });
-                $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
-    
-            }); //]]>
-        </script>
-        
-        <!-- //dropdown nav -->
-        <!--search jQuery-->
-        <script src="/js/main.js"></script>
-        <!--search jQuery-->
-        <!-- Scrolling Nav JavaScript -->
-        <script src="/js/scrolling-nav.js"></script>
-        <!-- //fixed-scroll-nav-js -->
-        <!--//scripts-->
-        <script src="/js/bootstrap.js"></script>
-        <!-- start-smoth-scrolling -->
-        <script src="/js/move-top.js"></script>
-        <script src="/js/easing.js"></script>
-        <script>
+    </script>
+    <!-- //cart-js -->
+    <!-- price range (top products) -->
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        //<![CDATA[ 
+        $(window).load(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 300,
+                values: [1, 60],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+        }); //]]>
+    </script>
+
+    <!-- //dropdown nav -->
+    <!--search jQuery-->
+    <script src="/js/main.js"></script>
+    <!--search jQuery-->
+    <!-- Scrolling Nav JavaScript -->
+    <script src="/js/scrolling-nav.js"></script>
+    <!-- //fixed-scroll-nav-js -->
+    <!--//scripts-->
+    <script src="/js/bootstrap.js"></script>
+    <!-- start-smoth-scrolling -->
+    <script src="/js/move-top.js"></script>
+    <script src="/js/easing.js"></script>
+    <script>
         jQuery(document).ready(function ($) {
-        $(".scroll").click(function (event) {
-        event.preventDefault();
-        $('html,body').animate({
-        scrollTop: $(this.hash).offset().top
-        }, 1000);
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
         });
-        });
-        </script>
-        <!-- start-smoth-scrolling -->
-        <!-- here stars scrolling icon -->
-        <script>
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- here stars scrolling icon -->
+    <script>
         $(document).ready(function () {
-        /*
-        var defaults = {
-        containerID: 'toTop', // fading element id
-        containerHoverID: 'toTopHover', // fading element hover id
-        scrollSpeed: 1200,
-        easingType: 'linear'
-        };
-        */
-        $().UItoTop({
-        easingType: 'easeOutQuart'
+            /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+            */
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
         });
-        });
-        </script>
-        <script src="/js/SmoothScroll.min.js"></script>
-        <!-- //smoothscroll -->
-       
-    </body>
+    </script>
+    <script src="/js/SmoothScroll.min.js"></script>
+    <!-- //smoothscroll -->
+    {{{_sections.js}}}
+</body>
+
 </html>

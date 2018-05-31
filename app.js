@@ -12,9 +12,9 @@ var handle404MDW = require('./middle-wares/handle404'),
     handleLayoutMDW = require('./middle-wares/handleLayout'),
     restrict = require('./middle-wares/restrict');
 
-var homeController = require('./controllers/homeController');
+var homeController = require('./controllers/homeController'),
     // categoryController = require('./controllers/categoryController'),
-    // productController = require('./controllers/productController'),
+    productController = require('./controllers/productController');
     // accountController = require('./controllers/accountController'),
     // cartController = require('./controllers/cartController');
 
@@ -70,13 +70,15 @@ app.use(session({
     saveUninitialized: false
 }));
 
-// app.use(handleLayoutMDW);
+app.use(handleLayoutMDW);
 
 app.get('/', (req, res) => {
     res.redirect('/home');
 });
 
 app.use('/home', homeController);
+app.use('/product', productController);
+
 
 app.use(handle404MDW);
 
