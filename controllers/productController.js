@@ -17,10 +17,11 @@ router.get('/byCat/:catId', (req, res) => {
     var p2 = productRepo.countByCat(catId);
     Promise.all([p1, p2]).then(([pRows, countRows]) => {
         // console.log(pRows);
-        // console.log(countRows);
 
         var total = countRows[0].total;
+
         var nPages = total / config.PRODUCTS_PER_PAGE;
+        
         if (total % config.PRODUCTS_PER_PAGE > 0) {
             nPages++;
         }
@@ -49,7 +50,7 @@ router.get('/bySup/:supId', (req, res) => {
     if (!page) {
         page = 1;
     }
-    console.log(config.PRODUCTS_PER_PAGE);
+    // console.log(config.PRODUCTS_PER_PAGE);
     var offset = (page - 1) * config.PRODUCTS_PER_PAGE;
 
     var p1 = productRepo.loadAllBySup(supId, offset);
