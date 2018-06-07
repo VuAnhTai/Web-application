@@ -82,14 +82,26 @@ router.get('/bySup/:supId', (req, res) => {
     });
 });
 
-router.get('/detail/:proId', (req, res) => {
-    var proId = req.params.proId;
+router.get('/detail/:id', (req, res) => {
+    var proId = req.params.id;
+
+
+    // res.render('product/detail');
+
     productRepo.single(proId).then(rows => {
         if (rows.length > 0) {
-            var vm = {
-                product: rows[0]
-            }
-            res.render('product/detail', vm);
+            var p1 = productRepo.loadByCat(rows[0].id_loai_sach);
+            var p2 = productRepo.loadBySup(rows[0].id_nha_xuat_ban);
+            Promise.all([p1, p2]).then(([cat, sup]) => {
+                var vm = {
+                    product: rows[0],
+                    productsByCat: cat,
+                    productsBySup: sup
+                }
+                console.log(vm.productsByCat);
+                res.render('product/detail', vm);
+
+            });
         } else {
             res.redirect('/');
         }
