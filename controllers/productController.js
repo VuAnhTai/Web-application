@@ -98,7 +98,7 @@ router.get('/detail/:id', (req, res) => {
                     productsByCat: cat,
                     productsBySup: sup
                 }
-                console.log(vm.productsByCat);
+                // console.log(vm.productsByCat);s
                 res.render('product/detail', vm);
 
             });

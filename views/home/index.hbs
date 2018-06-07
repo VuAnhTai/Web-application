@@ -24,23 +24,22 @@
     </h4>
 
     <div id="owl-example" class="owl-carousel">
-        <div class="col-md-3 product-men" style="width:250px;">
+        {{#each sp_moi_nhat}}
+        <div class="col-md-3 product-men" style="width:220px;">
             <div class="product-chr-info chr">
                 <div class="thumbnail">
-                    <a href="single_product.html">
-                        <img src="images/sp1.jpg" alt="" width="200px">
+                    <a href="/product/detail/{{id}}">
+                        <img src="/images_sach/{{hinh}}" alt="" width="200px">
                     </a>
                 </div>
                 <div class="caption">
-                    <h4>the gingerbread man</h4>
-                    <p>Vera South Gate</p>
-                    <p>Ngày nhập kho: 25/04/2018</p>
+                    <h4>{{ten_sach}}</h4>
+                    <p>{{ten_tac_gia}}</p>
+                    <p>New</p>
                     <div class="matrlf-mid">
                         <ul class="price-list">
-                            <li>$ 100.00</li>
-                            <li>
-                                $200.00
-                            </li>
+                            <li>{{number_format don_gia}} VNĐ</li>
+                            <li>{{number_format gia_bia}} VNĐ</li>
                         </ul>
                         <div class="clearfix"> </div>
                     </div>
@@ -57,312 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 product-men" style="width:250px;">
-            <div class="product-chr-info chr">
-                <div class="thumbnail">
-                    <a href="single_product.html">
-                        <img src="images/sp2.jpg" alt="" width="200px">
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>Jemina Puddle Duck</h4>
-                    <p>Beatrix Potter</p>
-                    <p>Ngày nhập kho: 25/04/2018</p>
-                    <div class="matrlf-mid">
-
-                        <ul class="price-list">
-                            <li>$ 100.00</li>
-                            <li>
-                                $200.00
-                            </li>
-                        </ul>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP2">
-                        <input type="hidden" name="amount" value="100.00">
-                        <button type="submit" class="chr-cart pchr-cart">Mua
-                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                        </button>
-                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men" style="width:250px;">
-            <div class="product-chr-info chr">
-                <div class="thumbnail">
-                    <a href="single_product.html">
-                        <img src="images/sp3.jpg" alt="" width="200px">
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>being happy</h4>
-                    <p>Andrew Matthews</p>
-                    <p>Ngày nhập kho: 20/04/2018</p>
-                    <div class="matrlf-mid">
-
-                        <ul class="price-list">
-                            <li>$ 100.00</li>
-                            <li>
-                                $200.00
-                            </li>
-                        </ul>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP3">
-                        <input type="hidden" name="amount" value="100.00">
-                        <button type="submit" class="chr-cart pchr-cart">Mua
-                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                        </button>
-                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men" style="width:250px;">
-            <div class="product-chr-info chr">
-                <div class="thumbnail">
-                    <a href="single_product.html">
-                        <img src="images/sp4.jpg" alt="" width="200px">
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>Happiness now</h4>
-                    <p>Andrew Matthews</p>
-                    <p>Ngày nhập kho: 20/04/2018</p>
-                    <div class="matrlf-mid">
-
-                        <ul class="price-list">
-                            <li>$ 100.00</li>
-                            <li>
-                                $200.00
-                            </li>
-                        </ul>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP4">
-                        <input type="hidden" name="amount" value="100.00">
-                        <button type="submit" class="chr-cart pchr-cart">Mua
-                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                        </button>
-                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men" style="width:250px;">
-            <div class="product-chr-info chr">
-                <div class="thumbnail">
-                    <a href="single_product.html">
-                        <img src="images/sp5.jpg" alt="" width="200px">
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>55 cách tranh luận</h4>
-                    <p>XACT</p>
-                    <p>Ngày nhập kho: 20/04/2018</p>
-                    <div class="matrlf-mid">
-
-                        <ul class="price-list">
-                            <li>$ 100.00</li>
-                            <li>
-                                $200.00
-                            </li>
-                        </ul>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP5">
-                        <input type="hidden" name="amount" value="100.00">
-                        <button type="submit" class="chr-cart pchr-cart">Mua
-                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                        </button>
-                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men" style="width:250px;">
-            <div class="product-chr-info chr">
-                <div class="thumbnail">
-                    <a href="single_product.html">
-                        <img src="images/sp6.jpg" alt="" width="200px">
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>Ô,dù lọng</h4>
-                    <p>Hữu Thọ</p>
-                    <p>Ngày nhập kho: 20/04/2018</p>
-                    <div class="matrlf-mid">
-
-                        <ul class="price-list">
-                            <li>$ 100.00</li>
-                            <li>
-                                $200.00
-                            </li>
-                        </ul>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP6">
-                        <input type="hidden" name="amount" value="100.00">
-                        <button type="submit" class="chr-cart pchr-cart">Mua
-                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                        </button>
-                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men" style="width:250px;">
-            <div class="product-chr-info chr">
-                <div class="thumbnail">
-                    <a href="single_product.html">
-                        <img src="images/sp7.jpg" alt="" width="200px">
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>nể và né</h4>
-                    <p>Hữu Thọ</p>
-                    <p>Ngày nhập kho: 15/04/2018</p>
-                    <div class="matrlf-mid">
-
-                        <ul class="price-list">
-                            <li>$ 100.00</li>
-                            <li>
-                                $200.00
-                            </li>
-                        </ul>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP7">
-                        <input type="hidden" name="amount" value="100.00">
-                        <button type="submit" class="chr-cart pchr-cart">Mua
-                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                        </button>
-                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men" style="width:250px;">
-            <div class="product-chr-info chr">
-                <div class="thumbnail">
-                    <a href="single_product.html">
-                        <img src="images/sp8.jpg" alt="" width="200px">
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>thiên thần sa ngã</h4>
-                    <p>Cassandra Clare</p>
-                    <p>Ngày nhập kho: 15/04/2018</p>
-                    <div class="matrlf-mid">
-
-                        <ul class="price-list">
-                            <li>$ 100.00</li>
-                            <li>
-                                $200.00
-                            </li>
-                        </ul>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP8">
-                        <input type="hidden" name="amount" value="100.00">
-                        <button type="submit" class="chr-cart pchr-cart">Mua
-                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                        </button>
-                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men" style="width:250px;">
-            <div class="product-chr-info chr">
-                <div class="thumbnail">
-                    <a href="single_product.html">
-                        <img src="images/sp9.jpg" alt="" width="200px">
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>how life works</h4>
-                    <p>Andrew Matthews</p>
-                    <p>Ngày nhập kho: 15/04/2018</p>
-                    <div class="matrlf-mid">
-
-                        <ul class="price-list">
-                            <li>$ 100.00</li>
-                            <li>
-                                $200.00
-                            </li>
-                        </ul>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP9">
-                        <input type="hidden" name="amount" value="100.00">
-                        <button type="submit" class="chr-cart pchr-cart">Mua
-                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                        </button>
-                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 product-men" style="width:250px;">
-            <div class="product-chr-info chr">
-                <div class="thumbnail">
-                    <a href="single_product.html">
-                        <img src="images/sp10.jpg" alt="" width="200px">
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>thành phố tro tàn</h4>
-                    <p>Cassandra Clare</p>
-                    <p>Ngày nhập kho: 10/04/2018</p>
-                    <div class="matrlf-mid">
-
-                        <ul class="price-list">
-                            <li>$ 100.00</li>
-                            <li>
-                                $200.00
-                            </li>
-                        </ul>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP10">
-                        <input type="hidden" name="amount" value="100.00">
-                        <button type="submit" class="chr-cart pchr-cart">Mua
-                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                        </button>
-                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                    </form>
-                </div>
-            </div>
-        </div>
+        {{/each}}
     </div>
 
 </div>
@@ -373,367 +67,39 @@
     </h4>
 
     <div id="owl-example2" class="owl-carousel">
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp21.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Diary of a Wimpy kid</h4>
-                        <p>Jeff Kinney</p>
-                        <p>Số lượng bán: 55 quyển</p>
-                        <div class="matrlf-mid">
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP21">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
+        {{#each top_san_pham}}
+        <div class="col-md-3 product-men" style="width:220px;">
+            <div class="product-chr-info chr">
+                <div class="thumbnail">
+                    <a href="/product/detail/{{id}}">
+                        <img src="/images_sach/{{hinh}}" alt="" width="200px">
+                    </a>
                 </div>
-            </div>
-
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp11.jpg" alt="" width="200px">
-                        </a>
+                <div class="caption">
+                    <h4>{{ten_sach}}</h4>
+                    <p>{{ten_tac_gia}}</p>
+                    <p>Còn: {{so_luong_ton}}</p>
+                    <div class="matrlf-mid">
+                        <ul class="price-list">
+                            <li>{{number_format don_gia}} VNĐ</li>
+                            <li>{{number_format gia_bia}} VNĐ</li>
+                        </ul>
+                        <div class="clearfix"> </div>
                     </div>
-                    <div class="caption">
-                        <h4>Mê động long lĩnh</h4>
-                        <p>Ma thổi đèn</p>
-                        <p>Số lượng bán: 53 quyển</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP11">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
+                    <form action="#" method="post">
+                        <input type="hidden" name="cmd" value="_cart">
+                        <input type="hidden" name="add" value="1">
+                        <input type="hidden" name="chr_item" value="SP1">
+                        <input type="hidden" name="amount" value="100.00">
+                        <button type="submit" class="chr-cart pchr-cart">Mua
+                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                        </button>
+                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                    </form>
                 </div>
             </div>
         </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp12.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Thiền sư</h4>
-                        <p>Thích Nhất Hạnh</p>
-                        <p>Số lượng bán: 53 quyển</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP12">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp13.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Lịch sử Việt Nam</h4>
-                        <p>Bộ giáo dục</p>
-                        <p>Số lượng bán: 50 quyển</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP13">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp14.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Super Hero Max</h4>
-                        <p>Lawrence David</p>
-                        <p>Số lượng bán: 49 quyển</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP14">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp15.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Truyện ngắn</h4>
-                        <p>Nguyễn Nhật Ánh</p>
-                        <p>Số lượng bán: 47 quyển</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP15">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp7.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>nể và né</h4>
-                        <p>Hữu Thọ</p>
-                        <p>Số lượng bán: 45 quyển</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP7">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp8.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>thiên thần sa ngã</h4>
-                        <p>Cassandra Clare</p>
-                        <p>Số lượng bán: 40 quyển</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP8">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp16.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Ghế</h4>
-                        <p>Hữu Thọ</p>
-                        <p>Số lượng bán: 37 quyển</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP16">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp10.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>thành phố tro tàn</h4>
-                        <p>Cassandra Clare</p>
-                        <p>Số lượng bán: 35 quyển</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP10">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        {{/each}}
     </div>
 </div>
 <div class="container-fluid">
@@ -743,371 +109,40 @@
     </h4>
 
     <div id="owl-example3" class="owl-carousel">
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp15.jpg" alt="" width="200px">
-                        </a>
+                        
+        {{#each sp_xem_nhieu}}
+        <div class="col-md-3 product-men" style="width:220px;">
+            <div class="product-chr-info chr">
+                <div class="thumbnail">
+                    <a href="/product/detail/{{id}}">
+                        <img src="/images_sach/{{hinh}}" alt="" width="200px">
+                    </a>
+                </div>
+                <div class="caption">
+                    <h4>{{ten_sach}}</h4>
+                    <p>{{ten_tac_gia}}</p>
+                    <p class="luotxem fa fa-eye" align="center">Lượt xem: {{luot_xem}} lượt</p>
+                    <div class="matrlf-mid">
+                        <ul class="price-list">
+                            <li>{{number_format don_gia}} VNĐ</li>
+                            <li>{{number_format gia_bia}} VNĐ</li>
+                        </ul>
+                        <div class="clearfix"> </div>
                     </div>
-                    <div class="caption">
-                        <h4>Truyện ngắn</h4>
-                        <p>Nguyễn Nhật Ánh</p>
-                        <p class="luotxem fa fa-eye" align="center">Lượt xem: 8.757 lượt</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP15">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
+                    <form action="#" method="post">
+                        <input type="hidden" name="cmd" value="_cart">
+                        <input type="hidden" name="add" value="1">
+                        <input type="hidden" name="chr_item" value="SP1">
+                        <input type="hidden" name="amount" value="100.00">
+                        <button type="submit" class="chr-cart pchr-cart">Mua
+                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                        </button>
+                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                    </form>
                 </div>
             </div>
         </div>
-
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp14.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Super Hero Max</h4>
-                        <p>Lawrence David</p>
-                        <p class="luotxem fa fa-eye" align="center">Lượt xem: 8.513 lượt</p>
-                        <div class="matrlf-mid">
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP14">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp21.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Diary of a Wimpy kid</h4>
-                        <p>Jeff Kinney</p>
-                        <p class="luotxem fa fa-eye" align="center">Lượt xem: 7.928 lượt</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP21">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp11.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Mê động long lĩnh</h4>
-                        <p>Ma thổi đèn</p>
-                        <p class="luotxem fa fa-eye" align="center">Lượt xem: 7.457 lượt</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP11">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp20.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Nữ hoàng sắt</h4>
-                        <p>Julie Kagawa</p>
-                        <p class="luotxem fa fa-eye" align="center">Lượt xem: 7.415 lượt</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP7">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp12.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Thiền sư</h4>
-                        <p>Thích Nhất Hạnh</p>
-                        <p class="luotxem fa fa-eye" align="center">Lượt xem: 7.094 lượt</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP12">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp13.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Lịch sử Việt Nam</h4>
-                        <p>Bộ giáo dục</p>
-                        <p class="luotxem fa fa-eye" align="center">Lượt xem: 6.876 lượt</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP13">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp10.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>thành phố tro tàn</h4>
-                        <p>Cassandra Clare</p>
-                        <p class="luotxem fa fa-eye" align="center">Lượt xem: 6.535 lượt</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP10">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp8.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>thiên thần sa ngã</h4>
-                        <p>Cassandra Clare</p>
-                        <p class="luotxem fa fa-eye" align="center">Lượt xem: 6.222 lượt</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP8">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="col-md-3 product-men" style="width:250px;">
-                <div class="product-chr-info chr">
-                    <div class="thumbnail">
-                        <a href="single_product.html">
-                            <img src="images/sp16.jpg" alt="" width="200px">
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <h4>Ghế</h4>
-                        <p>Hữu Thọ</p>
-                        <p class="luotxem fa fa-eye" align="center">Lượt xem: 6.131 lượt</p>
-                        <div class="matrlf-mid">
-
-                            <ul class="price-list">
-                                <li>$ 100.00</li>
-                                <li>
-                                    $200.00
-                                </li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="SP16">
-                            <input type="hidden" name="amount" value="100.00">
-                            <button type="submit" class="chr-cart pchr-cart">Mua
-                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                            </button>
-                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        {{/each}}
     </div>
 </div>
 
@@ -1118,23 +153,21 @@
         <div class="wrapper_top_shop">
             <!-- product-sec1 -->
             <div class="product-sec1">
-                <!-- row1-->
+                {{#each products}}
                 <div class="col-md-3 product-men">
                     <div class="product-chr-info chr">
                         <div class="thumbnail">
-                            <a href="single_product.html">
-                                <img src="images/lib8.jpg" alt="">
+                            <a href="/product/detail/{{id}}">
+                                <img src="/images_sach/{{hinh}}" alt="">
                             </a>
                         </div>
                         <div class="caption">
-                            <h4>be creative</h4>
-                            <p>Clayton Barton</p>
+                            <h4>{{ten_sach}}</h4>
+                            <p>{{ten_tac_gia}}</p>
                             <div class="matrlf-mid">
                                 <ul class="price-list">
-                                    <li>$ 100.00</li>
-                                    <li>
-                                        $200.00
-                                    </li>
+                                    <li>{{number_format don_gia}} VNĐ</li>
+                                    <li>{{number_format gia_bia}} VNĐ</li>
                                 </ul>
                                 <div class="clearfix"> </div>
                             </div>
@@ -1151,429 +184,29 @@
                         </div>
                     </div>
                 </div>
-
-                <div>
-                    <div class="col-md-3 product-men" style="">
-                        <div class="product-chr-info chr">
-                            <div class="thumbnail">
-                                <a href="single_product.html">
-                                    <img src="images/sp11.jpg" alt="" width="200px">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Mê động long lĩnh</h4>
-                                <p>Ma thổi đèn</p>
-
-                                <div class="matrlf-mid">
-
-                                    <ul class="price-list">
-                                        <li>$ 100.00</li>
-                                        <li>
-                                            $200.00
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"> </div>
-                                </div>
-                                <form action="#" method="post">
-                                    <input type="hidden" name="cmd" value="_cart">
-                                    <input type="hidden" name="add" value="1">
-                                    <input type="hidden" name="chr_item" value="SP11">
-                                    <input type="hidden" name="amount" value="100.00">
-                                    <button type="submit" class="chr-cart pchr-cart">Mua
-                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                    </button>
-                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="col-md-3 product-men" style="">
-                        <div class="product-chr-info chr">
-                            <div class="thumbnail">
-                                <a href="single_product.html">
-                                    <img src="images/sp20.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Nữ hoàng sắt</h4>
-                                <p>Julie Kagawa</p>
-
-                                <div class="matrlf-mid">
-
-                                    <ul class="price-list">
-                                        <li>$ 100.00</li>
-                                        <li>
-                                            $200.00
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"> </div>
-                                </div>
-                                <form action="#" method="post">
-                                    <input type="hidden" name="cmd" value="_cart">
-                                    <input type="hidden" name="add" value="1">
-                                    <input type="hidden" name="chr_item" value="SP7">
-                                    <input type="hidden" name="amount" value="100.00">
-                                    <button type="submit" class="chr-cart pchr-cart">Mua
-                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                    </button>
-                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 product-men">
-                    <div class="product-chr-info chr">
-                        <div class="thumbnail">
-                            <a href="single_product.html">
-                                <img src="images/lib6.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <h4>online business</h4>
-                            <p>Clayton Barton</p>
-                            <div class="matrlf-mid">
-
-                                <ul class="price-list">
-                                    <li>$ 120.00</li>
-                                    <li>
-                                        $130.00
-                                    </li>
-                                </ul>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <form action="#" method="post">
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="chr_item" value="Book4">
-                                <input type="hidden" name="amount" value="120.00">
-                                <button type="submit" class="chr-cart pchr-cart">Mua
-                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </button>
-                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- //row1 -->
-                <!-- row2 -->
-                <div class="col-md-3 product-men women_two">
-                    <div class="product-chr-info chr">
-                        <div class="thumbnail">
-                            <a href="single_product.html">
-                                <img src="images/lib6.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <h4>e-commerce</h4>
-                            <p>Chris Haroun</p>
-                            <div class="matrlf-mid">
-
-                                <ul class="price-list">
-                                    <li>$ 125.00</li>
-                                    <li>
-                                        $165.00
-                                    </li>
-                                </ul>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <form action="#" method="post">
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="chr_item" value="Book5">
-                                <input type="hidden" name="amount" value="125.00">
-                                <button type="submit" class="chr-cart pchr-cart">Mua
-                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </button>
-                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 product-men women_two">
-                    <div class="product-chr-info chr">
-                        <div class="thumbnail">
-                            <a href="single_product.html">
-                                <img src="images/lib2.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <h4>kids</h4>
-                            <p>Alex Even</p>
-                            <div class="matrlf-mid">
-
-                                <ul class="price-list">
-                                    <li>$ 70.00</li>
-                                    <li>
-                                        $100.00
-                                    </li>
-                                </ul>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <form action="#" method="post">
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="chr_item" value="Book6">
-                                <input type="hidden" name="amount" value="70.00">
-                                <button type="submit" class="chr-cart pchr-cart">Mua
-                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </button>
-                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 product-men women_two">
-                    <div class="product-chr-info chr">
-                        <div class="thumbnail">
-                            <a href="single_product.html">
-                                <img src="images/lib5.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <h4>media</h4>
-                            <p>Alex Even</p>
-                            <div class="matrlf-mid">
-                                <ul class="price-list">
-                                    <li>$ 220.00</li>
-                                    <li>
-                                        $300.00
-                                    </li>
-                                </ul>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <form action="#" method="post">
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="chr_item" value="Book7">
-                                <input type="hidden" name="amount" value="220.00">
-                                <button type="submit" class="chr-cart pchr-cart">Mua
-                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </button>
-                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 product-men women_two">
-                    <div class="product-chr-info chr">
-                        <div class="thumbnail">
-                            <a href="single_product.html">
-                                <img src="images/lib4.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <h4>membership</h4>
-                            <p>Hadilen de</p>
-                            <div class="matrlf-mid">
-
-                                <ul class="price-list">
-                                    <li>$ 210.00</li>
-                                    <li>
-                                        $300.00
-                                    </li>
-                                </ul>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <form action="#" method="post">
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="chr_item" value="Book8">
-                                <input type="hidden" name="amount" value="210.00">
-                                <button type="submit" class="chr-cart pchr-cart">Mua
-                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </button>
-                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- //row2 -->
-                <!-- row3 -->
-                <div>
-                    <div class="col-md-3 product-men">
-                        <div class="product-chr-info chr">
-                            <div class="thumbnail">
-                                <a href="single_product.html">
-                                    <img src="images/sp14.jpg" alt="" width="200px">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Super Hero Max</h4>
-                                <p>Lawrence David</p>
-
-                                <div class="matrlf-mid">
-
-                                    <ul class="price-list">
-                                        <li>$ 100.00</li>
-                                        <li>
-                                            $200.00
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"> </div>
-                                </div>
-                                <form action="#" method="post">
-                                    <input type="hidden" name="cmd" value="_cart">
-                                    <input type="hidden" name="add" value="1">
-                                    <input type="hidden" name="chr_item" value="SP14">
-                                    <input type="hidden" name="amount" value="100.00">
-                                    <button type="submit" class="chr-cart pchr-cart">Mua
-                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                    </button>
-                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="col-md-3 product-men">
-                        <div class="product-chr-info chr">
-                            <div class="thumbnail">
-                                <a href="single_product.html">
-                                    <img src="images/sp21.jpg" alt="" width="200px">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Diary of Wimpy kid</h4>
-                                <p>Jeff Kinney</p>
-
-                                <div class="matrlf-mid">
-
-                                    <ul class="price-list">
-                                        <li>$ 100.00</li>
-                                        <li>
-                                            $200.00
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"> </div>
-                                </div>
-                                <form action="#" method="post">
-                                    <input type="hidden" name="cmd" value="_cart">
-                                    <input type="hidden" name="add" value="1">
-                                    <input type="hidden" name="chr_item" value="SP21">
-                                    <input type="hidden" name="amount" value="100.00">
-                                    <button type="submit" class="chr-cart pchr-cart">Mua
-                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                    </button>
-                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-3 product-men">
-                    <div class="product-chr-info chr">
-                        <div class="thumbnail">
-                            <a href="single_product.html">
-                                <img src="images/lib2.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <h4>kids</h4>
-                            <p>Cordebard</p>
-                            <div class="matrlf-mid">
-
-                                <ul class="price-list">
-                                    <li>$ 280.00</li>
-                                    <li>
-                                        $500.00
-                                    </li>
-                                </ul>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <form action="#" method="post">
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="chr_item" value="Book11">
-                                <input type="hidden" name="amount" value="280.00">
-                                <button type="submit" class="chr-cart pchr-cart">Mua
-                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </button>
-                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 product-men">
-                    <div class="product-chr-info chr">
-                        <div class="thumbnail">
-                            <a href="single_product.html">
-                                <img src="images/lib3.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <h4>work from home</h4>
-                            <p>Cordebard</p>
-                            <div class="matrlf-mid">
-
-                                <ul class="price-list">
-                                    <li>$ 140.00</li>
-                                    <li>
-                                        $200.00
-                                    </li>
-                                </ul>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <form action="#" method="post">
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="chr_item" value="Book12">
-                                <input type="hidden" name="amount" value="140.00">
-                                <button type="submit" class="chr-cart pchr-cart">Mua
-                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </button>
-                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-                            </form>
-                        </div>
-
-                    </div>
-
-                </div>
-
+                {{/each}}
+                <div class="clearfix"></div>
+                
                 <!-- //row3 -->
                 <div class="clearfix">
                     <ul class="pagination modal-2" align="center" style="margin-left:265px;">
                         <li>
                             <a href="#" class="prev">&laquo </a>
                         </li>
-                        <li>
-                            <a href="#" class="active">1</a>
-                        </li>
-                        <li>
-                            <a href="#">2</a>
-                        </li>
-                        <li>
-                            <a href="#">3</a>
-                        </li>
-                        <li>
-                            <a href="#">4</a>
-                        </li>
-                        <li>
-                            <a href="#">5</a>
-                        </li>
-                        <li>
-                            <a href="#">6</a>
-                        </li>
-                        <li>
-                            <a href="#">7</a>
-                        </li>
-                        <li>
-                            <a href="#">8</a>
-                        </li>
-                        <li>
-                            <a href="#">9</a>
-                        </li>
+                        {{#each page_numbers}}
+                            {{#if isCurPage}}
+                                <li class="active"><a href="javascript:;">{{value}}</a></li>
+                            {{else}}
+                                <li><a href="?page={{value}}">{{value}}</a></li>
+                            {{/if}}
+                        {{/each}}
                         <li>
                             <a href="#" class="next"> &raquo;</a>
                         </li>
                     </ul>
                 </div>
+            {{!-- </div> --}}
+
             </div>
 
             <!-- //product-sec1 -->

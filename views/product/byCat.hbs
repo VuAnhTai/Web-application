@@ -1,3 +1,11 @@
+{{#if noProducts}}
+<br><br><br>
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 bs3-a">
+        Không có sản phẩm Thuộc loại này.
+    </div>
+</div>
+{{else}}
 <div class="innerf-pages section">
     <div class="container-fluid">
         <h1 align="center">Tất cả sản phẩm</h1>
@@ -15,8 +23,8 @@
                         <p>{{ten_tac_gia}}</p>
                         <div class="matrlf-mid">
                             <ul class="price-list">
-                                <li>{{don_gia}}</li>
-                                <li>{{gia_bia}}</li>
+                                <li>{{number_format don_gia}} VNĐ</li>
+                                <li>{{number_format gia_bia}} VNĐ</li>
                             </ul>
                             <div class="clearfix"> </div>
                         </div>
@@ -65,3 +73,4 @@
 
 </div>
 <!--// Shop -->
+{{/if}}
