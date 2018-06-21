@@ -115,11 +115,53 @@
                             <li id="admin">
                                 <a href="../Admin/index">ADMIN</a>
                             </li>
+                            {{#if layoutVM.isLogged}}
+                            <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">
+                                        <span class="fa fa-user nav-icon" aria-hidden="true"></span>
+                                        Welcome {{layoutVM.curUser}}
+                                    </a>
+                                     <ul id="MyAccountPop" class="dropdown-menu">
+                                         <li class="list-group-item">
+                                            <a href="information_account.html">
+                                                <i class="fa fa-user "></i>
+                                                Thông tin Tài khoản
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="history.html">
+                                                <i class="glyphicon glyphicon-th-list"></i>
+                                                Thông tin hóa đơn
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="user-dashboard-saved-searches.html">
+                                                <i class="glyphicon glyphicon-heart"></i>
+                                                Sản phẩm yêu thích
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#">
+                                                <i class="glyphicon glyphicon-home"></i>
+                                                Sổ địa chỉ
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#" onclick="$('#logoutForm').submit()">
+                                                <i class="glyphicon glyphicon-log-out"></i>
+                                                Đăng xuất
+                                            </a>
+                                            <form id="logoutForm" action="/account/logout" style="hidden" method="post"></form>
+                                        </li>
+                                    </ul>
+                                </li>
+                            {{else}}
                             <li>
                                 <a href="/account/login" title="SignIn & SignUp">
                                     <span class="fa fa-user nav-icon" aria-hidden="true"></span>
                                 </a>
                             </li>
+                            {{/if}}
                         </ul>
                         <!-- search-bar -->
                         <div class="search-bar-agileits">

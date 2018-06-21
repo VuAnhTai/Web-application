@@ -14,7 +14,7 @@ module.exports = (req, res, next) => {
             isLogged: req.session.isLogged,
             curUser: req.session.user
         };
-        
+        // console.log(res.locals.layoutVM.curUser);
         next();
     });
 };

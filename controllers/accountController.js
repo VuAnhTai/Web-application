@@ -133,7 +133,7 @@ router.post('/login', (req, res) => {
             // user = rows[0];
 
             req.session.isLogged = true;
-
+            req.session.user = req.body.username;
             res.redirect('/');
 
         } else {
@@ -143,11 +143,17 @@ router.post('/login', (req, res) => {
             };
             res.render('account/login', {
                 data: vm,
-                layout: 'main_not_leftbar.handlebars'});
+                layout: 'main_not_leftbar.handlebars'
+            });
         }
     });
 });
 
+router.post('/logout', (req, res) => {
+    req.session.isLogged = false;
+    req.session.user = null;
+    res.redirect(req.headers.referer);
+});
 router.get('/profile', restrict, (req, res) => {
     res.render('account/profile');
 });
