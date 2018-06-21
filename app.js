@@ -14,8 +14,8 @@ var handle404MDW = require('./middle-wares/handle404'),
 
 var homeController = require('./controllers/homeController'),
     // categoryController = require('./controllers/categoryController'),
-    productController = require('./controllers/productController');
-    // accountController = require('./controllers/accountController'),
+    productController = require('./controllers/productController'),
+    accountController = require('./controllers/accountController');
     // cartController = require('./controllers/cartController');
 
 var app = express();
@@ -50,7 +50,7 @@ var sessionStore = new MySQLStore({
     port: 3306,
     user: 'root',
     password: '',
-    database: 'ban_hang',
+    database: 'ban_sach',
     createDatabaseTable: true,
     schema: {
         tableName: 'sessions',
@@ -78,7 +78,7 @@ app.get('/', (req, res) => {
 
 app.use('/home', homeController);
 app.use('/product', productController);
-
+app.use('/account', accountController);
 
 app.use(handle404MDW);
 

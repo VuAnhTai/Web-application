@@ -40,7 +40,7 @@ router.get('/', (req, res) => {
             sp_moi_nhat: sp_moi,	
             sp_xem_nhieu: sp_xem_nhieu_nhat
         };
-        console.log(vm.products);
+        // console.log(vm.products);
         res.render('home/index', vm);
     });
 });

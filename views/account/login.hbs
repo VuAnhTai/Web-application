@@ -1,0 +1,72 @@
+        <div class="login-form section text-center">
+            <div class="container">
+                <h4 class="rad-txt">
+                    <a href="/account/login"><span class="abtxt1">Đăng nhập</span></a>
+                    
+                    <a href="/account/register">
+                        <span class="abtext">Đăng kí</span>
+                    </a>
+                </h4>
+                <!-- form login -->
+                <div id="loginbox" style="margin-top:30px;" class="mainbox  loginbox">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Đăng nhập</div>
+                            <div class="fpassword">
+                                <a href="#">Bạn quên mật khẩu?</a>
+                            </div>
+                        </div>
+                        <div style="padding-top:30px" class="panel-body">
+
+                            <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            <form id="loginform" class="form-horizontal" action="/account/login" method="post">
+                                {{#if data.showError}}
+                                    <div id="signupalert" class="alert alert-danger">
+                                        <p>Error: {{data.errorMsg}}</p>
+                                        <span></span>
+                                    </div>
+                                {{/if}}
+                                <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                    </span>
+                                    <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Tên đăng nhập hoặc email" required="">
+                                </div>
+
+                                <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-lock"></i>
+                                    </span>
+                                    <input id="login-password" type="password" class="form-control" name="password" placeholder="Mật khẩu" required="">
+                                </div>
+                                <div class="input-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="login-remember" type="checkbox" name="remember" value="1"> Lưu thông tin
+                                        </label>
+                                    </div>
+                                </div>
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                        <button id="btn-login" type="submit" class="btn btn-success">Đăng nhập</button>
+                                        <a id="btn-fblogin" href="information_account.html" class="btn btn-primary">Đăng nhập bằng Facebook</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                            Bạn chưa có tài khoản!
+                                            <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                                Đăng kí tại đây
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
