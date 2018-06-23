@@ -44,7 +44,9 @@
             {{/each}}
 
             <!-- //row3 -->
-            <div class="clearfix">            
+            <div class="clearfix">  
+            </div>
+                      
             <div class="clearfix">
                 <ul class="pagination modal-2" align="center" style="margin-left:265px;">
                     <li>
@@ -52,7 +54,7 @@
                     </li>
                     {{#each page_numbers}}
                         {{#if isCurPage}}
-                            <li class="active"><a href="javascript:;">{{value}}</a></li>
+                            <li class="active" id="active"><a href="javascript:;">{{value}}</a></li>
                         {{else}}
                             <li><a href="?page={{value}}">{{value}}</a></li>
                         {{/if}}
@@ -62,7 +64,6 @@
                     </li>
                 </ul>
             </div>
-            {{!-- </div> --}}
 
         <!-- //product-sec1 -->
         <div class="clearfix"></div>
@@ -74,3 +75,7 @@
 </div>
 <!--// Shop -->
 {{/if}}
+
+{{#section "js"}}
+    <script src="/js/myJS.js"></script>
+{{/section}}

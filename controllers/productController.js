@@ -60,6 +60,7 @@ router.get('/bySup/:supId', (req, res) => {
         // console.log(countRows);
 
         var total = countRows[0].total;
+
         var nPages = total / config.PRODUCTS_PER_PAGE;
         if (total % config.PRODUCTS_PER_PAGE > 0) {
             nPages++;

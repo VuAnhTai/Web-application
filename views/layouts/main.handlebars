@@ -34,31 +34,14 @@
 
     <!-- Default Theme -->
     <link rel="stylesheet" href="/slider/owl-carousel/owl.theme.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <!--  jQuery 1.7+  -->
     <script src="/slider/assets/js/jquery-1.9.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
     <!-- Include js plugin -->
     <script src="/slider/owl-carousel/owl.carousel.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> {{{_sections.css}}}
 </head>
-<script>
-    $(document).ready(function () {
-        $("#owl-example").owlCarousel({ 
-            items:4    
-        });
-    });
-    $(document).ready(function () {
-        $("#owl-example2").owlCarousel({ 
-            items:4    
-        });
-    });
-    $(document).ready(function () {
-        $("#owl-example3").owlCarousel({ 
-            items:4    
-        });
-    });
-</script>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <div id="home">
@@ -409,39 +392,10 @@
     <!-- //home -->
     <!-- js -->
     <!-- Common js -->
-    <!-- <script src="js/jquery-2.2.3.min.js"></script> -->
+     
     <!--// Common js -->
-    <!-- cart-js -->
-    <script src="js/minicart.js"></script>
-    <script>
-        chr.render();
-        chr.cart.on('new_checkout', function (evt) {
-            var items, len, i;
-            if (this.subtotal() > 0) {
-                items = this.items();
-                for (i = 0, len = items.length; i < len; i++) { }
-            }
-        });
-    </script>
-    <!-- //cart-js -->
     <!-- price range (top products) -->
-    <script src="js/jquery-ui.js"></script>
-    <script>
-        //<![CDATA[ 
-        $(window).load(function () {
-            $("#slider-range").slider({
-                range: true,
-                min: 0,
-                max: 300,
-                values: [1, 60],
-                slide: function (event, ui) {
-                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-                }
-            });
-            $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
-
-        }); //]]>
-    </script>
+        
 
     <!-- //dropdown nav -->
     <!--search jQuery-->

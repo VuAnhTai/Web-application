@@ -38,8 +38,8 @@
                     <p>New</p>
                     <div class="matrlf-mid">
                         <ul class="price-list">
-                            <li>{{number_format don_gia}} VNĐ</li>
-                            <li>{{number_format gia_bia}} VNĐ</li>
+                            <li>{{number_format don_gia}}đ</li>
+                            <li>{{number_format gia_bia}}đ</li>
                         </ul>
                         <div class="clearfix"> </div>
                     </div>
@@ -81,8 +81,8 @@
                     <p>Còn: {{so_luong_ton}}</p>
                     <div class="matrlf-mid">
                         <ul class="price-list">
-                            <li>{{number_format don_gia}} VNĐ</li>
-                            <li>{{number_format gia_bia}} VNĐ</li>
+                            <li>{{number_format don_gia}}đ</li>
+                            <li>{{number_format gia_bia}}đ</li>
                         </ul>
                         <div class="clearfix"> </div>
                     </div>
@@ -124,8 +124,8 @@
                     <p class="luotxem fa fa-eye" align="center">Lượt xem: {{luot_xem}} lượt</p>
                     <div class="matrlf-mid">
                         <ul class="price-list">
-                            <li>{{number_format don_gia}} VNĐ</li>
-                            <li>{{number_format gia_bia}} VNĐ</li>
+                            <li>{{number_format don_gia}}đ</li>
+                            <li>{{number_format gia_bia}}đ</li>
                         </ul>
                         <div class="clearfix"> </div>
                     </div>
@@ -166,8 +166,8 @@
                             <p>{{ten_tac_gia}}</p>
                             <div class="matrlf-mid">
                                 <ul class="price-list">
-                                    <li>{{number_format don_gia}} VNĐ</li>
-                                    <li>{{number_format gia_bia}} VNĐ</li>
+                                    <li>{{number_format don_gia}}đ</li>
+                                    <li>{{number_format gia_bia}}đ</li>
                                 </ul>
                                 <div class="clearfix"> </div>
                             </div>
@@ -195,7 +195,7 @@
                         </li>
                         {{#each page_numbers}}
                             {{#if isCurPage}}
-                                <li class="active"><a href="javascript:;">{{value}}</a></li>
+                                <li class="active" id="active"><a href="javascript:;">{{value}}</a></li>
                             {{else}}
                                 <li><a href="?page={{value}}">{{value}}</a></li>
                             {{/if}}
@@ -218,3 +218,37 @@
 
 </div>
 <!--// Shop -->
+
+{{#section "js"}}
+<script>
+        //<![CDATA[ 
+    $(window).load(function () {
+        $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 300,
+            values: [1, 60],
+            slide: function (event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+    }); //]]>
+    $(document).ready(function () {
+        $("#owl-example").owlCarousel({ 
+            items:4    
+        });
+    });
+    $(document).ready(function () {
+        $("#owl-example2").owlCarousel({ 
+            items:4    
+        });
+    });
+    $(document).ready(function () {
+        $("#owl-example3").owlCarousel({ 
+            items:4    
+        });
+    });
+    </script>
+{{/section}}
