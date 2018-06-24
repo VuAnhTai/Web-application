@@ -586,7 +586,7 @@ ul.rating li {
 ul.price-list li {
 	display: inline-block;
 	color: #000;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 
 ul.price-list li:first-child {
