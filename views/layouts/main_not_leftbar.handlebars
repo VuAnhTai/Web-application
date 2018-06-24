@@ -184,15 +184,10 @@
                         <!-- //search-bar ends here -->
                         <!-- shopping cart -->
                         <div class="cart-mainf">
-                            <div class="chrcart chrcart2 cart cart box_1">
-                                <form action="#" method="post" class="last">
-                                    <input type="hidden" name="cmd" value="_cart">
-                                    <input type="hidden" name="display" value="1">
-                                    <button class="top_chr_cart" type="submit" name="submit" value="">
-                                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                                    </button>
-                                </form>
-                            </div>
+                            <a href="/cart" class="top_chr_cart" name="submit" value="">
+                                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                                <span style="font-size: 25px; font-weight: 500; color: white;">{{layoutVM.numberItems}}</span>
+                            </a>
                         </div>
                         <!-- //shopping cart ends here -->
                     </div>

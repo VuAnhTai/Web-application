@@ -10,8 +10,7 @@
             </h4>
             
             <div class="checkout-right">
-                <h4>Giỏ hàng của bạn bao gồm
-                    <span>3 sản phẩm</span>
+                <h4>Lịch sử mua hàng
                 </h4>
                 {{#each data.orders}}
                 <h4>Hóa đơn ngày: 
@@ -47,11 +46,18 @@
                             <td class="invert">{{number_format don_gia}}</td>
                             <td class="invert">{{number_format thanh_tien}}</td>
 
-                            <td class="invert">
-                                {{!-- {{#if trang}} --}}
+                            {{#if ../trang_thai}}
+                                {{#if ../trang_thai2}}
+                                    <td class="invert" style="border:1px solid black;background-color: green">Đã giao</td>
+                                {{else}}
+                                        <td class="invert" style="border:1px solid black;background-color: yellow">Đang giao</td>
+                                {{/if}}
+                            {{else}}
+                                <td class="invert" style="border:1px solid black;background-color: red">Chưa giao</td> 
+                            {{/if}}
                             </td>
                         </tr>
-                        {{/each}}
+                    {{/each}}
                             <tr>
                                 <th>Tổng tiền:</th>
                                 <td></td>

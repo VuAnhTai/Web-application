@@ -66,9 +66,8 @@ router.get('/order', (req, res) => {
     Promise.all([DH]).then(([DH]) => {
         var vm = {
             don_hang: DH
-            
         };
-        
+        console.log(vm);
         res.render('admin/order', {
             data: vm,
             layout: 'admin.handlebars'

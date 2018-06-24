@@ -39,7 +39,7 @@ exports.addOrderDetail = orderDetail => {
 }
 
 exports.loadOrder = id_nguoi_dung => {
-    var sql = `SELECT * FROM bs_don_hang WHERE id_nguoi_dung = ${id_nguoi_dung}`;
+    var sql = `SELECT *, (trang_thai-1) as trang_thai2 FROM bs_don_hang WHERE id_nguoi_dung = ${id_nguoi_dung}`;
     console.log(sql);
     return db.save(sql);
 }

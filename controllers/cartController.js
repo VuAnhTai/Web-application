@@ -139,31 +139,30 @@ router.get('/history', (req, res) => {
             //load all order cua nguoi dung
             for (var i = orders.length - 1; i >= 0; i--) {
                 idOrder = orders[i].id;
-                // console.log(idOrder);
                 proInOrder = cartRepo.loadOrderDetail(idOrder);
                 order.push(proInOrder);
             }
             //cau hinh data gui cho client
             data = [];
             Promise.all(order).then(result => {
-                for (var i = result.length - 1, j = 0; i >= 0, j < result.length - 1; i--, j++) {
+                // console.log(orders);
+                for (var j = result.length - 1, i = 0; j >= 0, i < result.length - 1; j--, i++) {
                     var order = {
                         items: result[i],
-                        time: yyyymmdd(orders[i].ngay_dat),
-                        total: orders[i].tong_tien,
-
+                        time: yyyymmdd(orders[j].ngay_dat),
+                        total: orders[j].tong_tien,
+                        trang_thai: orders[j].trang_thai,
+                        trang_thai2: orders[j].trang_thai2,
                     }
                     // console.log(result[i][0].id_don_hang);
                     // console.log(orders[j].id);
-                    // console.log(j);
+                    console.log(order);
                     data.push(order);
                 }
-
                 var vm = {
                     orders: data
                 }
-                console.log(vm.orders[0].items[0]);
-
+                
                 // console.log(vm);
                 res.render('cart/history', {
                     data: vm,
