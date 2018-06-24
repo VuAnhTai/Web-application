@@ -60,6 +60,7 @@ router.get('/bySup/:supId', (req, res) => {
         // console.log(countRows);
 
         var total = countRows[0].total;
+
         var nPages = total / config.PRODUCTS_PER_PAGE;
         if (total % config.PRODUCTS_PER_PAGE > 0) {
             nPages++;
@@ -93,12 +94,40 @@ router.get('/detail/:id', (req, res) => {
             var p1 = productRepo.loadByCat(rows[0].id_loai_sach);
             var p2 = productRepo.loadBySup(rows[0].id_nha_xuat_ban);
             Promise.all([p1, p2]).then(([cat, sup]) => {
+                // console.log(cat.length);
+                var cats = [];
+                var sups = [];
+                var exists = [];
+                if(cat.length >= 5){
+                    for(var l = 0; l < 5; l++) {
+                       do {
+                           randomNumber = Math.floor(Math.random() * cat.length);  
+                       } while (exists[randomNumber]);
+                       exists[randomNumber] = true;
+                       cats.push(cat[randomNumber]);
+                    }
+                }else{
+                    cats = cat;
+                }
+                console.log(sup.length);
+
+                if(sup.length > 5){
+                    for(var l = 0; l < 5; l++) {
+                       do {
+                           randomNumber = Math.floor(Math.random() * sup.length);  
+                       } while (exists[randomNumber]);
+                       exists[randomNumber] = true;
+                       sups.push(sup[randomNumber]);
+                    }
+                }else{
+                    sups = sup;
+                }
+                
                 var vm = {
                     product: rows[0],
-                    productsByCat: cat,
-                    productsBySup: sup
+                    productsByCat: cats,
+                    productsBySup: sups
                 }
-                // console.log(vm.productsByCat);s
                 res.render('product/detail', vm);
 
             });

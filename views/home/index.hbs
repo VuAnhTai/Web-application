@@ -38,16 +38,14 @@
                     <p>New</p>
                     <div class="matrlf-mid">
                         <ul class="price-list">
-                            <li>{{number_format don_gia}} VNĐ</li>
-                            <li>{{number_format gia_bia}} VNĐ</li>
+                            <li>{{number_format don_gia}}đ</li>
+                            <li>{{number_format gia_bia}}đ</li>
                         </ul>
                         <div class="clearfix"> </div>
                     </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP1">
-                        <input type="hidden" name="amount" value="100.00">
+                    <form action="/cart/add" method="post">
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="hidden" name="proId" value="{{id}}">
                         <button type="submit" class="chr-cart pchr-cart">Mua
                             <i class="fa fa-cart-plus" aria-hidden="true"></i>
                         </button>
@@ -81,16 +79,14 @@
                     <p>Còn: {{so_luong_ton}}</p>
                     <div class="matrlf-mid">
                         <ul class="price-list">
-                            <li>{{number_format don_gia}} VNĐ</li>
-                            <li>{{number_format gia_bia}} VNĐ</li>
+                            <li>{{number_format don_gia}}đ</li>
+                            <li>{{number_format gia_bia}}đ</li>
                         </ul>
                         <div class="clearfix"> </div>
                     </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP1">
-                        <input type="hidden" name="amount" value="100.00">
+                    <form action="/cart/add" method="post">
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="hidden" name="proId" value="{{id}}">
                         <button type="submit" class="chr-cart pchr-cart">Mua
                             <i class="fa fa-cart-plus" aria-hidden="true"></i>
                         </button>
@@ -124,16 +120,14 @@
                     <p class="luotxem fa fa-eye" align="center">Lượt xem: {{luot_xem}} lượt</p>
                     <div class="matrlf-mid">
                         <ul class="price-list">
-                            <li>{{number_format don_gia}} VNĐ</li>
-                            <li>{{number_format gia_bia}} VNĐ</li>
+                            <li>{{number_format don_gia}}đ</li>
+                            <li>{{number_format gia_bia}}đ</li>
                         </ul>
                         <div class="clearfix"> </div>
                     </div>
-                    <form action="#" method="post">
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="chr_item" value="SP1">
-                        <input type="hidden" name="amount" value="100.00">
+                    <form action="/cart/add" method="post">
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="hidden" name="proId" value="{{id}}">
                         <button type="submit" class="chr-cart pchr-cart">Mua
                             <i class="fa fa-cart-plus" aria-hidden="true"></i>
                         </button>
@@ -166,16 +160,14 @@
                             <p>{{ten_tac_gia}}</p>
                             <div class="matrlf-mid">
                                 <ul class="price-list">
-                                    <li>{{number_format don_gia}} VNĐ</li>
-                                    <li>{{number_format gia_bia}} VNĐ</li>
+                                    <li>{{number_format don_gia}}đ</li>
+                                    <li>{{number_format gia_bia}}đ</li>
                                 </ul>
                                 <div class="clearfix"> </div>
                             </div>
-                            <form action="#" method="post">
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="chr_item" value="Book1">
-                                <input type="hidden" name="amount" value="100.00">
+                            <form action="/cart/add" method="post">
+                                <input type="hidden" name="quantity" value="1">
+                                <input type="hidden" name="proId" value="{{id}}">
                                 <button type="submit" class="chr-cart pchr-cart">Mua
                                     <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                 </button>
@@ -195,7 +187,7 @@
                         </li>
                         {{#each page_numbers}}
                             {{#if isCurPage}}
-                                <li class="active"><a href="javascript:;">{{value}}</a></li>
+                                <li class="active" id="active"><a href="javascript:;">{{value}}</a></li>
                             {{else}}
                                 <li><a href="?page={{value}}">{{value}}</a></li>
                             {{/if}}
@@ -218,3 +210,37 @@
 
 </div>
 <!--// Shop -->
+
+{{#section "js"}}
+<script>
+        //<![CDATA[ 
+    $(window).load(function () {
+        $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 300,
+            values: [1, 60],
+            slide: function (event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+    }); //]]>
+    $(document).ready(function () {
+        $("#owl-example").owlCarousel({ 
+            items:4    
+        });
+    });
+    $(document).ready(function () {
+        $("#owl-example2").owlCarousel({ 
+            items:4    
+        });
+    });
+    $(document).ready(function () {
+        $("#owl-example3").owlCarousel({ 
+            items:4    
+        });
+    });
+    </script>
+{{/section}}

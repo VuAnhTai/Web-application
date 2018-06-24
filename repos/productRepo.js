@@ -36,7 +36,7 @@ exports.loadAllBySup= (supId, offset) => {
 }
 
 exports.countBySup = supId => {
-	var sql = `SELECT * FROM bs_sach, bs_nha_xuat_ban WHERE bs_sach.id_nha_xuat_ban = bs_nha_xuat_ban.id AND bs_nha_xuat_ban.id = ${supId} and bs_nha_xuat_ban.id = ${supId}`;
+	var sql = `SELECT count(*) as total FROM bs_sach, bs_nha_xuat_ban WHERE bs_sach.id_nha_xuat_ban = bs_nha_xuat_ban.id AND bs_nha_xuat_ban.id = ${supId} and bs_nha_xuat_ban.id = ${supId}`;
     return db.load(sql);
 }
 
@@ -71,9 +71,8 @@ exports.loadByCat= (catId) => {
     ) 
     or ( 
         bs_sach.id_loai_sach = bs_loai_sach.id 
-        and bs_loai_sach.id_loai_cha = ${catId} 
+        and bs_loai_sach.id = ${catId} 
         and bs_sach.id_tac_gia = bs_tac_gia.id 
-    ) 
-    limit 5`;
+    ) `;
     return db.load(sql);
 }

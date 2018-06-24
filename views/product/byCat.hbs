@@ -28,11 +28,9 @@
                             </ul>
                             <div class="clearfix"> </div>
                         </div>
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="Book1">
-                            <input type="hidden" name="amount" value="100.00">
+                        <form action="/cart/add" method="post">
+                            <input type="hidden" name="quantity" value="1">
+                            <input type="hidden" name="proId" value="{{id}}">
                             <button type="submit" class="chr-cart pchr-cart">Mua
                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                             </button>
@@ -44,7 +42,9 @@
             {{/each}}
 
             <!-- //row3 -->
-            <div class="clearfix">            
+            <div class="clearfix">  
+            </div>
+                      
             <div class="clearfix">
                 <ul class="pagination modal-2" align="center" style="margin-left:265px;">
                     <li>
@@ -52,7 +52,7 @@
                     </li>
                     {{#each page_numbers}}
                         {{#if isCurPage}}
-                            <li class="active"><a href="javascript:;">{{value}}</a></li>
+                            <li class="active" id="active"><a href="javascript:;">{{value}}</a></li>
                         {{else}}
                             <li><a href="?page={{value}}">{{value}}</a></li>
                         {{/if}}
@@ -62,7 +62,6 @@
                     </li>
                 </ul>
             </div>
-            {{!-- </div> --}}
 
         <!-- //product-sec1 -->
         <div class="clearfix"></div>
@@ -74,3 +73,7 @@
 </div>
 <!--// Shop -->
 {{/if}}
+
+{{#section "js"}}
+    <script src="/js/myJS.js"></script>
+{{/section}}

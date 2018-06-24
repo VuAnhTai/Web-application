@@ -26,13 +26,13 @@
                     <p class="price">
                         Giá Bìa:
                         <span class="save">
-                            {{number_format gia_bia}} VNĐ
+                            {{number_format gia_bia}}đ
                         </span>
                     </p>
                     <p class="price">
                         Giá Shop:
                         <span class="val2">
-                            {{number_format don_gia}} VNĐ
+                            {{number_format don_gia}}đ
                             <i>(Đã có VAT)</i>
                         </span>
                     </p>
@@ -72,11 +72,9 @@
                 
                 <div class="occasion-cart">
                     <div class="chr single-item single_page_b">
-                        <form action="#" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="add" value="1">
-                            <input type="hidden" name="chr_item" value="Single book">
-                            <input type="hidden" name="amount" value="100.00">
+                        <form action="#" met/cart/addod="post">
+                            <input type="hidden" name="quantity" value="1">
+                            <input type="hidden" name="proId" value="Single{{id}}">
                             <button type="submit" class="chr-cart pchr-cart">
                             <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
                             <a href="#" data-toggle="modal" data-target="#myModal1"></a>
@@ -123,16 +121,14 @@
                                                 <div class="matrlf-mid">
                                                     
                                                     <ul class="price-list">
-                                                        <li>{{number_format don_gia}} VND</li>
-                                                        <li>{{number_format gia_bia}} VND</li>
+                                                        <li>{{number_format don_gia}}đ</li>
+                                                        <li>{{number_format gia_bia}}đ</li>
                                                     </ul>
                                                     <div class="clearfix"> </div>
                                                 </div>
-                                                <form action="#" method="post">
-                                                    <input type="hidden" name="cmd" value="_cart">
-                                                    <input type="hidden" name="add" value="1">
-                                                    <input type="hidden" name="chr_item" value="Book4">
-                                                    <input type="hidden" name="amount" value="140.00">
+                                                <form action="/cart/add" method="post">
+                                                    <input type="hidden" name="quantity" value="1">
+                                                    <input type="hidden" name="proId" value="{{id}}">
                                                     <button type="submit" class="chr-cart pchr-cart">Add to cart
                                                     <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                     </button>
@@ -186,16 +182,14 @@
                                                 <div class="matrlf-mid">
                                                     
                                                     <ul class="price-list">
-                                                        <li>{{number_format don_gia}} VND</li>
-                                                        <li>{{number_format gia_bia}} VND</li>
+                                                        <li>{{number_format don_gia}}đ</li>
+                                                        <li>{{number_format gia_bia}}đ</li>
                                                     </ul>
                                                     <div class="clearfix"> </div>
                                                 </div>
-                                                <form action="#" method="post">
-                                                    <input type="hidden" name="cmd" value="_cart">
-                                                    <input type="hidden" name="add" value="1">
-                                                    <input type="hidden" name="chr_item" value="Book4">
-                                                    <input type="hidden" name="amount" value="140.00">
+                                                <form action="/cart/add" method="post">
+                                                    <input type="hidden" name="quantity" value="1">
+                                                    <input type="hidden" name="proId" value="{{id}}">
                                                     <button type="submit" class="chr-cart pchr-cart">Add to cart
                                                     <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                                     </button>

@@ -15,7 +15,7 @@
     </script>
     <!-- Custom Theme files -->
     <link href="/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-    <!-- shop css -->
+    <!-- shop css --> 
     <link href="/css/shop.css" type="text/css" rel="stylesheet" media="all">
     <!-- checkout css -->
     <link href="/css/checkout.css" type="text/css" rel="stylesheet" media="all">
@@ -34,31 +34,10 @@
 
     <!-- Default Theme -->
     <link rel="stylesheet" href="/slider/owl-carousel/owl.theme.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <!--  jQuery 1.7+  -->
-    <script src="/slider/assets/js/jquery-1.9.1.min.js"></script>
-
-    <!-- Include js plugin -->
-    <script src="/slider/owl-carousel/owl.carousel.js"></script>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> {{{_sections.css}}}
 </head>
-<script>
-    $(document).ready(function () {
-        $("#owl-example").owlCarousel({ 
-            items:4    
-        });
-    });
-    $(document).ready(function () {
-        $("#owl-example2").owlCarousel({ 
-            items:4    
-        });
-    });
-    $(document).ready(function () {
-        $("#owl-example3").owlCarousel({ 
-            items:4    
-        });
-    });
-</script>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <div id="home">
@@ -184,15 +163,10 @@
                         <!-- //search-bar ends here -->
                         <!-- shopping cart -->
                         <div class="cart-mainf">
-                            <div class="chrcart chrcart2 cart cart box_1">
-                                <form action="#" method="post" class="last">
-                                    <input type="hidden" name="cmd" value="_cart">
-                                    <input type="hidden" name="display" value="1">
-                                    <button class="top_chr_cart" type="submit" name="submit" value="">
-                                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                                    </button>
-                                </form>
-                            </div>
+                            <a href="/cart" class="top_chr_cart" name="submit" value="">
+                                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                                <span style="font-size: 25px; font-weight: 500; color: white;">{{layoutVM.numberItems}}</span>
+                            </a>
                         </div>
                         <!-- //shopping cart ends here -->
                     </div>
@@ -409,40 +383,14 @@
     <!-- //home -->
     <!-- js -->
     <!-- Common js -->
-    <!-- <script src="js/jquery-2.2.3.min.js"></script> -->
+     
     <!--// Common js -->
-    <!-- cart-js -->
-    <script src="js/minicart.js"></script>
-    <script>
-        chr.render();
-        chr.cart.on('new_checkout', function (evt) {
-            var items, len, i;
-            if (this.subtotal() > 0) {
-                items = this.items();
-                for (i = 0, len = items.length; i < len; i++) { }
-            }
-        });
-    </script>
-    <!-- //cart-js -->
     <!-- price range (top products) -->
-    <script src="js/jquery-ui.js"></script>
-    <script>
-        //<![CDATA[ 
-        $(window).load(function () {
-            $("#slider-range").slider({
-                range: true,
-                min: 0,
-                max: 300,
-                values: [1, 60],
-                slide: function (event, ui) {
-                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-                }
-            });
-            $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+        
+    <script src="/slider/assets/js/jquery-1.9.1.min.js"></script>
 
-        }); //]]>
-    </script>
-
+    <!-- Include js plugin -->
+    <script src="/slider/owl-carousel/owl.carousel.js"></script>
     <!-- //dropdown nav -->
     <!--search jQuery-->
     <script src="/js/main.js"></script>
