@@ -41,7 +41,7 @@
                                 <div class="quantity">
                                     <div class="quantity-select">
                                         <div data-proid="{{Product.id}}" class="entry value-minus">&nbsp;</div>
-                                        <input type="number" name="input_quantity" value="{{Quantity}}" min="1">
+                                        <input data-proid="{{Product.id}}" class="input_quantity" data-oldValue="{{Quantity}}" type="number" name="input_quantity" value="{{Quantity}}" min="1">
                                         <div data-proid="{{Product.id}}" class="entry value-plus active">&nbsp;</div>
                                     </div>
                                 </div>
@@ -153,9 +153,9 @@
             var SLT = $("#SLT").text();
             var idPro = $(this).data('proid');
                 divUpd.val(newVal);
-                $('input[name="quantity"]').val(newVal);
+                $('input[name="quantity"]').val(1);
                 $('input[name="proId"]').val(idPro);
-            // $('#form_change').submit('');
+                $('#form_change').submit();
         });
 
         $('.value-minus').on('click', function () {
@@ -165,11 +165,27 @@
 
             if (newVal >= 1) {
                 divUpd.val(newVal);
-                $('input[name="quantity"]').val(newVal);
+                $('input[name="quantity"]').val(-1);
                 $('input[name="proId"]').val(idPro);
+                $('#form_change').submit();
             }
         });
 
+        $('.input_quantity').keypress(function(e) {
+            if(e.which == 13) {
+                var newVal = parseInt($(this).val(), 10);
+                if(newVal >= 1){
+                    var idPro = $(this).data('proid');
+                    var oldVal = $(this).data('oldvalue');
+                    Quantity = newVal - oldVal;
+                    $('input[name="proId"]').val(idPro);
+                    $('input[name="quantity"]').val(Quantity);
+
+                    $('#form_change').submit();
+                }
+
+            }
+        });
 
     </script>
     <!--quantity-->
