@@ -15,7 +15,7 @@ var handle404MDW = require('./middle-wares/handle404'),
 var homeController = require('./controllers/homeController'),
     // categoryController = require('./controllers/categoryController'),
     productController = require('./controllers/productController'),
-    accountController = require('./controllers/accountController');
+    accountController = require('./controllers/accountController'),
     adminController = require('./controllers/adminController'),
     cartController = require('./controllers/cartController');
 
