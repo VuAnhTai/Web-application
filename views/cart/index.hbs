@@ -1,5 +1,8 @@
 </br></br></br></br>
-
+<form id="form_change" action="/cart/add" method="post">
+    <input  name="quantity" value="1">
+    <input  name="proId" value="{{id}}">
+</form>
 <!--checkout-->
 <div class="innerf-pages section">
     <div class="container">
@@ -37,17 +40,18 @@
                             <td class="invert">
                                 <div class="quantity">
                                     <div class="quantity-select">
-                                        <div class="entry value-minus">&nbsp;</div>
-                                        <div class="entry value">
-                                            <span>{{Quantity}}</span>
-                                        </div>
-                                        <div class="entry value-plus active">&nbsp;</div>
+                                        <div data-proid="{{Product.id}}" class="entry value-minus">&nbsp;</div>
+                                        <input type="number" name="input_quantity" value="{{Quantity}}" min="1">
+                                        <div data-proid="{{Product.id}}" class="entry value-plus active">&nbsp;</div>
                                     </div>
                                 </div>
                             </td>
                             <td class="invert">{{Product.ten_sach}}</td>
 
                             <td class="invert">{{number_format Amount}}</td>
+
+                            <td id="SLT" class="invert hidden">{{Product.so_luong_ton}}</td>
+
                             <td class="invert">
                                 <div class="rem">
                                     <div class="close1"> </div>
@@ -56,8 +60,13 @@
                             </td>
                         </tr>
                         {{/each}}
-                        
-
+                            <tr>
+                                <th>Tổng tiền:</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>xxxxx</td>
+                            </tr>
                     </tbody>
                 </table>
             </div>
@@ -131,25 +140,37 @@
                 <div class="clearfix"> </div>
 
             </div>
-
         </div>
-
     </div>
 </div>
 
     <!--quantity-->
     <script>
         $('.value-plus').on('click', function () {
-            var divUpd = $(this).parent().find('.value'),
-                newVal = parseInt(divUpd.text(), 10) + 1;
-            divUpd.text(newVal);
+            var divUpd = $(this).parent().find('input'),
+                newVal = parseInt(divUpd.val(), 10) + 1;
+                console.log(newVal);
+            var SLT = $("#SLT").text();
+            var idPro = $(this).data('proid');
+                divUpd.val(newVal);
+                $('input[name="quantity"]').val(newVal);
+                $('input[name="proId"]').val(idPro);
+            // $('#form_change').submit('');
         });
 
         $('.value-minus').on('click', function () {
-            var divUpd = $(this).parent().find('.value'),
-                newVal = parseInt(divUpd.text(), 10) - 1;
-            if (newVal >= 1) divUpd.text(newVal);
+            var divUpd = $(this).parent().find('input'),
+                newVal = parseInt(divUpd.val(), 10) - 1;
+            var idPro = $(this).data('proid');
+
+            if (newVal >= 1) {
+                divUpd.val(newVal);
+                $('input[name="quantity"]').val(newVal);
+                $('input[name="proId"]').val(idPro);
+            }
         });
+
+
     </script>
     <!--quantity-->
     <!-- FadeOut-Script -->
