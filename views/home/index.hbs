@@ -212,9 +212,11 @@
 <!--// Shop -->
 
 {{#section "js"}}
+    <script src="/js/myJS.js"></script>
 <script>
+
         //<![CDATA[ 
-    $(window).load(function () {
+    {{!-- $(window).load(function () {
         $("#slider-range").slider({
             range: true,
             min: 0,
@@ -226,7 +228,7 @@
         });
         $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
 
-    }); //]]>
+    }); //]]> --}}
     $(document).ready(function () {
         $("#owl-example").owlCarousel({ 
             items:4    

@@ -10,3 +10,8 @@ exports.login = user => {
     var sql = `select * from bs_nguoi_dung where tai_khoan = '${user.username}' and mat_khau = '${user.password}'`;
     return db.load(sql);
 }
+
+exports.loadUser = username => {
+    var sql = `select * from bs_nguoi_dung where tai_khoan = '${username}'`;
+    return db.load(sql);
+}

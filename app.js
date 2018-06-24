@@ -15,7 +15,8 @@ var handle404MDW = require('./middle-wares/handle404'),
 var homeController = require('./controllers/homeController'),
     // categoryController = require('./controllers/categoryController'),
     productController = require('./controllers/productController'),
-    accountController = require('./controllers/accountController'),
+    accountController = require('./controllers/accountController');
+    adminController = require('./controllers/adminController'),
     cartController = require('./controllers/cartController');
 
 var app = express();
@@ -79,6 +80,7 @@ app.get('/', (req, res) => {
 app.use('/home', homeController);
 app.use('/product', productController);
 app.use('/account', accountController);
+app.use('/admin', adminController);
 app.use('/cart', cartController);
 
 app.use(handle404MDW);

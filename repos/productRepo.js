@@ -76,3 +76,8 @@ exports.loadByCat= (catId) => {
     ) `;
     return db.load(sql);
 }
+
+exports.updateSL = (id, SLT, SLB) => {
+    var sql = `update bs_sach set sl_ban=${SLB},so_luong_ton=${SLT} where id=${id}`
+    return db.save(sql);
+}

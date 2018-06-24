@@ -1,0 +1,71 @@
+</br></br></br></br>
+
+<!--checkout-->
+<div class="innerf-pages section">
+    <div class="container">
+        <div class="privacy about">
+            <h4 class="rad-txt">
+                <span class="abtxt1">Xem lại</span>
+                <span class="abtext">Giỏ hàng</span>
+            </h4>
+            
+            <div class="checkout-right">
+                <h4>Giỏ hàng của bạn bao gồm
+                    <span>3 sản phẩm</span>
+                </h4>
+                {{#each data.orders}}
+                <h4>Hóa đơn ngày: 
+                    <span>{{time}}</span>
+                </h4>
+                <table class="timetable_sub table-responsive">
+                    <thead>
+                        <tr>
+                            {{!-- <th>STT</th> --}}
+                            <th>Hình ảnh</th>
+                            <th>Tên SP</th>
+                            <th>Số lượng</th>
+                            <th>Đơn giá</th>
+                            <th>Thành tiền</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {{#each items}}
+                        <tr class="rem1">
+                            {{!-- <td class="invert">{{Product.id}}</td> --}}
+                            <td class="invert-image">
+                                <a href="product/detail/{{id_sach}}">
+                                    <img src="/images_sach/{{hinh}}" alt=" " class="img-responsive">
+                                </a>
+                            </td>
+                            <td class="invert">
+                                <a href="product/detail/{{id_sach}}">
+                                    {{ten_sach}}
+                                </a>
+                            </td>
+                            <td class="invert">{{so_luong}}</td>
+                            <td class="invert">{{number_format don_gia}}</td>
+                            <td class="invert">{{number_format thanh_tien}}</td>
+
+                            <td class="invert">
+                                {{!-- {{#if trang}} --}}
+                            </td>
+                        </tr>
+                        {{/each}}
+                            <tr>
+                                <th>Tổng tiền:</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                {{!-- {{#with }} --}}
+                                <td>{{number_format total}}</td>
+                                {{!-- {{/with}} --}}
+                            </tr>
+                    </tbody>
+                </table>
+                <br><br>    
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

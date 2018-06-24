@@ -1,7 +1,10 @@
 </br></br></br></br>
 <form id="form_change" action="/cart/add" method="post">
-    <input  name="quantity" value="1">
-    <input  name="proId" value="{{id}}">
+    <input  name="quantity" value="1" class="hidden">
+    <input  name="proId" value="{{id}}" class="hidden">
+</form>
+<form id="form_remove" action="/cart/remove" method="post">
+    <input  name="proId" value="{{id}}" class="hidden">
 </form>
 <!--checkout-->
 <div class="innerf-pages section">
@@ -11,11 +14,15 @@
                 <span class="abtxt1">Xem lại</span>
                 <span class="abtext">Giỏ hàng</span>
             </h4>
-
+            
             <div class="checkout-right">
                 <h4>Giỏ hàng của bạn bao gồm
                     <span>3 sản phẩm</span>
                 </h4>
+                <div id="signupalert" class="alert alert-danger hidden">
+                    <p id="error">Error: {{data.errorMsg}}</p>
+                    <span></span>
+                </div>
                 <table class="timetable_sub table-responsive">
                     <thead>
                         <tr>
@@ -33,16 +40,16 @@
                         <tr class="rem1">
                             <td class="invert">{{Product.id}}</td>
                             <td class="invert-image">
-                                <a href="single_product.html">
+                                <a href="product/detail/{{Product.id}}">
                                     <img src="/images_sach/{{Product.hinh}}" alt=" " class="img-responsive">
                                 </a>
                             </td>
                             <td class="invert">
                                 <div class="quantity">
                                     <div class="quantity-select">
-                                        <div data-proid="{{Product.id}}" class="entry value-minus">&nbsp;</div>
-                                        <input data-proid="{{Product.id}}" class="input_quantity" data-oldValue="{{Quantity}}" type="number" name="input_quantity" value="{{Quantity}}" min="1">
-                                        <div data-proid="{{Product.id}}" class="entry value-plus active">&nbsp;</div>
+                                        <div data-proid="{{Product.id}}" data-SLT="{{Product.so_luong_ton}}" class="entry value-minus">&nbsp;</div>
+                                        <input data-proid="{{Product.id}}" class="input_quantity" data-oldValue="{{Quantity}}" data-SLT="{{Product.so_luong_ton}}" type="number" name="input_quantity" value="{{Quantity}}" min="1">
+                                        <div data-proid="{{Product.id}}" data-SLT="{{Product.so_luong_ton}}" class="entry value-plus active">&nbsp;</div>
                                     </div>
                                 </div>
                             </td>
@@ -54,9 +61,8 @@
 
                             <td class="invert">
                                 <div class="rem">
-                                    <div class="close1"> </div>
-                                </div>
-
+                                    <a class="remove" data-proid="{{Product.id}}"></a>
+                                </a>
                             </td>
                         </tr>
                         {{/each}}
@@ -65,76 +71,64 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td>xxxxx</td>
+                                {{!-- {{#with }} --}}
+                                <td>{{number_format data.moneyTotal}}</td>
+                                {{!-- {{/with}} --}}
                             </tr>
                     </tbody>
                 </table>
             </div>
             <div class="checkout-left">
                 <div class="col-md-4 checkout-left-basket">
-                    <h4>Tiếp tục mua sắm</h4>
+                    <h4><a href="/">Tiếp tục mua sắm</a></h4>
                     <ul>
-                        <li>Be Creative
+                        {{#each data.items}}
+                        <li>{{Product.ten_sach}}
                             <i>-</i>
-                            <span>$100.00 </span>
+                            <span>{{number_format Amount}}đ</span>
                         </li>
-                        <li>Work From Home
+                        {{/each}}
+                        <li>Tổng tiền:
                             <i>-</i>
-                            <span>$80.00 </span>
-                        </li>
-                        <li>E-Commerce
-                            <i>-</i>
-                            <span>$120.00 </span>
-                        </li>
-                        <li>Phí
-                            <i>-</i>
-                            <span>$55.00</span>
-                        </li>
-                        <li>Tổng cộng
-                            <i>-</i>
-                            <span>$355.00</span>
+                            <span>{{number_format data.moneyTotal}}đ</span>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-8 address_form">
                     <h4>Địa chỉ thanh toán</h4>
-                    <form action="payment.html" method="post" class="creditly-card-form shopf-sear-headinfo_form">
+                    {{#with data.user}}
+                    <form action="/cart/payment" method="post" class="creditly-card-form shopf-sear-headinfo_form">
                         <div class="creditly-wrapper wrapper">
                             <div class="information-wrapper">
                                 <div class="first-row form-group">
                                     <div class="controls">
                                         <label class="control-label">Họ tên: </label>
-                                        <input class="billing-address-name form-control" type="text" name="name" placeholder="Full name">
+                                        <input class="billing-address-name form-control" type="text" name="ho_ten_nguoi_nhan" placeholder="Full name" value="{{ho_ten}}" required>
+                                    </div>
+                                    <div class="controls">
+                                        <label class="control-label">email: </label>
+                                        <input class="billing-address-name form-control" type="text" name="email_nguoi_nhan" placeholder="Email" value="{{email}}" required>
                                     </div>
                                     <div class="card_number_grids">
                                         <div class="card_number_grid_left">
                                             <div class="controls">
                                                 <label class="control-label">Số điện thoại:</label>
-                                                <input class="form-control" type="text" placeholder="Mobile number">
+                                                <input class="form-control" type="text" placeholder="Mobile number" name="so_dien_thoai_nguoi_nhan" value="{{dien_thoai}}" required>
                                             </div>
                                         </div>
                                         
                                         <div class="clear"> </div>
                                     </div>
                                     <div class="controls">
-                                        <label class="control-label">Tỉnh, TP: </label>
-                                        <input class="form-control" type="text" placeholder="Town/City">
-                                    </div>
-                                    <div class="controls">
-                                        <label class="control-label">Loại địa chỉ: </label>
-                                        <select class="form-control option-fieldf">
-                                            <option>Văn phòng</option>
-                                            <option>Nhà</option>
-                                            
-
-                                        </select>
+                                        <label class="control-label">Địa chỉ: </label>
+                                        <input class="form-control" type="text" placeholder="Địa chỉ" name="dia_chi_nguoi_nhan" value="{{dia_chi}}" required>
                                     </div>
                                 </div>
                                 <button class="submit check_out">Đặt hàng</button>
                             </div>
                         </div>
                     </form>
-
+                    {{/with}}
                 </div>
 
                 <div class="clearfix"> </div>
@@ -146,74 +140,100 @@
 
     <!--quantity-->
     <script>
+        $('.remove').on('click', function () {
+            var proID = $(this).data('proid');
+
+            $('#form_remove input[name="proId"]').val(proID);
+
+            $('#form_remove').submit();
+        });
+
         $('.value-plus').on('click', function () {
-            var divUpd = $(this).parent().find('input'),
+            var SLT = $(this).data('slt');
+            if(SLT < 1)
+            {
+                $("#error").text('Sản phẩm này hiện đã bán hết, vui lòng lựa chọn sản phẩm khác');
+                $("#signupalert").removeClass('hidden');
+            }else{
+                $("#signupalert").addClass('hidden');
+
+                var divUpd = $(this).parent().find('input'),
                 newVal = parseInt(divUpd.val(), 10) + 1;
                 console.log(newVal);
-            var SLT = $("#SLT").text();
-            var idPro = $(this).data('proid');
+                var idPro = $(this).data('proid');
                 divUpd.val(newVal);
-                $('input[name="quantity"]').val(1);
-                $('input[name="proId"]').val(idPro);
+                $('#form_change input[name="quantity"]').val(1);
+                $('#form_change input[name="proId"]').val(idPro);
                 $('#form_change').submit();
+            }
         });
 
         $('.value-minus').on('click', function () {
-            var divUpd = $(this).parent().find('input'),
-                newVal = parseInt(divUpd.val(), 10) - 1;
-            var idPro = $(this).data('proid');
+            var SLT = $(this).data('slt');
+            if(SLT < 1)
+            {
+                $("#error").text('Sản phẩm này hiện đã bán hết, vui lòng lựa chọn sản phẩm khác');
+                $("#signupalert").removeClass('hidden');
+            }else{
+                $("#signupalert").addClass('hidden');
 
-            if (newVal >= 1) {
-                divUpd.val(newVal);
-                $('input[name="quantity"]').val(-1);
-                $('input[name="proId"]').val(idPro);
-                $('#form_change').submit();
+                var divUpd = $(this).parent().find('input'),
+                    newVal = parseInt(divUpd.val(), 10) - 1;
+                var idPro = $(this).data('proid');
+
+                if (newVal >= 1) {
+                    divUpd.val(newVal);
+                    $('#form_change input[name="quantity"]').val(-1);
+                    $('#form_change input[name="proId"]').val(idPro);
+                    $('#form_change').submit();
+                }
             }
         });
 
         $('.input_quantity').keypress(function(e) {
             if(e.which == 13) {
+                var SLT = $(this).data('slt');
                 var newVal = parseInt($(this).val(), 10);
-                if(newVal >= 1){
-                    var idPro = $(this).data('proid');
-                    var oldVal = $(this).data('oldvalue');
-                    Quantity = newVal - oldVal;
-                    $('input[name="proId"]').val(idPro);
-                    $('input[name="quantity"]').val(Quantity);
+                if(SLT < newVal)
+                {
+                    $("#error").text('Cửa hàng chỉ còn lại: ' + SLT + " sản phẩm");
+                    $("#signupalert").removeClass('hidden');
+                }else{
+                    $("#signupalert").addClass('hidden');
 
-                    $('#form_change').submit();
+                    if(newVal >= 1){
+                        var idPro = $(this).data('proid');
+                        var oldVal = $(this).data('oldvalue');
+                        Quantity = newVal - oldVal;
+                        $('#form_change input[name="proId"]').val(idPro);
+                        $('#form_change input[name="quantity"]').val(Quantity);
+
+                        $('#form_change').submit();
+                    }
                 }
-
             }
         });
 
-    </script>
-    <!--quantity-->
-    <!-- FadeOut-Script -->
-     <script>
-        $(document).ready(function (c) {
-            $('.close1').on('click', function (c) {
-                $('.rem1').fadeOut('slow', function (c) {
-                    $('.rem1').remove();
-                });
-            });
+        $('.input_quantity').blur(function(e) {
+            var newVal = parseInt($(this).val(), 10);
+            if(newVal >= 1){
+                var SLT = $(this).data('slt');
+                if(SLT < newVal)
+                {
+                    $("#error").text('Cửa hàng chỉ còn lại: ' + SLT + " sản phẩm");
+                    $("#signupalert").removeClass('hidden');
+                }else{
+                    $("#signupalert").addClass('hidden');
+
+                    var idPro = $(this).data('proid');
+                    var oldVal = $(this).data('oldvalue');
+                    Quantity = newVal - oldVal;
+                    $('#form_change input[name="proId"]').val(idPro);
+                    $('#form_change input[name="quantity"]').val(Quantity);
+
+                    $('#form_change').submit();
+                }
+            }
         });
-    </script>
-    <script>
-        $(document).ready(function (c) {
-            $('.close2').on('click', function (c) {
-                $('.rem2').fadeOut('slow', function (c) {
-                    $('.rem2').remove();
-                });
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function (c) {
-            $('.close3').on('click', function (c) {
-                $('.rem3').fadeOut('slow', function (c) {
-                    $('.rem3').remove();
-                });
-            });
-        });
+
     </script>
