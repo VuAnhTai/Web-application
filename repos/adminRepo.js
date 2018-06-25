@@ -15,3 +15,9 @@ exports.loadSanPham = () => {
 				LEFT JOIN bs_loai_sach R4 ON (R1.id_loai_sach = R4.id)`;
 	return db.load(sql);
 }
+
+exports.loadDonHang = () => {
+	var sql = `select *, DATE_FORMAT(ngay_dat, '%Y-%m-%d') as ngay_dat2,(trang_thai-1) as trang_thai2 from bs_don_hang
+	ORDER BY ngay_dat2 DESC`;
+	return db.load(sql);
+}
