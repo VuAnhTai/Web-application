@@ -1,0 +1,115 @@
+{{#if noProducts}}
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 bs3-a">
+        <div id="signupalert" class="alert alert-danger">
+            <p>Không Tìm được sản phẩm</p>
+            <span></span>
+        </div>
+    </div>
+</div>
+{{else}}
+<div class="innerf-pages section">
+    <div class="container-fluid">
+        <h1 align="center">Tất cả sản phẩm</h1>
+        <div class="wrapper_top_shop">
+            {{#each products}}
+            <div class="col-md-3 product-men">
+                <div class="product-chr-info chr">
+                    <div class="thumbnail">
+                        <a href="/product/detail/{{id}}">
+                            <img src="/images_sach/{{hinh}}" alt="">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <h4>{{ten_sach}}</h4>
+                        <p>{{ten_tac_gia}}</p>
+                        <div class="matrlf-mid">
+                            <ul class="price-list">
+                                <li>{{number_format don_gia}} VNĐ</li>
+                                <li>{{number_format gia_bia}} VNĐ</li>
+                            </ul>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <form action="/cart/add" method="post">
+                            <input type="hidden" name="quantity" value="1">
+                            <input type="hidden" name="proId" value="{{id}}">
+                            <button type="submit" class="chr-cart pchr-cart">Mua
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+            <!-- //row3 -->
+            <div class="clearfix">
+            </div>
+
+            <div class="clearfix">
+                <ul class="pagination modal-2" align="center" style="margin-left:265px;">
+                    <li>
+                        <a href="#" class="prev">&laquo </a>
+                    </li>
+                    {{#each page_numbers}} {{#if isCurPage}}
+                    <li class="active" id="active">
+                        <a href="javascript:;">{{value}}</a>
+                    </li>
+                    {{else}}
+                    <li>
+                        <a href="?price1={{../price1}}&price2={{../price2}}&page={{value}}">{{value}}</a>
+                    </li>
+                    {{/if}} {{/each}}
+                    <li>
+                        <a href="#" class="next"> &raquo;</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- //product-sec1 -->
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+</div>
+<!--// Shop -->
+{{/if}} 
+{{#section "js"}}
+<script>
+        $(document).ready(function(){
+        $(".prev").click(function(){
+            var value = $("#active").text();
+            if(value <= 1)
+                $("a").attr("href", "javascript:;");
+            else{
+                var pagePrev = +value - 1;
+                url = window.location.href;
+                url = url.substring(0, url.length -1);
+                window.location.href = url + pagePrev;
+            }
+        })
+    });
+    $(document).ready(function(){
+        $(".next").click(function(){
+            var value = $("#active").text();
+            var pageLast = $('.pagination li:nth-last-child(2)').text();
+            if(value >= pageLast)
+                $("a").attr("href", "javascript:;");
+            else{
+                var pageNext = +value + 1;
+                url = window.location.href;
+                url = url.substring(0, url.length-1);
+                alert(url);
+
+                window.location.href = url + pageNext;
+            }
+        })
+    });
+</script> 
+{{/section}}

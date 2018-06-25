@@ -56,7 +56,7 @@
                     </li>
                     {{else}}
                     <li>
-                        <a href="?page={{value}}">{{value}}</a>
+                        <a href="?Search={{../search}}&page={{value}}">{{value}}</a>
                     </li>
                     {{/if}} {{/each}}
                     <li>
@@ -75,4 +75,35 @@
 </div>
 <!--// Shop -->
 {{/if}} {{#section "js"}}
-<script src="/js/myJS.js"></script> {{/section}}
+<script>
+    $(document).ready(function(){
+        $(".prev").click(function(){
+            var value = $("#active").text();
+            if(value <= 1)
+                $("a").attr("href", "javascript:;");
+            else{
+                var pagePrev = +value - 1;
+                url = window.location.href;
+                url = url.substring(0, url.length -1);
+                window.location.href = url + pagePrev;
+            }
+        })
+    });
+    $(document).ready(function(){
+        $(".next").click(function(){
+            var value = $("#active").text();
+            var pageLast = $('.pagination li:nth-last-child(2)').text();
+            if(value >= pageLast)
+                $("a").attr("href", "javascript:;");
+            else{
+                var pageNext = +value + 1;
+                url = window.location.href;
+                url = url.substring(0, url.length-1);
+                alert(url);
+
+                window.location.href = url + pageNext;
+            }
+        })
+    });
+
+</script> {{/section}}

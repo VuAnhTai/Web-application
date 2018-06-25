@@ -1,6 +1,14 @@
 var db = require('../fn/db')
 var config = require('../config/config');
 
+exports.loadAllProduct= (offset) => {
+    var sql = `SELECT bs_sach.*, bs_tac_gia.ten_tac_gia 
+        FROM bs_sach, bs_tac_gia 
+        WHERE bs_sach.id_tac_gia = bs_tac_gia.id
+        limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+    return db.load(sql);
+}
+
 exports.loadAllByCat= (catId, offset) => {
     var sql = `SELECT bs_sach.*, bs_loai_sach.ten_loai_sach, bs_tac_gia.ten_tac_gia 
         FROM bs_sach, bs_loai_sach, bs_tac_gia 
@@ -97,5 +105,47 @@ exports.search = (stringSearch, offset) => {
                 limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
     // var sql = `SELECT * FROM users WHERE SACH.ten_sach LIKE '%${stringSearch}%'`
     console.log(sql);
+    return db.load(sql);
+}
+exports.countSearch = (stringSearch) => {
+    var sql = `SELECT count(*) as total
+                FROM bs_sach as SACH
+                LEFT JOIN bs_tac_gia as TG on SACH.id_tac_gia = TG.id 
+                LEFT JOIN bs_nha_xuat_ban as NXB on SACH.id_nha_xuat_ban = NXB.id 
+                LEFT JOIN bs_loai_sach as LS on SACH.id_loai_sach = LS.id 
+                LEFT JOIN (SELECT id, ten_loai_sach FROM bs_loai_sach WHERE id_loai_cha = 0) 
+                    as LSPARENT on LS.id_loai_cha = LSPARENT.id 
+                WHERE SACH.ten_sach LIKE '%${stringSearch}%' ||
+                NXB.ten_nha_xuat_ban LIKE '%${stringSearch}%' ||
+                TG.ten_tac_gia LIKE '%${stringSearch}%' ||
+                LS.ten_loai_sach LIKE '%${stringSearch}%'`;
+    // var sql = `SELECT * FROM users WHERE SACH.ten_sach LIKE '%${stringSearch}%'`
+    return db.load(sql);
+}
+
+exports.searchByPrice = (value1, value2, offset) => {
+    var sql = `SELECT SACH.*, NXB.ten_nha_xuat_ban, TG.ten_tac_gia, LS.ten_loai_sach
+                FROM bs_sach as SACH
+                LEFT JOIN bs_tac_gia as TG on SACH.id_tac_gia = TG.id 
+                LEFT JOIN bs_nha_xuat_ban as NXB on SACH.id_nha_xuat_ban = NXB.id 
+                LEFT JOIN bs_loai_sach as LS on SACH.id_loai_sach = LS.id 
+                LEFT JOIN (SELECT id, ten_loai_sach FROM bs_loai_sach WHERE id_loai_cha = 0) 
+                    as LSPARENT on LS.id_loai_cha = LSPARENT.id 
+                WHERE SACH.don_gia BETWEEN ${value1} AND ${value2}
+                limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+    // var sql = `SELECT * FROM users WHERE SACH.ten_sach LIKE '%${stringSearch}%'`
+    return db.load(sql);
+}
+exports.countSearchByPrice = (value1, value2) => {
+    var sql = `SELECT count(*) as total
+                FROM bs_sach as SACH
+                LEFT JOIN bs_tac_gia as TG on SACH.id_tac_gia = TG.id 
+                LEFT JOIN bs_nha_xuat_ban as NXB on SACH.id_nha_xuat_ban = NXB.id 
+                LEFT JOIN bs_loai_sach as LS on SACH.id_loai_sach = LS.id 
+                LEFT JOIN (SELECT id, ten_loai_sach FROM bs_loai_sach WHERE id_loai_cha = 0) 
+                    as LSPARENT on LS.id_loai_cha = LSPARENT.id 
+                WHERE SACH.don_gia BETWEEN ${value1} AND ${value2}`;
+    // var sql = `SELECT * FROM users WHERE SACH.ten_sach LIKE '%${stringSearch}%'`
+    // console.log(sql);
     return db.load(sql);
 }
