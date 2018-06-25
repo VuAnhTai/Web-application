@@ -81,3 +81,21 @@ exports.updateSL = (id, SLT, SLB) => {
     var sql = `update bs_sach set sl_ban=${SLB},so_luong_ton=${SLT} where id=${id}`
     return db.save(sql);
 }
+
+exports.search = (stringSearch, offset) => {
+    var sql = `SELECT SACH.*, NXB.ten_nha_xuat_ban, TG.ten_tac_gia, LS.ten_loai_sach
+                FROM bs_sach as SACH
+                LEFT JOIN bs_tac_gia as TG on SACH.id_tac_gia = TG.id 
+                LEFT JOIN bs_nha_xuat_ban as NXB on SACH.id_nha_xuat_ban = NXB.id 
+                LEFT JOIN bs_loai_sach as LS on SACH.id_loai_sach = LS.id 
+                LEFT JOIN (SELECT id, ten_loai_sach FROM bs_loai_sach WHERE id_loai_cha = 0) 
+                    as LSPARENT on LS.id_loai_cha = LSPARENT.id 
+                WHERE SACH.ten_sach LIKE '%${stringSearch}%' ||
+                NXB.ten_nha_xuat_ban LIKE '%${stringSearch}%' ||
+                TG.ten_tac_gia LIKE '%${stringSearch}%' ||
+                LS.ten_loai_sach LIKE '%${stringSearch}%'
+                limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+    // var sql = `SELECT * FROM users WHERE SACH.ten_sach LIKE '%${stringSearch}%'`
+    console.log(sql);
+    return db.load(sql);
+}

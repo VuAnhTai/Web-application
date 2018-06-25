@@ -124,7 +124,7 @@
                                         <input class="form-control" type="text" placeholder="Địa chỉ" name="dia_chi_nguoi_nhan" value="{{dia_chi}}" required>
                                     </div>
                                 </div>
-                                <button class="submit check_out">Đặt hàng</button>
+                                <a id="payment" data-sl="{{../data.moneyTotal}}" class="submit check_out">Đặt hàng</a>
                             </div>
                         </div>
                     </form>
@@ -214,7 +214,7 @@
             }
         });
 
-        $('.input_quantity').blur(function(e) {
+        $('.input_quantity').blur(function() {
             var newVal = parseInt($(this).val(), 10);
             if(newVal >= 1){
                 var SLT = $(this).data('slt');
@@ -236,4 +236,16 @@
             }
         });
 
+        $("#payment").click(function(){
+            var SL = $(this).data('sl');
+            alert(SL);
+            if(SL <= 0)
+            {
+                $("#error").text('Hiện không có sản phẩm nào trong giỏ hàng');
+                $("#signupalert").removeClass('hidden');
+                alert('Hiện không có sản phẩm nào trong giỏ hàng');
+            }else{
+                $(this).submit();
+            }
+        })
     </script>

@@ -1,12 +1,13 @@
 {{#if noProducts}}
-<br><br><br>
+<br>
+<br>
+<br>
 <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12">
         Không có sản phẩm Thuộc nhà xuất bản này.
     </div>
 </div>
 {{else}}
-
 <div class="innerf-pages section">
     <div class="container-fluid">
         <h1 align="center">Tất cả sản phẩm</h1>
@@ -42,20 +43,22 @@
             </div>
             {{/each}}
             <div class="clearfix"></div>
-            
+
             <!-- //row3 -->
             <div class="clearfix">
                 <ul class="pagination modal-2" align="center" style="margin-left:265px;">
                     <li>
                         <a href="javascript:;" class="prev">&laquo </a>
                     </li>
-                    {{#each page_numbers}}
-                        {{#if isCurPage}}
-                            <li class="active" id='active'><a href="javascript:;">{{value}}</a></li>
-                        {{else}}
-                            <li><a href="?page={{value}}">{{value}}</a></li>
-                        {{/if}}
-                    {{/each}}
+                    {{#each page_numbers}} {{#if isCurPage}}
+                    <li class="active" id='active'>
+                        <a href="javascript:;">{{value}}</a>
+                    </li>
+                    {{else}}
+                    <li>
+                        <a href="?page={{value}}">{{value}}</a>
+                    </li>
+                    {{/if}} {{/each}}
                     <li>
                         <a href="#" class="next"> &raquo;</a>
                     </li>
@@ -71,4 +74,5 @@
 <div class="clearfix"></div>
 </div>
 <!--// Shop -->
-{{/if}}
+{{/if}} {{#section "js"}}
+<script src="/js/myJS.js"></script> {{/section}}

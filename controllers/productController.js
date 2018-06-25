@@ -37,9 +37,9 @@ router.get('/byCat/:catId', (req, res) => {
         var vm = {
             products: pRows,
             noProducts: pRows.length === 0,
-            page_numbers: numbers
+            page_numbers: numbers,
         };
-        res.render('product/byCat', vm);
+        res.render('product/product', vm);
     });
 });
 
@@ -77,9 +77,11 @@ router.get('/bySup/:supId', (req, res) => {
         var vm = {
             products: pRows,
             noProducts: pRows.length === 0,
-            page_numbers: numbers
+            page_numbers: numbers,
+            // errorMsg: 'Không tìm thấy sản phẩm của nhà sản xuất'
+
         };
-        res.render('product/bySup', vm);
+        res.render('product/product', vm);
     });
 });
 
@@ -109,7 +111,7 @@ router.get('/detail/:id', (req, res) => {
                 }else{
                     cats = cat;
                 }
-                console.log(sup.length);
+                // console.log(sup.length);
 
                 if(sup.length > 5){
                     for(var l = 0; l < 5; l++) {
@@ -137,4 +139,37 @@ router.get('/detail/:id', (req, res) => {
     });
 });
 
+router.get('/search', (req, res) => {
+    var keyword = req.query.Search;
+    var page = req.query.page;
+    if (!page) {
+        page = 1;
+    }
+    var offset = (page - 1) * config.PRODUCTS_PER_PAGE;
+
+    productRepo.search(keyword, offset).then(rows => {
+        total = rows.length;
+
+        var nPages = total / config.PRODUCTS_PER_PAGE;
+        if (total % config.PRODUCTS_PER_PAGE > 0) {
+            nPages++;
+        }
+
+        var numbers = [];
+        for (i = 1; i <= nPages; i++) {
+            numbers.push({
+                value: i,
+                isCurPage: i === +page
+            });
+        }
+
+        var vm = {
+            products: rows,
+            noProducts: rows.length === 0,
+            page_numbers: numbers,
+            // errorMsg: 'Không tìm thấy sản phẩm'
+        };
+        res.render('product/product', vm);
+    });
+})
 module.exports = router;

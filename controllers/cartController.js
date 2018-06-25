@@ -121,7 +121,7 @@ router.post('/payment', (req, res) => {
                 Promise.all(items).then(result_order_detail => {
                     //delete toan bo cart sau khi hoan thanh
                     req.session.cart = undefined;
-                    res.redirect(req.headers.referer);
+                    res.redirect('/cart/history');
                 });
             });
         });
@@ -156,7 +156,7 @@ router.get('/history', (req, res) => {
                     }
                     // console.log(result[i][0].id_don_hang);
                     // console.log(orders[j].id);
-                    console.log(order);
+                    // console.log(order);
                     data.push(order);
                 }
                 var vm = {

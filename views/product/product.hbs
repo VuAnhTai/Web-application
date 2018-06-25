@@ -1,8 +1,13 @@
 {{#if noProducts}}
-<br><br><br>
+<br>
+<br>
+<br>
 <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12 bs3-a">
-        Không có sản phẩm Thuộc loại này.
+        <div id="signupalert" class="alert alert-danger">
+            <p>Không Tìm được sản phẩm</p>
+            <span></span>
+        </div>
     </div>
 </div>
 {{else}}
@@ -42,38 +47,37 @@
             {{/each}}
 
             <!-- //row3 -->
-            <div class="clearfix">  
+            <div class="clearfix">
             </div>
-                      
+
             <div class="clearfix">
                 <ul class="pagination modal-2" align="center" style="margin-left:265px;">
                     <li>
                         <a href="#" class="prev">&laquo </a>
                     </li>
-                    {{#each page_numbers}}
-                        {{#if isCurPage}}
-                            <li class="active" id="active"><a href="javascript:;">{{value}}</a></li>
-                        {{else}}
-                            <li><a href="?page={{value}}">{{value}}</a></li>
-                        {{/if}}
-                    {{/each}}
+                    {{#each page_numbers}} {{#if isCurPage}}
+                    <li class="active" id="active">
+                        <a href="javascript:;">{{value}}</a>
+                    </li>
+                    {{else}}
+                    <li>
+                        <a href="?page={{value}}">{{value}}</a>
+                    </li>
+                    {{/if}} {{/each}}
                     <li>
                         <a href="#" class="next"> &raquo;</a>
                     </li>
                 </ul>
             </div>
 
-        <!-- //product-sec1 -->
-        <div class="clearfix"></div>
+            <!-- //product-sec1 -->
+            <div class="clearfix"></div>
 
+        </div>
     </div>
-</div>
-<div class="clearfix"></div>
+    <div class="clearfix"></div>
 
 </div>
 <!--// Shop -->
-{{/if}}
-
-{{#section "js"}}
-    <script src="/js/myJS.js"></script>
-{{/section}}
+{{/if}} {{#section "js"}}
+<script src="/js/myJS.js"></script> {{/section}}
