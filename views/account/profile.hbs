@@ -1,0 +1,129 @@
+{{#section 'css'}}
+    <link rel="stylesheet" type="text/css" href="/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+    <style type="text/css">
+        .datepicker.dropdown-menu {
+          background-color:#FFF;
+        }
+    </style>
+    
+{{/section}}
+</br>
+</br>
+<!-- breadcrumbs -->
+<div class="crumbs text-center">
+    <div class="container">
+        <div class="row">
+            <ul class="btn-group btn-breadcrumb bc-list">
+                <li class="btn btn1">
+                    <a href="/">
+                        <i class="glyphicon glyphicon-home"></i>
+                    </a>
+                </li>
+                <li class="btn btn2">
+                    <a href="/account/profile">Thông tin tài khoản</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--//breadcrumbs ends here-->
+<!-- ******************************* Form account ******************************************** -->
+</br>
+<div class="container-info">
+    <!-- //product left -->
+    <div class="col-md-3">
+        <ul class="list-group">
+            <li>
+                <legend class="alert alert-success">
+                    <center>
+                        <p>Tài khoản</p>
+                        <h2>
+                            <b>Vũ Anh Tài</b>
+                        </h2>
+                    </center>
+                </legend>
+            </li>
+            <li class="list-group-item">
+                <a href="user-dashboard-saved-searches.html">
+                    <i class="glyphicon glyphicon-user"></i>
+                    Thông tin tài khoản
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="history.html">
+                    <i class="glyphicon glyphicon-th-list"></i>
+                    Thông tin hóa đơn
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="user-dashboard-saved-searches.html">
+                    <i class="glyphicon glyphicon-heart"></i>
+                    Sản phẩm yêu thích
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="user-dashboard-saved-searches.html">
+                    <i class="glyphicon glyphicon-home"></i>
+                    Sổ địa chỉ
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- product right -->
+
+    <div class="col-md-9 address_form">
+        <h4>Địa chỉ thanh toán</h4>
+        {{#with data.user}}
+        <form action="/account/update" method="post" class="creditly-card-form shopf-sear-headinfo_form">
+            <div class="creditly-wrapper wrapper">
+                <div class="information-wrapper">
+                    <div class="first-row form-group">
+                        <div class="controls">
+                            <label class="control-label">Họ tên: </label>
+                            <input class="billing-address-name form-control" type="text" name="ho_ten" placeholder="Full name" value="{{ho_ten}}"
+                                required>
+                        </div>
+                        <div class="controls">
+                            <label for="txtDOB" class="control-label">Ngày sinh</label>
+                            <input id="txtDOB" type="text" class="billing-address-name form-control" name="dob" placeholder="ngày sinh" required="" value="{{dob}}"><i class="icon-calendar"></i></input>
+                        </div>
+                        <div class="controls">
+                            <label class="control-label">email: </label>
+                            <input class="billing-address-name form-control" type="text" name="email" placeholder="Email" value="{{email}}"
+                                required>
+                        </div>
+                        <div class="card_number_grids">
+                            <div class="card_number_grid_left">
+                                <div class="controls">
+                                    <label class="control-label">Số điện thoại:</label>
+                                    <input class="form-control" type="text" placeholder="Mobile number" name="so_dien_thoai" value="{{dien_thoai}}"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="controls">
+                            <label class="control-label">Địa chỉ: </label>
+                            <input class="form-control" type="text" placeholder="Địa chỉ" name="dia_chi" value="{{dia_chi}}" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit check_out">Cập nhật</button>
+                </div>
+            </div>
+        </form>
+        {{/with}}
+    </div>
+    <div class="clearfix"></div>
+
+</div>
+
+{{#section 'js'}}
+    <script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript">
+            $('#txtDOB').datepicker({
+                format: 'd/m/yyyy',
+                autoclose: true
+            });
+        </script>  
+{{/section}}

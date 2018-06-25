@@ -82,7 +82,16 @@ app.use('/product', productController);
 app.use('/account', accountController);
 app.use('/admin', adminController);
 app.use('/cart', cartController);
-
+app.get('/about', (req, res) => {
+    res.render('hbs/about', {
+        layout: 'main_not_leftbar.handlebars',
+    });
+});
+app.get('/contact', (req, res) => {
+    res.render('hbs/contact', {
+        layout: 'main_not_leftbar.handlebars',
+    });
+});
 app.use(handle404MDW);
 
 app.listen(3000, () => {

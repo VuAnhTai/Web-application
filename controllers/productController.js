@@ -93,36 +93,68 @@ router.get('/detail/:id', (req, res) => {
 
     productRepo.single(proId).then(rows => {
         if (rows.length > 0) {
+            offset = Math.floor(Math.random() * 10) * 8;  
+            
             var p1 = productRepo.loadByCat(rows[0].id_loai_sach);
             var p2 = productRepo.loadBySup(rows[0].id_nha_xuat_ban);
-            Promise.all([p1, p2]).then(([cat, sup]) => {
+            var p3 = productRepo.loadAllProduct(offset);
+            Promise.all([p1, p2, p3]).then(([cat, sup, all]) => {
                 // console.log(cat.length);
                 var cats = [];
                 var sups = [];
                 var exists = [];
+                var arrRandom=[];
+                console.log(sup.length);
+                console.log(cat.length);
                 if(cat.length >= 5){
                     for(var l = 0; l < 5; l++) {
                        do {
                            randomNumber = Math.floor(Math.random() * cat.length);  
+
                        } while (exists[randomNumber]);
                        exists[randomNumber] = true;
                        cats.push(cat[randomNumber]);
                     }
                 }else{
                     cats = cat;
+                    var arrRandom=[];
+                    for(var l = cat.length; l < 5; l++) {
+                        do {
+                            randomNumber = Math.floor(Math.random() * 8);  
+                            console.log(randomNumber);
+                        } while (arrRandom.includes(randomNumber));
+
+                        arrRandom.push(randomNumber);
+
+                        cats.push(all[randomNumber]);
+                        
+                    }
                 }
                 // console.log(sup.length);
-
-                if(sup.length > 5){
+                exists = []; arrRandom = [];
+                if(sup.length >= 5){
                     for(var l = 0; l < 5; l++) {
-                       do {
-                           randomNumber = Math.floor(Math.random() * sup.length);  
-                       } while (exists[randomNumber]);
-                       exists[randomNumber] = true;
-                       sups.push(sup[randomNumber]);
+                        do {
+                            randomNumber = Math.floor(Math.random() * sup.length);  
+ 
+                        } while (exists[randomNumber]);
+                        exists[randomNumber] = true;
+                        sups.push(sup[randomNumber]);
                     }
                 }else{
                     sups = sup;
+                    for(var l = sup.length; l < 5; l++) {
+                        do {
+                            randomNumber = Math.floor(Math.random() * 8); 
+                            console.log(randomNumber);
+                        } while (arrRandom.includes(randomNumber));
+
+                        arrRandom.push(randomNumber);
+
+                        sups.push(all[randomNumber]);
+                        
+                    }
+                    // console.log(sups);
                 }
                 
                 var vm = {
