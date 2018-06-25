@@ -61,11 +61,11 @@ router.get('/suspended/:id', (req, res) => {
 
 router.get('/order', (req, res) => {
     //var pid = req.params.id;
-    var SP = adminRepo.loadSanPham();
+    var DH = adminRepo.loadDonHang();
     
-    Promise.all([SP]).then(([SP]) => {
+    Promise.all([DH]).then(([DH]) => {
         var vm = {
-            san_pham: SP
+            don_hang: DH
             
         };
         
@@ -74,6 +74,32 @@ router.get('/order', (req, res) => {
             layout: 'admin.handlebars'
         });
     });
+    
+});
+
+router.get('/updateStatus/:id', (req, res) => {
+    var pid = req.params.id;
+    db.connectDatabase().query("select *, DATE_FORMAT(ngay_dat, '%Y-%m-%d') as ngay_dat2 from bs_don_hang where id = ?", [pid], function (err, row) {
+        if (err) throw err;
+        var vm = {
+            don_hang: row[0]
+        };
+        res.render('admin/updateStatus', {
+            data: vm,
+            layout: 'admin.handlebars'
+        });
+    })
+});
+
+
+router.post('/updateStatus/:id', (req, res) => {
+    // update categories set CatName = '${category.CatName}' where CatID = ${category.CatID}
+    var pid = req.params.id;
+    db.connectDatabase().query(`update bs_don_hang set trang_thai = '${req.body.trang_thai}' where id = ?`, [pid], function (err, row) {
+        if (err) throw err;
+        
+        res.redirect('/admin/order');
+    })
     
 });
 
