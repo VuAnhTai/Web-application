@@ -1,0 +1,119 @@
+<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav" style="color: white">
+        <li class="active">
+            <a href="/admin" style="color: white">
+                <i class="fa fa-fw fa-dashboard"></i> Sản phẩm</a>
+        </li>
+        <li>
+            <a href="/admin/Publisher" style="color: white">
+                <i class="fa fa-fw fa fa-tasks"></i> Nhà xuất bản</a>
+        </li>
+        <li>
+            <a href="/admin/KindOfBook" style="color: white">
+                <i class="fa fa-fw fa fa-tasks"></i> Loại sản phẩm</a>
+        </li>
+        <li>
+            <a href="/admin/order" style="color: white">
+                <i class="fa fa-fw fa fa-pencil-square-o"></i> Đơn hàng</a>
+        </li>
+
+    </ul>
+</div>
+<!-- /.navbar-collapse -->
+
+<div class="span9">
+    <h1 class="page-header">
+        Quản lý
+        <small> Loại sản phẩm</small>
+    </h1>
+    <div id="page-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="breadcrumb">
+                        <li style="font-size: x-large">
+                            <i class="fa fa-plus fa-x"></i>
+                            <b> Thêm loại sản phẩm</b>
+                        </li>
+                    </ul>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-dashboard"></i> Thêm loại sản phẩm mới
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="well">
+        <form class="form-horizontal" action="" method="POST" role="form">
+            <h4>Thông tin loại sản phẩm</h4>
+            <div class="control-group">
+                <label class="control-label">Tên
+                </label>
+                <div class="controls">
+                    <input type="text" id="inputFname" name="ten_loai_sach" placeholder="Name">
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-ok"></span>
+                Add
+            </button>
+        </form>
+    </div>
+
+
+            <br>
+            <br>
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="breadcrumb">
+                        <li style="font-size: x-large">
+                            <i class="fa fa-pencil fa-x"></i>
+                            <b> Cập nhật loại sản phẩm</b>
+                        </li>
+                    </ul>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-dashboard"></i> Cập nhật thông tin loại sản phẩm
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="well">
+                <table class="table">
+                    <thead style="text-align: center">
+                        <tr>
+                            <th style="border:1px solid black">ID</th>
+                            <th style="border:1px solid black">Tên loại sách</th>
+                            <th style="border:1px solid black">Cập nhật tên loại sách</th>
+                            <th style="border:1px solid black">Xoá loại sách</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each data.loai_san_pham}}
+
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">{{id}}</td>
+                            <td style="border:1px solid black">{{ten_loai_sach}}</td>
+                            <td style="border:1px solid black">
+                                <a href="/admin/updateKOB/{{id}}">
+                                    <button class="btn btn-success">Cập nhật</button>
+                                </a>
+                            </td>
+                            <td style="border:1px solid black">
+                                <a href="/admin/KindOfBook/{{id}}">
+                                    <button class="glyphicon glyphicon-remove" style="color: red"></button>
+                                </a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>>

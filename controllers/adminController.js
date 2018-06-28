@@ -9,12 +9,15 @@ var router = express.Router();
 
 router.get('/', (req, res) => {
     //var pid = req.params.id;
+    var NXB = adminRepo.loadNhaXuatBan();
+    var LS = adminRepo.loadLoaiSach();
     var SP = adminRepo.loadSanPham();
     
-    Promise.all([SP]).then(([SP]) => {
+    Promise.all([NXB, LS, SP]).then(([NXB, LS, SP]) => {
         var vm = {
-            san_pham: SP
-            
+            san_pham: SP,
+            nha_xuat_ban: NXB,
+            loai_sach: LS
         };
         
         res.render('admin/index', {
@@ -49,6 +52,147 @@ router.post('/updatePrice/:id', (req, res) => {
     })
     
 });
+
+router.post('/', (req, res) => {
+    var NXB = adminRepo.loadNhaXuatBan();
+    var LS = adminRepo.loadLoaiSach();
+    Promise.all([NXB, LS]).then(([NXB, LS]) => {
+        db.connectDatabase().query(`insert into bs_sach(ten_sach, gioi_thieu, id_loai_sach, id_nha_xuat_ban, luot_xem, ngay_tiep_nhan, sl_ban, so_luong_ton, trang_thai, hinh, don_gia) values ('${req.body.ten_sach}', '${req.body.gioi_thieu}', '${req.body.id_loai_sach}', '${req.body.id_nha_xuat_ban}', '${req.body.luot_xem}', '${req.body.ngay_tiep_nhan.split("/").reverse().join("-")}', '${req.body.sl_ban}', '${req.body.so_luong_ton}', 1, '${req.body.hinh}', '${req.body.don_gia}')`);
+        // os = fs.createWriteStream(`./data/${req.body.hinh}`);
+        // is = fs.createReadStream(req.body.hinh.mozFullPath);
+        // is.pipe(os);
+        res.redirect('/admin');
+    });
+});
+
+router.get('/Publisher', (req, res) => {
+    //var pid = req.params.id;
+    var NXB = adminRepo.loadNhaXuatBan();
+    Promise.all([NXB]).then(([NXB]) => {
+        var vm = {
+            nha_xuat_ban: NXB
+        };
+
+        res.render('admin/Publisher', {
+            data: vm,
+            layout: 'admin.handlebars'
+        });
+    });
+
+});
+router.get('/updatePS/:id', (req, res) => {
+    var pid = req.params.id;
+    db.connectDatabase().query("select * from bs_nha_xuat_ban where id = ?", [pid], function (err, row) {
+        if (err) throw err;
+        var vm = {
+            nha_xuat_ban: row[0]
+        };
+        res.render('admin/updatePS', {
+            data: vm,
+            layout: 'admin.handlebars'
+        });
+    })
+});
+
+router.post('/updatePS/:id', (req, res) => {
+    var pid = req.params.id;
+    db.connectDatabase().query(`update bs_nha_xuat_ban set ten_nha_xuat_ban = '${req.body.ten_nha_xuat_ban}', dia_chi = '${req.body.dia_chi}', dien_thoai = '${req.body.dien_thoai}', email = '${req.body.email}' where id = ?`, [pid], function (err, row) {
+        if (err) throw err;
+
+        res.redirect('/admin/Publisher');
+    })
+});
+
+router.get('/Publisher/:id', (req, res) => {
+    var pid = req.params.id;
+    db.connectDatabase().query(`delete from bs_nha_xuat_ban where id = ?`, [pid], function (err, row) {
+        if (err) throw err;
+
+        res.redirect('/admin/Publisher');
+    })
+});
+
+router.post('/Publisher/:id', (req, res) => {
+    var pid = req.params.id;
+    db.connectDatabase().query(`delete from bs_nha_xuat_ban where id = ?`, [pid], function (err, row) {
+        if (err) throw err;
+
+        res.redirect('/admin/Publisher');
+    })
+});
+
+
+router.post('/Publisher', (req, res) => {
+    db.connectDatabase().query(`insert into bs_nha_xuat_ban(ten_nha_xuat_ban, dia_chi, dien_thoai, email) values ('${req.body.ten_nha_xuat_ban}', '${req.body.dia_chi}', '${req.body.dien_thoai}', '${req.body.email}')`, function (err, row) {
+        if (err) throw err;
+        res.redirect('/admin/Publisher');
+    })
+});
+
+router.get('/KindOfBook', (req, res) => {
+    //var pid = req.params.id;
+    var LS = adminRepo.loadLoaiSach();
+    Promise.all([LS]).then(([LS]) => {
+        var vm = {
+            loai_san_pham: LS
+        };
+
+        res.render('admin/KindOfBook', {
+            data: vm,
+            layout: 'admin.handlebars'
+        });
+    });
+
+});
+router.get('/updateKOB/:id', (req, res) => {
+    var pid = req.params.id;
+    db.connectDatabase().query("select * from bs_loai_sach where id = ?", [pid], function (err, row) {
+        if (err) throw err;
+        var vm = {
+            loai_san_pham: row[0]
+        };
+        res.render('admin/updateKOB', {
+            data: vm,
+            layout: 'admin.handlebars'
+        });
+    })
+});
+
+router.post('/updateKOB/:id', (req, res) => {
+    var pid = req.params.id;
+    db.connectDatabase().query(`update bs_loai_sach set ten_loai_sach = '${req.body.ten_loai_sach}' where id = ?`, [pid], function (err, row) {
+        if (err) throw err;
+
+        res.redirect('/admin/KindOfBook');
+    })
+});
+
+router.get('/KindOfBook/:id', (req, res) => {
+    var pid = req.params.id;
+    db.connectDatabase().query(`delete from bs_loai_sach where id = ?`, [pid], function (err, row) {
+        if (err) throw err;
+
+        res.redirect('/admin/KindOfBook');
+    })
+});
+
+router.post('/KindOfBook/:id', (req, res) => {
+    var pid = req.params.id;
+    db.connectDatabase().query(`delete from bs_loai_sach where id = ?`, [pid], function (err, row) {
+        if (err) throw err;
+
+        res.redirect('/admin/KindOfBook');
+    })
+});
+
+
+router.post('/KindOfBook', (req, res) => {
+    db.connectDatabase().query(`insert into bs_loai_sach(ten_loai_sach) values ('${req.body.ten_loai_sach}')`, function (err, row) {
+        if (err) throw err;
+        res.redirect('/admin/KindOfBook');
+    })
+});
+
 router.get('/suspended/:id', (req, res) => {
     var pid = req.params.id;
     db.connectDatabase().query(`UPDATE bs_sach SET trang_thai = 0 WHERE id = ?`, [pid], function (err, row) {

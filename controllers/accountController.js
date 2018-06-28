@@ -102,35 +102,8 @@ router.post('/logout', (req, res) => {
     req.session.user = null;
     res.redirect(req.headers.referer);
 });
-
 router.get('/profile', restrict, (req, res) => {
-
-    accountRepo.loadUser(req.session.user).then(rows => {
-        vm = {
-            user: rows[0]
-        }
-        // console.log(vm);
-        res.render('account/profile',  {
-            data: vm,
-            layout: 'main_not_leftbar.handlebars'
-        });
-    });
-});
-
-router.post('/update', restrict, (req, res) => {
-
-    var user = {
-        tai_khoan: req.session.user,
-        ho_ten: req.body.ho_ten,
-        so_dien_thoai: req.body.so_dien_thoai,
-        dia_chi: req.body.dia_chi,
-        email: req.body.email, 
-        ngay_sinh: req.body.dob
-    };
-
-    accountRepo.updateUser(user).then(value => {
-        res.redirect(req.headers.referer);
-    });
+    res.render('account/profile');
 });
 
 module.exports = router;

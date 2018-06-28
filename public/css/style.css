@@ -106,12 +106,11 @@ button.top_chr_cart {
 }
 
 i.fa.fa-cart-arrow-down {
-    width: 30px;
+    width: 41px;
     height: 41px;
     color: #fff;
     font-size: 2em;
     line-height: 42px;
-    margin-left: 15px;
 }
 
 span.nav-icon {

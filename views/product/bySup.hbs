@@ -1,0 +1,78 @@
+{{#if noProducts}}
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        Không có sản phẩm Thuộc nhà xuất bản này.
+    </div>
+</div>
+{{else}}
+<div class="innerf-pages section">
+    <div class="container-fluid">
+        <h1 align="center">Tất cả sản phẩm</h1>
+        <div class="wrapper_top_shop">
+            {{#each products}}
+            <div class="col-md-3 product-men">
+                <div class="product-chr-info chr">
+                    <div class="thumbnail">
+                        <a href="/product/detail/{{id}}">
+                            <img src="/images_sach/{{hinh}}" alt="">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <h4>{{ten_sach}}</h4>
+                        <p>{{ten_tac_gia}}</p>
+                        <div class="matrlf-mid">
+                            <ul class="price-list">
+                                <li>{{number_format don_gia}}đ</li>
+                                <li>{{number_format gia_bia}}đ</li>
+                            </ul>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <form action="/cart/add" method="post">
+                            <input type="hidden" name="quantity" value="1">
+                            <input type="hidden" name="proId" value="{{id}}">
+                            <button type="submit" class="chr-cart pchr-cart">Mua
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            <div class="clearfix"></div>
+
+            <!-- //row3 -->
+            <div class="clearfix">
+                <ul class="pagination modal-2" align="center" style="margin-left:265px;">
+                    <li>
+                        <a href="javascript:;" class="prev">&laquo </a>
+                    </li>
+                    {{#each page_numbers}} {{#if isCurPage}}
+                    <li class="active" id='active'>
+                        <a href="javascript:;">{{value}}</a>
+                    </li>
+                    {{else}}
+                    <li>
+                        <a href="?page={{value}}">{{value}}</a>
+                    </li>
+                    {{/if}} {{/each}}
+                    <li>
+                        <a href="#" class="next"> &raquo;</a>
+                    </li>
+                </ul>
+            </div>
+            {{!-- </div> --}}
+
+        <!-- //product-sec1 -->
+        <div class="clearfix"></div>
+
+    </div>
+</div>
+<div class="clearfix"></div>
+</div>
+<!--// Shop -->
+{{/if}} {{#section "js"}}
+<script src="/js/myJS.js"></script> {{/section}}

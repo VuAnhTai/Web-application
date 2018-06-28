@@ -59,10 +59,12 @@ td.invert-image a img {
 	position: relative;
 }
 
-.remove{
+.close1,
+.close2,
+.close3 {
 	background: url('../images/close_1.jpg') no-repeat 0px 0px;
 	cursor: pointer;
-	width: 30px;
+	width: 41px;
 	height: 39px;
 	position: absolute;
 	right: 5px;
@@ -554,28 +556,6 @@ select.form-control.option-fieldf {
 	border-radius: 0;
 }
 
-a.submit.check_out {
-	outline: none;
-	padding: 10px 28px;
-	background: #34c663;
-	font-size: 1.1em;
-	border-radius: 7px;
-	font-weight: 400;
-	color: #fff;
-	border: none;
-	text-transform: capitalize;
-	letter-spacing: 2px;
-	margin-top: 1em;
-}
-
-a.submit.check_out:hover {
-	background: #e85342;
-	transition: 0.5s all;
-	-webkit-transition: 0.5s all;
-	-moz-transition: 0.5s all;
-	-o-transition: 0.5s all;
-	-ms-transition: 0.5s all;
-}
 button.submit.check_out {
 	outline: none;
 	padding: 10px 28px;
@@ -598,6 +578,7 @@ button.submit.check_out:hover {
 	-o-transition: 0.5s all;
 	-ms-transition: 0.5s all;
 }
+
 .section_room_pay {
 	margin-bottom: 2em;
 }
@@ -758,11 +739,4 @@ button.submit.check_out:hover {
 	.vertical_post h5 {
 		width: 98%;
 	}
-}
-
-input.input_quantity {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-weight: bold;
 }
