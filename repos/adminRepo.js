@@ -21,3 +21,18 @@ exports.loadDonHang = () => {
 	ORDER BY ngay_dat2 DESC`;
 	return db.load(sql);
 }
+
+exports.loadNhaXuatBan = () => {
+	var sql = 'select * from bs_nha_xuat_ban';
+	return db.load(sql);
+}
+
+exports.loadLoaiSach = () => {
+	var sql = 'select * from bs_loai_sach';
+	return db.load(sql);
+}
+
+exports.loadTacGia = () => {
+	var sql = 'select * from bs_tac_gia';
+	return db.load(sql);
+}
