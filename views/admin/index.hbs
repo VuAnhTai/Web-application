@@ -1,170 +1,44 @@
+    
 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-<div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav side-nav" style="color: white">
-        <li class="active">
-            <a href="/admin" style="color: white">
-                <i class="fa fa-fw fa-dashboard"></i> Sản phẩm</a>
-        </li>
-        <li>
-            <a href="/admin/Publisher" style="color: white">
-                <i class="fa fa-fw fa fa-tasks"></i> Nhà xuất bản</a>
-        </li>
-        <li>
-            <a href="/admin/KindOfBook" style="color: white">
-                <i class="fa fa-fw fa fa-tasks"></i> Loại sản phẩm</a>
-        </li>
-        <li>
-            <a href="/admin/order" style="color: white">
-                <i class="fa fa-fw fa fa-pencil-square-o"></i> Đơn hàng</a>
-        </li>
+            <div class="collapse navbar-collapse navbar-ex1-collapse" >
+                <ul class="nav navbar-nav side-nav" style="color: white">
+                    <li class="active">
+                        <a href="/admin" style="color: white"><i class="fa fa-fw fa-dashboard"></i> Sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="/admin/rooms" style="color: white"><i class="fa fa-fw fa fa-tasks"></i> Nhà xuất bản</a>
+                    </li>
+                    <li>
+                        <a href="/admin/order" style="color: white"><i class="fa fa-fw fa fa-pencil-square-o"></i> Đơn hàng</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
 
-    </ul>
-</div>
-<!-- /.navbar-collapse -->
+        <div id="page-wrapper">
 
-<div class="span9">
-    <h1 class="page-header">
-        Quản lý
-        <small> Sản phẩm</small>
-    </h1>
-    <div id="page-wrapper">
+            <div class="container-fluid">
 
-        <div class="container-fluid">
-
-            <!-- Page Heading -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="breadcrumb">
-                        <li style="font-size: x-large">
-                            <i class="fa fa-plus fa-x"></i>
-                            <b> Thêm sản phẩm</b>
-                        </li>
-                    </ul>
-                    <ol class="breadcrumb">
-                        <li class="active">
-                            <i class="fa fa-dashboard"></i> Thêm sản phẩm mới
-                        </li>
-                    </ol>
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Quản lý <small> Sản phẩm</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-dashboard"></i> Cập nhật giá sản phẩm, trạng thái hàng
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
-
-            <div class="well">
-                <form class="form-horizontal" action="" method="POST" role="form">
-                    <h4>Thông tin sản phẩm</h4>
-                    <div class="control-group">
-                        <label class="control-label">Tên
-                        </label>
-                        <div class="controls">
-                            <input type="text" id="inputFname" name="ten_sach" placeholder="Name">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Giá
-                        </label>
-                        <div class="controls">
-                            <input type="number" id="inputFprice" name="don_gia" value=0 min="0">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Nhà xuất bản
-                        </label>
-                        <div class="controls">
-                            <select class="span2" name="id_nha_xuat_ban">
-                                {{!--
-                                <option value="">-</option> --}} {{#each data.nha_xuat_ban}}
-                                <option value="{{id}}">{{ten_nha_xuat_ban}}</option>
-                                {{/each}}
-                            </select>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Loại sách
-                        </label>
-                        <div class="controls">
-                            <select class="span2" name="id_loai_sach">
-                                {{!--
-                                <option value="">-</option> --}} {{#each data.loai_sach}}
-                                <option value="{{id}}">{{ten_loai_sach}}</option>
-                                {{/each}}
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label">Lượt xem
-                        </label>
-                        <div class="controls">
-                            <input type="number" id="inputView" name="luot_xem" value=0 min="0">
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label">Ngày tiếp nhận
-                        </label>
-                        <div class="controls">
-                            <input type="date" id="inputNTN" name="ngay_tiep_nhan">
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label">Số lượng bán
-                        </label>
-                        <div class="controls">
-                            <input type="number" id="inputSLB" name="sl_ban" value=0 min="0">
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label">Số lượng tồn
-                        </label>
-                        <div class="controls">
-                            <input type="number" id="inputSLT" name="so_luong_ton" value=0 min="0">
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label">Giới thiệu</label>
-                        <div class="controls">
-                            <textarea id="description" name="gioi_thieu" cols="26" rows="5"></textarea>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Hình ảnh
-                        </label>
-                        <div class="controls">
-                            <input type="file" id="inputFimage" name="hinh">
-                        </div>
-                    </div>
-                    <br>
-                    <button type="submit" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-ok"></span>
-                        Add
-                    </button>
-                </form>
-            </div>
-
-
-            <br><br>
-            <!-- Page Heading -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="breadcrumb">
-                        <li style="font-size: x-large">
-                            <i class="fa fa-pencil fa-x"></i>
-                            <b> Cập nhật sản phẩm</b>
-                        </li>
-                    </ul>
-                    <ol class="breadcrumb">
-                        <li class="active">
-                            <i class="fa fa-dashboard"></i> Cập nhật giá sản phẩm, trạng thái hàng
-                        </li>
-                    </ol>
-                </div>
-            </div>
-            <div class="well">
-                <table class="table">
-                    <thead style="text-align: center">
-                        <tr>
+        </div>
+    
+        <table class="table"  >
+                <thead style="text-align: center">
+                    <tr >
                             <th style="border:1px solid black">ID</th>
                             <th style="border:1px solid black">Tên sách</th>
                             <th style="border:1px solid black">Tác giả</th>
@@ -173,13 +47,13 @@
                             <th style="border:1px solid black">Đơn giá</th>
                             <th style="border:1px solid black">Cập nhật giá cả</th>
                             <th style="border:1px solid black">Ngưng bán</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{#each data.san_pham}}
-
-                        <tr style="border:1px solid black">
+                            
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each data.san_pham}}
+                        
+                        <tr style="border:1px solid black" >
                             <td style="border:1px solid black">{{id}}</td>
                             <td style="border:1px solid black">{{ten_sach}}</td>
                             <td style="border:1px solid black">{{ten_tac_gia}}</td>
@@ -187,24 +61,18 @@
                             <td style="border:1px solid black">{{ten_nha_xuat_ban}}</td>
                             <td style="border:1px solid black">{{don_gia}}</td>
                             <td style="border:1px solid black">
-                                <a href="/admin/updatePrice/{{id}}">
-                                    <button class="btn btn-success">Cập nhật</button>
-                                </a>
+                                <a href="/admin/updatePrice/{{id}}"><button class="btn btn-success" >Cập nhật</button></a>
                             </td>
                             {{#if trang_thai}}
                             <td style="border:1px solid black">
-                                <a href="../admin/suspended/{{id}}">
-                                    <button class="glyphicon glyphicon-remove" style="color: red"></button>
-                                </a>
+                                <a href="../admin/suspended/{{id}}"><button class="glyphicon glyphicon-remove" style="color: red" ></button></a>
                             </td>
                             {{else}}
                             <td style="border:1px solid black">
-                                <a>
-                                    <button class="glyphicon glyphicon-ok" style="color: green"></button>
-                                </a>
+                                <a><button class="glyphicon glyphicon-ok" style="color: green" ></button></a>
                             </td>
-                            {{/if}} {{/each}}
-                    </tbody>
-                </table>
-            </div>
-        </div>>
+                            {{/if}}
+                    {{/each}}
+                </tbody>
+            </table>
+            

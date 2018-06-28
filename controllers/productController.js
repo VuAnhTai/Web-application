@@ -93,36 +93,65 @@ router.get('/detail/:id', (req, res) => {
 
     productRepo.single(proId).then(rows => {
         if (rows.length > 0) {
+            offset = Math.floor(Math.random() * 10) * 8;  
+            
             var p1 = productRepo.loadByCat(rows[0].id_loai_sach);
             var p2 = productRepo.loadBySup(rows[0].id_nha_xuat_ban);
-            Promise.all([p1, p2]).then(([cat, sup]) => {
+            var p3 = productRepo.loadAllProduct(offset);
+            Promise.all([p1, p2, p3]).then(([cat, sup, all]) => {
                 // console.log(cat.length);
                 var cats = [];
                 var sups = [];
                 var exists = [];
+                var arrRandom=[];
+                console.log(sup.length);
+                console.log(cat.length);
                 if(cat.length >= 5){
                     for(var l = 0; l < 5; l++) {
                        do {
                            randomNumber = Math.floor(Math.random() * cat.length);  
+
                        } while (exists[randomNumber]);
                        exists[randomNumber] = true;
                        cats.push(cat[randomNumber]);
                     }
                 }else{
                     cats = cat;
-                }
-                // console.log(sup.length);
+                    var arrRandom=[];
+                    for(var l = cat.length; l < 5; l++) {
+                        do {
+                            randomNumber = Math.floor(Math.random() * 8);  
+                            console.log(randomNumber);
+                        } while (arrRandom.includes(randomNumber));
 
-                if(sup.length > 5){
+                        arrRandom.push(randomNumber);
+
+                        cats.push(all[randomNumber]);
+                        
+                    }
+                }
+                exists = []; arrRandom = [];
+                if(sup.length >= 5){
                     for(var l = 0; l < 5; l++) {
-                       do {
-                           randomNumber = Math.floor(Math.random() * sup.length);  
-                       } while (exists[randomNumber]);
-                       exists[randomNumber] = true;
-                       sups.push(sup[randomNumber]);
+                        do {
+                            randomNumber = Math.floor(Math.random() * sup.length);  
+ 
+                        } while (exists[randomNumber]);
+                        exists[randomNumber] = true;
+                        sups.push(sup[randomNumber]);
                     }
                 }else{
                     sups = sup;
+                    for(var l = sup.length; l < 5; l++) {
+                        do {
+                            randomNumber = Math.floor(Math.random() * 8); 
+                        } while (arrRandom.includes(randomNumber));
+
+                        arrRandom.push(randomNumber);
+
+                        sups.push(all[randomNumber]);
+                        
+                    }
                 }
                 
                 var vm = {
@@ -146,10 +175,12 @@ router.get('/search', (req, res) => {
         page = 1;
     }
     var offset = (page - 1) * config.PRODUCTS_PER_PAGE;
-
-    productRepo.search(keyword, offset).then(rows => {
-        total = rows.length;
-
+    var p1 = productRepo.search(keyword, offset);
+    var p2 = productRepo.countSearch(keyword);
+    Promise.all([p1, p2]).then(([pRows, countRows]) => {
+    // productRepo.search(keyword, offset).then(rows => {
+        total = countRows[0].total;
+        console.log(pRows);
         var nPages = total / config.PRODUCTS_PER_PAGE;
         if (total % config.PRODUCTS_PER_PAGE > 0) {
             nPages++;
@@ -164,12 +195,55 @@ router.get('/search', (req, res) => {
         }
 
         var vm = {
-            products: rows,
-            noProducts: rows.length === 0,
+            products: pRows,
+            noProducts: pRows.length === 0,
             page_numbers: numbers,
+            search: req.query.Search,
+
             // errorMsg: 'Không tìm thấy sản phẩm'
         };
-        res.render('product/product', vm);
+        console.log(vm);
+        res.render('product/search', vm);
+    });
+})
+
+router.get('/searchByPrice', (req, res) => {
+    var price1 = req.query.price1;
+    var price2 = req.query.price2;
+    var page = req.query.page;
+    if (!page) {
+        page = 1;
+    }
+    var offset = (page - 1) * config.PRODUCTS_PER_PAGE;
+    var p1 = productRepo.searchByPrice(price1, price2, offset);
+    var p2 = productRepo.countSearchByPrice(price1,price2);
+    Promise.all([p1, p2]).then(([pRows, countRows]) => {
+    // productRepo.searchByPrice(price1, price2, offset).then(rows => {
+        total = countRows[0].total;
+        var nPages = total / config.PRODUCTS_PER_PAGE;
+        if (total % config.PRODUCTS_PER_PAGE > 0) {
+            nPages++;
+        }
+
+        var numbers = [];
+        for (i = 1; i <= nPages; i++) {
+            numbers.push({
+                value: i,
+                isCurPage: i === +page
+            });
+        }
+        // console.log(numbers);
+
+        var vm = {
+            products: pRows,
+            noProducts: pRows.length === 0,
+            page_numbers: numbers,
+            price1: req.query.price1,
+            price2: req.query.price2,
+            // errorMsg: 'Không tìm thấy sản phẩm'
+        };
+        // console.log(vm.price1);
+        res.render('product/searchByPrice', vm);
     });
 })
 module.exports = router;

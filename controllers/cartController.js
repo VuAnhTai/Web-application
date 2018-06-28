@@ -27,7 +27,6 @@ router.get('/', restrict, (req, res) => {
     var items = [];
     var moneyTotal = 0;
     req.session.total = 0;
-
     Promise.all(arr).then(result => {
 
         for (var i = result.length - 1; i >= 1; i--) {
@@ -40,6 +39,7 @@ router.get('/', restrict, (req, res) => {
             };
 
             req.session.total += item.Amount;
+            
             items.push(item);
         }
 

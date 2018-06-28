@@ -93,7 +93,7 @@
                                 <a href="/contact">Contact us</a>
                             </li>
                             <li id="admin">
-                                <a href="../Admin/index">ADMIN</a>
+                                <a href="/admin">ADMIN</a>
                             </li>
                             {{#if layoutVM.isLogged}}
                             <li class="dropdown">
@@ -103,19 +103,19 @@
                                     </a>
                                      <ul id="MyAccountPop" class="dropdown-menu">
                                          <li class="list-group-item">
-                                            <a href="information_account.html">
+                                            <a href="/account/profile">
                                                 <i class="fa fa-user "></i>
                                                 Thông tin Tài khoản
                                             </a>
                                         </li>
                                         <li class="list-group-item">
-                                            <a href="history.html">
+                                            <a href="cart/history">
                                                 <i class="glyphicon glyphicon-th-list"></i>
                                                 Thông tin hóa đơn
                                             </a>
                                         </li>
                                         <li class="list-group-item">
-                                            <a href="user-dashboard-saved-searches.html">
+                                            <a href="#">
                                                 <i class="glyphicon glyphicon-heart"></i>
                                                 Sản phẩm yêu thích
                                             </a>
@@ -188,6 +188,27 @@
                     <!--preference -->
                     <div class="side-bar">
                         <div class="left-side">
+                            <div class="search">
+                                <h3 class="shopf-sear-headits-sear-head">
+                                    <span>Tìm</span> theo tên tác giả</h3>
+                                
+                                    <div class="form-group">
+                                        <label>
+                                            <b>Giá:</b>
+                                        </label>
+                                        <select class="form-control" id="gia">
+                                            <option value="">Chọn giá</option>
+                                            <option value="1">0 - 50.000</option>
+                                            <option value="2">50.000 - 200.000</option>
+                                            <option value="3">200.000 - 500.000</option>
+                                            <option value="4">Trên 500.000</option>
+                                        </select>
+                                    </div>
+                                <form id="formSearchPrice_js" action="/product/searchByPrice" method="GET">
+                                    <input type="text" value="1000" name="price1" class="hidden">
+                                    <input type="text" value="2999" name="price2" class="hidden">
+                                </form>
+                            </div>
                             <h3 class="shopf-sear-headits-sear-head">
                                 Thể loại</h3>
                             <ul>
@@ -215,14 +236,7 @@
                             </ul>
                         </div>
                         <!-- // preference -->
-                        <div class="search-hotel">
-                            <h3 class="shopf-sear-headits-sear-head">
-                                <span>Tìm</span> theo tên tác giả</h3>
-                            <form action="#" method="post">
-                                <input type="search" placeholder="Nhập..." name="search" required="">
-                                <input type="submit" value="Tìm">
-                            </form>
-                        </div>
+                        
                         <!--preference -->
                     </div>
                     
@@ -264,7 +278,7 @@
                     <!-- footer-grid1 -->
                     <div class="col-md-3 col-sm-6 footer-logo" style="margin-top: -26px; margin-left:-7px;">
                         <h3>
-                            <a href="index">
+                            <a href="/">
                                 <span style="font-family: Arial">US Bookstore</span>
                             </a>
                         </h3>
@@ -280,10 +294,10 @@
                                 <a href="/home">Home</a>
                             </li>
                             <li>
-                                <a href="/app.js">About us</a>
+                                <a href="/about">About us</a>
                             </li>
                             <li>
-                                <a href="/shop">shop</a>
+                                <a href="/payment">shop</a>
                             </li>
                             <li>
                                 <a href="/contact">contact us</a>
@@ -430,6 +444,35 @@
                 easingType: 'easeOutQuart'
             });
         });
+    </script>
+    <script>
+    $(document).ready(function(){
+        $("#gia").change(function(){
+            value = $(this).find(":selected").val();
+                {{!-- alert(value == 1); --}}
+            if(value == 1)
+            {
+                $('#formSearchPrice_js input[name="price1"]').val('0');
+                $('#formSearchPrice_js input[name="price2"]').val('50000');
+                $("#formSearchPrice_js").submit();
+            }
+            if(value == '2'){
+                $('#formSearchPrice_js input[name="price1"]').val('50000');
+                $('#formSearchPrice_js input[name="price2"]').val('200000');
+                $("#formSearchPrice_js").submit();
+            }
+            if(value == '3'){
+                $('#formSearchPrice_js input[name="price1"]').val('200000');
+                $('#formSearchPrice_js input[name="price2"]').val('500000');
+                $("#formSearchPrice_js").submit();
+            }
+            if(value == '4'){
+                $('#formSearchPrice_js input[name="price1"]').val('500000');
+                $('#formSearchPrice_js input[name="price2"]').val('20000000');
+                $("#formSearchPrice_js").submit();
+            }
+        });
+    });
     </script>
     <script src="/js/SmoothScroll.min.js"></script>
     <!-- //smoothscroll -->

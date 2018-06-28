@@ -12,6 +12,11 @@ exports.login = user => {
 }
 
 exports.loadUser = username => {
-    var sql = `select * from bs_nguoi_dung where tai_khoan = '${username}'`;
+    var sql = `select *, DATE_FORMAT(ngay_sinh, '%Y-%m-%d') as dob from bs_nguoi_dung where tai_khoan = '${username}'`;    
     return db.load(sql);
+}
+
+exports.updateUser = user => {
+    var sql = `UPDATE bs_nguoi_dung SET ho_ten='${user.ho_ten}', email='${user.email}', ngay_sinh='${user.ngay_sinh}', dia_chi='${user.dia_chi}', dien_thoai='${user.so_dien_thoai}' WHERE tai_khoan = '${user.tai_khoan}'`;
+    return db.save(sql);
 }
