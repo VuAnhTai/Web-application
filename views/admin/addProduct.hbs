@@ -1,25 +1,5 @@
 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-<div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav side-nav" style="color: white">
-        <li class="active">
-            <a href="/admin" style="color: white">
-                <i class="fa fa-fw fa-dashboard"></i> Sản phẩm</a>
-        </li>
-        <li>
-            <a href="/admin/Publisher" style="color: white">
-                <i class="fa fa-fw fa fa-tasks"></i> Nhà xuất bản</a>
-        </li>
-        <li>
-            <a href="/admin/KindOfBook" style="color: white">
-                <i class="fa fa-fw fa fa-tasks"></i> Loại sản phẩm</a>
-        </li>
-        <li>
-            <a href="/admin/order" style="color: white">
-                <i class="fa fa-fw fa fa-pencil-square-o"></i> Đơn hàng</a>
-        </li>
 
-    </ul>
-</div>
 <!-- /.navbar-collapse -->
 
 <div class="span9">
@@ -27,6 +7,42 @@
         Quản lý
         <small> Sản phẩm</small>
     </h1>
+    <div class="col-lg-3 col-md-6">
+                        <a href="./">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-wrench fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Cập nhật</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="./addProduct">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-plus fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Thêm sách</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        </a>
+                    </div>
     <div id="page-wrapper">
 
         <div class="container-fluid">
@@ -81,9 +97,9 @@
                         <label class="control-label">Tác giả
                         </label>
                         <div class="controls">
-                            <select class="span2" name="id_loai_sach">
-                                {{#each data.loai_sach}}
-                                <option value="{{id}}">{{ten_loai_sach}}</option>
+                            <select class="span2" name="id_tac_gia">
+                                {{#each data.tac_gia}}
+                                <option value="{{id}}">{{ten_tac_gia}}</option>
                                 {{/each}}
                             </select>
                         </div>
@@ -92,9 +108,9 @@
                         <label class="control-label">Loại sách
                         </label>
                         <div class="controls">
-                            <select class="span2" name="id_tac_gia">
-                                {{#each data.tac_gia}}
-                                <option value="{{id}}">{{ten_tac_gia}}</option>
+                            <select class="span2" name="id_loai_sach">
+                                {{#each data.loai_sach}}
+                                <option value="{{id}}">{{ten_loai_sach}}</option>
                                 {{/each}}
                             </select>
                         </div>

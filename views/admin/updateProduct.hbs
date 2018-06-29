@@ -1,0 +1,104 @@
+<h1 class="page-header">
+        Quản lý
+        <small> Sản phẩm</small>
+    </h1>
+    <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <a href="./">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-wrench fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Cập nhật</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="./addProduct">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-plus fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Thêm sách</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        </a>
+                    </div>
+                    
+    </div>
+<div class="row">
+                <div class="col-lg-12">
+                    <ul class="breadcrumb">
+                        <li style="font-size: x-large">
+                            <i class="fa fa-pencil fa-x"></i>
+                            <b> Cập nhật sản phẩm</b>
+                        </li>
+                    </ul>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-dashboard"></i> Cập nhật giá sản phẩm, trạng thái hàng
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="well">
+                <table class="table">
+                    <thead style="text-align: center">
+                        <tr>
+                            <th style="border:1px solid black">ID</th>
+                            <th style="border:1px solid black">Tên sách</th>
+                            <th style="border:1px solid black">Tác giả</th>
+                            <th style="border:1px solid black">Thể loại</th>
+                            <th style="border:1px solid black">Nhà xuất bản</th>
+                            <th style="border:1px solid black">Đơn giá</th>
+                            <th style="border:1px solid black">Cập nhật giá cả</th>
+                            <th style="border:1px solid black">Ngưng bán</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each data.san_pham}}
+
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">{{id}}</td>
+                            <td style="border:1px solid black">{{ten_sach}}</td>
+                            <td style="border:1px solid black">{{ten_tac_gia}}</td>
+                            <td style="border:1px solid black">{{ten_loai_sach}}</td>
+                            <td style="border:1px solid black">{{ten_nha_xuat_ban}}</td>
+                            <td style="border:1px solid black">{{don_gia}}</td>
+                            <td style="border:1px solid black">
+                                <a href="/admin/updatePrice/{{id}}">
+                                    <button class="btn btn-success">Cập nhật</button>
+                                </a>
+                            </td>
+                            {{#if trang_thai}}
+                            <td style="border:1px solid black">
+                                <a href="../admin/suspended/{{id}}">
+                                    <button class="glyphicon glyphicon-remove" style="color: red"></button>
+                                </a>
+                            </td>
+                            {{else}}
+                            <td style="border:1px solid black">
+                                <a>
+                                    <button class="glyphicon glyphicon-ok" style="color: green"></button>
+                                </a>
+                            </td>
+                            {{/if}} {{/each}}
+                    </tbody>
+                </table>
+            </div>

@@ -95,26 +95,19 @@
                             <li id="about">
                                 <a href="/about">about us</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">shop
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="/checkout">checkout</a>
-                                    </li>
-                                    <li>
-                                        <a href="/payment">Payment</a>
-                                    </li>
-                                </ul>
+                            <li id="cart">
+                                <a href="/cart">Cart</a>
                             </li>
 
                             <li id="contact">
                                 <a href="/contact">Contact us</a>
                             </li>
-                            <li id="admin">
-                                <a href="admin">ADMIN</a>
-                            </li>
+                            {{#if layoutVM.isAdmin}}
+                                <li id="admin">
+                                    <a href="admin">ADMIN</a>
+                                </li>
+                            {{/if}}
+
                             {{#if layoutVM.isLogged}}
                             <li class="dropdown">
                                     <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">
@@ -135,7 +128,7 @@
                                             </a>
                                         </li>
                                         <li class="list-group-item">
-                                            <a href="user-dashboard-saved-searches.html">
+                                            <a href="#">
                                                 <i class="glyphicon glyphicon-heart"></i>
                                                 Sản phẩm yêu thích
                                             </a>
@@ -186,7 +179,7 @@
                         <div class="cart-mainf">
                             <a href="/cart" class="top_chr_cart" name="submit" value="">
                                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                                <span style="font-size: 25px; font-weight: 500; color: white;">{{layoutVM.numberItems}}</span>
+                                <span id="SL" style="font-size: 25px; font-weight: 500; color: white;">{{layoutVM.numberItems}}</span>
                             </a>
                         </div>
                         <!-- //shopping cart ends here -->

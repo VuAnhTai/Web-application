@@ -150,6 +150,7 @@ router.get('/history', (req, res) => {
                     var order = {
                         items: result[i],
                         time: yyyymmdd(orders[j].ngay_dat),
+                        nguoi_nhan: orders[j].ho_ten_nguoi_nhan,
                         total: orders[j].tong_tien,
                         trang_thai: orders[j].trang_thai,
                         trang_thai2: orders[j].trang_thai2,

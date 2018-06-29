@@ -31,6 +31,10 @@ exports.loadLoaiSach = () => {
 	var sql = 'select * from bs_loai_sach';
 	return db.load(sql);
 }
+exports.loadLoaiSachCha = () => {
+	var sql = 'select id, ten_loai_sach from bs_loai_sach where id_loai_cha = 0';
+	return db.load(sql);
+}
 
 exports.loadTacGia = () => {
 	var sql = 'select * from bs_tac_gia';

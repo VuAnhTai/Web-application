@@ -10,7 +10,8 @@ var MySQLStore = require('express-mysql-session')(session);
 
 var handle404MDW = require('./middle-wares/handle404'),
     handleLayoutMDW = require('./middle-wares/handleLayout'),
-    restrict = require('./middle-wares/restrict');
+    restrict = require('./middle-wares/restrict'),
+    restrictAdmin = require('./middle-wares/restrictAdmin');
 
 var homeController = require('./controllers/homeController'),
     // categoryController = require('./controllers/categoryController'),
@@ -80,7 +81,7 @@ app.get('/', (req, res) => {
 app.use('/home', homeController);
 app.use('/product', productController);
 app.use('/account', accountController);
-app.use('/admin', adminController);
+app.use('/admin',restrictAdmin, adminController);
 app.use('/cart', cartController);
 app.get('/about', (req, res) => {
     res.render('hbs/about', {

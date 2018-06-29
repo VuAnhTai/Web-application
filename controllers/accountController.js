@@ -52,6 +52,7 @@ router.post('/register', (req, res) => {
         req.session.isLogged = true;
         req.session.user = req.body.username;
         return res.json({"success": true, "msg":"Registered success"});
+        
     }).catch(err => {
         return res.json({"success": false, "msg":"Register failure"});
     //     var vm = {
@@ -63,6 +64,7 @@ router.post('/register', (req, res) => {
     //         layout: 'main_not_leftbar.handlebars'
     //     });
     });
+    
   });
 });
 
@@ -79,11 +81,18 @@ router.post('/login', (req, res) => {
     accountRepo.login(user).then(rows => {
         if (rows.length > 0) {
             // user = rows[0];
+            if(rows[0].id_loai_user >= 6){
+                req.session.admin = true;
+            }
 
             req.session.isLogged = true;
             req.session.user = req.body.username;
-            res.redirect('/');
+            var url = '/';
+            if (req.query.retUrl) {
+                url = req.query.retUrl;
+            }
 
+            res.redirect(url);
         } else {
             var vm = {
                 showError: true,
@@ -99,7 +108,9 @@ router.post('/login', (req, res) => {
 
 router.post('/logout', (req, res) => {
     req.session.isLogged = false;
-    req.session.user = null;
+    req.session.user = undefined;
+    req.session.admin = undefined;
+    req.session.cart = undefined;
     res.redirect(req.headers.referer);
 });
 

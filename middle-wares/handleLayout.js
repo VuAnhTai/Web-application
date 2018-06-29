@@ -5,6 +5,9 @@ module.exports = (req, res, next) => {
 	if (req.session.isLogged === undefined) {
 		req.session.isLogged = false;
 	}
+    if (req.session.admin === undefined) {
+        req.session.admin = false;
+    }
     if (req.session.cart === undefined) {
         req.session.cart = [];
     }
@@ -25,10 +28,10 @@ module.exports = (req, res, next) => {
             categories: LS,
             suppliers: NXB,
             isLogged: req.session.isLogged,
+            isAdmin: req.session.admin,
             curUser: req.session.user,
             numberItems: numberItems
         };
-        // console.log(res.locals.layoutVM.curUser);
         next();
     });
 };

@@ -38,31 +38,33 @@
                     <center>
                         <p>Tài khoản</p>
                         <h2>
-                            <b>Vũ Anh Tài</b>
+                            {{#with data.user}}
+                            <b>{{ho_ten}}</b>
+                            {{/with}}
                         </h2>
                     </center>
                 </legend>
             </li>
             <li class="list-group-item">
-                <a href="user-dashboard-saved-searches.html">
+                <a href="/account/profile">
                     <i class="glyphicon glyphicon-user"></i>
                     Thông tin tài khoản
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="history.html">
+                <a href="/cart/history">
                     <i class="glyphicon glyphicon-th-list"></i>
                     Thông tin hóa đơn
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="user-dashboard-saved-searches.html">
+                <a href="">
                     <i class="glyphicon glyphicon-heart"></i>
                     Sản phẩm yêu thích
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="user-dashboard-saved-searches.html">
+                <a href="">
                     <i class="glyphicon glyphicon-home"></i>
                     Sổ địa chỉ
                 </a>
@@ -85,7 +87,7 @@
                         </div>
                         <div class="controls">
                             <label for="txtDOB" class="control-label">Ngày sinh</label>
-                            <input id="txtDOB" type="text" class="billing-address-name form-control" name="dob" placeholder="ngày sinh" required="" value="{{dob}}"><i class="icon-calendar"></i></input>
+                            <input id="txtDOB" type="text" class="billing-address-name form-control" name="dob" placeholder="ngày sinh" required="" value="{{ngay_sinh}}"><i class="icon-calendar"></i></input>
                         </div>
                         <div class="controls">
                             <label class="control-label">email: </label>
